@@ -19,7 +19,7 @@ composer require bookingcom/booking-schemas
 
 // ...
 
-$requestData = $serializer->deserialize($requestBody, 'App\Model\Booking\Search\Request', 'json');
+$requestData = $serializer->deserialize($requestBody, 'Capimichi\BookingSchemas\Model\Booking\Search\Request', 'json');
 
 // ...
 ```
