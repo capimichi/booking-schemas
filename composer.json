@@ -1,0 +1,19 @@
+{
+  "name": "capimichi/booking-schemas",
+  "description": "This repository describe the models used in the responses from booking.com internal API",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Capimichi\\BookingSchemas\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Michele Capichioni",
+      "email": "capimichi@gmail.com"
+    }
+  ],
+  "require": {
+    "jms/serializer": "^3.28"
+  }
+}
