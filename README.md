@@ -1,4 +1,4 @@
-# booking-schemas
+# Booking Schemas
 
 This repository describe the models used in the responses from booking.com internal API
 
