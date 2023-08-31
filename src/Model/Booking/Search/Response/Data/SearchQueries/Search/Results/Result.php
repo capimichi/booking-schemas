@@ -83,23 +83,26 @@ class Result
     protected $displayName;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("geniusInfo")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result::geniusInfo
      */
     protected $geniusInfo;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("inferredLocationScore")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result::inferredLocationScore
      */
     protected $inferredLocationScore;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("isInCompanyBudget")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result::isInCompanyBudget
      */
     protected $isInCompanyBudget;
     
@@ -111,9 +114,10 @@ class Result
     protected $isNewlyOpened;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("licenseDetails")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result::licenseDetails
      */
     protected $licenseDetails;
     
@@ -181,16 +185,18 @@ class Result
     protected $recommendedDate;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("recommendedDatesLabel")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result::recommendedDatesLabel
      */
     protected $recommendedDatesLabel;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("relocationMode")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result::relocationMode
      */
     protected $relocationMode;
     
@@ -429,7 +435,7 @@ class Result
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getGeniusInfo()
     {
@@ -437,7 +443,7 @@ class Result
     }
     
     /**
-     * @param string|null $geniusInfo
+     * @param mixed|null $geniusInfo
      */
     public function setGeniusInfo($geniusInfo)
     {
@@ -446,7 +452,7 @@ class Result
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getInferredLocationScore()
     {
@@ -454,7 +460,7 @@ class Result
     }
     
     /**
-     * @param string|null $inferredLocationScore
+     * @param mixed|null $inferredLocationScore
      */
     public function setInferredLocationScore($inferredLocationScore)
     {
@@ -463,7 +469,7 @@ class Result
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getIsInCompanyBudget()
     {
@@ -471,7 +477,7 @@ class Result
     }
     
     /**
-     * @param string|null $isInCompanyBudget
+     * @param mixed|null $isInCompanyBudget
      */
     public function setIsInCompanyBudget($isInCompanyBudget)
     {
@@ -497,7 +503,7 @@ class Result
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getLicenseDetails()
     {
@@ -505,7 +511,7 @@ class Result
     }
     
     /**
-     * @param string|null $licenseDetails
+     * @param mixed|null $licenseDetails
      */
     public function setLicenseDetails($licenseDetails)
     {
@@ -667,7 +673,7 @@ class Result
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getRecommendedDatesLabel()
     {
@@ -675,7 +681,7 @@ class Result
     }
     
     /**
-     * @param string|null $recommendedDatesLabel
+     * @param mixed|null $recommendedDatesLabel
      */
     public function setRecommendedDatesLabel($recommendedDatesLabel)
     {
@@ -684,7 +690,7 @@ class Result
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getRelocationMode()
     {
@@ -692,7 +698,7 @@ class Result
     }
     
     /**
-     * @param string|null $relocationMode
+     * @param mixed|null $relocationMode
      */
     public function setRelocationMode($relocationMode)
     {

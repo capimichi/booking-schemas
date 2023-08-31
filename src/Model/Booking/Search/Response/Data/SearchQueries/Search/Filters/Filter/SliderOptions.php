@@ -76,9 +76,10 @@ class SliderOptions
     protected $minSelectedFormatted;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("selectedRange")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions::selectedRange
      */
     protected $selectedRange;
     
@@ -244,7 +245,7 @@ class SliderOptions
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSelectedRange()
     {
@@ -252,7 +253,7 @@ class SliderOptions
     }
     
     /**
-     * @param string|null $selectedRange
+     * @param mixed|null $selectedRange
      */
     public function setSelectedRange($selectedRange)
     {

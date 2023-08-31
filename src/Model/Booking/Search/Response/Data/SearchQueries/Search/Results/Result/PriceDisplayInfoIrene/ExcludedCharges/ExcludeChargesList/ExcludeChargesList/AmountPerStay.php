@@ -27,9 +27,10 @@ class AmountPerStay
     protected $currency;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("amountUnformatted")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList\AmountPerStay::amountUnformatted
      */
     protected $amountUnformatted;
     
@@ -83,7 +84,7 @@ class AmountPerStay
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getAmountUnformatted()
     {
@@ -91,7 +92,7 @@ class AmountPerStay
     }
     
     /**
-     * @param string|null $amountUnformatted
+     * @param mixed|null $amountUnformatted
      */
     public function setAmountUnformatted($amountUnformatted)
     {

@@ -27,16 +27,18 @@ class ReviewScore
     protected $reviewCount;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("score")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore::score
      */
     protected $score;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("secondaryScore")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore::secondaryScore
      */
     protected $secondaryScore;
     
@@ -104,7 +106,7 @@ class ReviewScore
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getScore()
     {
@@ -112,7 +114,7 @@ class ReviewScore
     }
     
     /**
-     * @param string|null $score
+     * @param mixed|null $score
      */
     public function setScore($score)
     {
@@ -121,7 +123,7 @@ class ReviewScore
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSecondaryScore()
     {
@@ -129,7 +131,7 @@ class ReviewScore
     }
     
     /**
-     * @param string|null $secondaryScore
+     * @param mixed|null $secondaryScore
      */
     public function setSecondaryScore($secondaryScore)
     {

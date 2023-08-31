@@ -20,9 +20,10 @@ class ShortDescription
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("translation")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException\ShortDescription::translation
      */
     protected $translation;
     
@@ -45,7 +46,7 @@ class ShortDescription
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getTranslation()
     {
@@ -53,7 +54,7 @@ class ShortDescription
     }
     
     /**
-     * @param string|null $translation
+     * @param mixed|null $translation
      */
     public function setTranslation($translation)
     {

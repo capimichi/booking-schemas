@@ -34,9 +34,10 @@ class CustomBadges
     protected $showIsWorkFriendly;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("showOnlineCheckinBadge")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges::showOnlineCheckinBadge
      */
     protected $showOnlineCheckinBadge;
     
@@ -107,7 +108,7 @@ class CustomBadges
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getShowOnlineCheckinBadge()
     {
@@ -115,7 +116,7 @@ class CustomBadges
     }
     
     /**
-     * @param string|null $showOnlineCheckinBadge
+     * @param mixed|null $showOnlineCheckinBadge
      */
     public function setShowOnlineCheckinBadge($showOnlineCheckinBadge)
     {

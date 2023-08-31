@@ -13,9 +13,10 @@ class Copy
 {
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("translation")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesAggregated\Copy::translation
      */
     protected $translation;
     
@@ -28,7 +29,7 @@ class Copy
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getTranslation()
     {
@@ -36,7 +37,7 @@ class Copy
     }
     
     /**
-     * @param string|null $translation
+     * @param mixed|null $translation
      */
     public function setTranslation($translation)
     {

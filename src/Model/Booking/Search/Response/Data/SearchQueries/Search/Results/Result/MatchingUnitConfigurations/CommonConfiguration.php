@@ -97,9 +97,10 @@ class CommonConfiguration
     protected $bedConfigurations;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("name")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration::name
      */
     protected $name;
     
@@ -309,7 +310,7 @@ class CommonConfiguration
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getName()
     {
@@ -317,7 +318,7 @@ class CommonConfiguration
     }
     
     /**
-     * @param string|null $name
+     * @param mixed|null $name
      */
     public function setName($name)
     {

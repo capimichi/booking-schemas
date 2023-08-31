@@ -13,9 +13,10 @@ class Carousel
 {
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("themeId")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Carousels\Carousel::themeId
      */
     protected $themeId;
     
@@ -41,23 +42,26 @@ class Carousel
     protected $contentType;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("aggregatedCountsByFilterId")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Carousels\Carousel::aggregatedCountsByFilterId
      */
     protected $aggregatedCountsByFilterId;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("title")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Carousels\Carousel::title
      */
     protected $title;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("slides")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Carousels\Carousel::slides
      */
     protected $slides;
     
@@ -90,15 +94,16 @@ class Carousel
     protected $priority;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("soldoutProperties")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Carousels\Carousel::soldoutProperties
      */
     protected $soldoutProperties;
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getThemeId()
     {
@@ -106,7 +111,7 @@ class Carousel
     }
     
     /**
-     * @param string|null $themeId
+     * @param mixed|null $themeId
      */
     public function setThemeId($themeId)
     {
@@ -166,7 +171,7 @@ class Carousel
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getAggregatedCountsByFilterId()
     {
@@ -174,7 +179,7 @@ class Carousel
     }
     
     /**
-     * @param string|null $aggregatedCountsByFilterId
+     * @param mixed|null $aggregatedCountsByFilterId
      */
     public function setAggregatedCountsByFilterId($aggregatedCountsByFilterId)
     {
@@ -183,7 +188,7 @@ class Carousel
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getTitle()
     {
@@ -191,7 +196,7 @@ class Carousel
     }
     
     /**
-     * @param string|null $title
+     * @param mixed|null $title
      */
     public function setTitle($title)
     {
@@ -200,7 +205,7 @@ class Carousel
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSlides()
     {
@@ -208,7 +213,7 @@ class Carousel
     }
     
     /**
-     * @param string|null $slides
+     * @param mixed|null $slides
      */
     public function setSlides($slides)
     {
@@ -285,7 +290,7 @@ class Carousel
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSoldoutProperties()
     {
@@ -293,7 +298,7 @@ class Carousel
     }
     
     /**
-     * @param string|null $soldoutProperties
+     * @param mixed|null $soldoutProperties
      */
     public function setSoldoutProperties($soldoutProperties)
     {

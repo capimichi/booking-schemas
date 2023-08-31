@@ -69,16 +69,18 @@ class SliderOptionsPerStay
     protected $minSelected;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("minSelectedFormatted")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay::minSelectedFormatted
      */
     protected $minSelectedFormatted;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("selectedRange")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay::selectedRange
      */
     protected $selectedRange;
     
@@ -227,7 +229,7 @@ class SliderOptionsPerStay
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getMinSelectedFormatted()
     {
@@ -235,7 +237,7 @@ class SliderOptionsPerStay
     }
     
     /**
-     * @param string|null $minSelectedFormatted
+     * @param mixed|null $minSelectedFormatted
      */
     public function setMinSelectedFormatted($minSelectedFormatted)
     {
@@ -244,7 +246,7 @@ class SliderOptionsPerStay
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSelectedRange()
     {
@@ -252,7 +254,7 @@ class SliderOptionsPerStay
     }
     
     /**
-     * @param string|null $selectedRange
+     * @param mixed|null $selectedRange
      */
     public function setSelectedRange($selectedRange)
     {

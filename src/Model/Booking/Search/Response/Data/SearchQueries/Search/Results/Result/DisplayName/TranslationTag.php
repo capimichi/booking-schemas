@@ -20,9 +20,10 @@ class TranslationTag
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("translation")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag::translation
      */
     protected $translation;
     
@@ -45,7 +46,7 @@ class TranslationTag
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getTranslation()
     {
@@ -53,7 +54,7 @@ class TranslationTag
     }
     
     /**
-     * @param string|null $translation
+     * @param mixed|null $translation
      */
     public function setTranslation($translation)
     {

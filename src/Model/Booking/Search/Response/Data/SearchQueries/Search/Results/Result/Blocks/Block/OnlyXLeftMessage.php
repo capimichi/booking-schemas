@@ -20,9 +20,10 @@ class OnlyXLeftMessage
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("tag")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OnlyXLeftMessage::tag
      */
     protected $tag;
     
@@ -59,7 +60,7 @@ class OnlyXLeftMessage
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getTag()
     {
@@ -67,7 +68,7 @@ class OnlyXLeftMessage
     }
     
     /**
-     * @param string|null $tag
+     * @param mixed|null $tag
      */
     public function setTag($tag)
     {

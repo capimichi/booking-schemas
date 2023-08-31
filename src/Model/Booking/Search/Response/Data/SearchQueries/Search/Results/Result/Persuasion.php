@@ -27,9 +27,10 @@ class Persuasion
     protected $autoextended;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("bookedXTimesMessage")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion::bookedXTimesMessage
      */
     protected $bookedXTimesMessage;
     
@@ -48,23 +49,26 @@ class Persuasion
     protected $highlighted;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("nativeAdId")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion::nativeAdId
      */
     protected $nativeAdId;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("nativeAdsCpc")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion::nativeAdsCpc
      */
     protected $nativeAdsCpc;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("nativeAdsTracking")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion::nativeAdsTracking
      */
     protected $nativeAdsTracking;
     
@@ -90,9 +94,10 @@ class Persuasion
     protected $showNativeAdLabel;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("sponsoredAdsData")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion::sponsoredAdsData
      */
     protected $sponsoredAdsData;
     
@@ -132,7 +137,7 @@ class Persuasion
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getBookedXTimesMessage()
     {
@@ -140,7 +145,7 @@ class Persuasion
     }
     
     /**
-     * @param string|null $bookedXTimesMessage
+     * @param mixed|null $bookedXTimesMessage
      */
     public function setBookedXTimesMessage($bookedXTimesMessage)
     {
@@ -183,7 +188,7 @@ class Persuasion
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getNativeAdId()
     {
@@ -191,7 +196,7 @@ class Persuasion
     }
     
     /**
-     * @param string|null $nativeAdId
+     * @param mixed|null $nativeAdId
      */
     public function setNativeAdId($nativeAdId)
     {
@@ -200,7 +205,7 @@ class Persuasion
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getNativeAdsCpc()
     {
@@ -208,7 +213,7 @@ class Persuasion
     }
     
     /**
-     * @param string|null $nativeAdsCpc
+     * @param mixed|null $nativeAdsCpc
      */
     public function setNativeAdsCpc($nativeAdsCpc)
     {
@@ -217,7 +222,7 @@ class Persuasion
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getNativeAdsTracking()
     {
@@ -225,7 +230,7 @@ class Persuasion
     }
     
     /**
-     * @param string|null $nativeAdsTracking
+     * @param mixed|null $nativeAdsTracking
      */
     public function setNativeAdsTracking($nativeAdsTracking)
     {
@@ -285,7 +290,7 @@ class Persuasion
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSponsoredAdsData()
     {
@@ -293,7 +298,7 @@ class Persuasion
     }
     
     /**
-     * @param string|null $sponsoredAdsData
+     * @param mixed|null $sponsoredAdsData
      */
     public function setSponsoredAdsData($sponsoredAdsData)
     {

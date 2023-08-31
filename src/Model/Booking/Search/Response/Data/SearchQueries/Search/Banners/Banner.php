@@ -27,9 +27,10 @@ class Banner
     protected $isDismissible;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("imageUrl")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner::imageUrl
      */
     protected $imageUrl;
     
@@ -76,9 +77,10 @@ class Banner
     protected $nbDeals;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("pendingReviewInfo")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner::pendingReviewInfo
      */
     protected $pendingReviewInfo;
     
@@ -111,9 +113,10 @@ class Banner
     protected $iconName;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("secondaryAction")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner::secondaryAction
      */
     protected $secondaryAction;
     
@@ -181,7 +184,7 @@ class Banner
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getImageUrl()
     {
@@ -189,7 +192,7 @@ class Banner
     }
     
     /**
-     * @param string|null $imageUrl
+     * @param mixed|null $imageUrl
      */
     public function setImageUrl($imageUrl)
     {
@@ -300,7 +303,7 @@ class Banner
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getPendingReviewInfo()
     {
@@ -308,7 +311,7 @@ class Banner
     }
     
     /**
-     * @param string|null $pendingReviewInfo
+     * @param mixed|null $pendingReviewInfo
      */
     public function setPendingReviewInfo($pendingReviewInfo)
     {
@@ -385,7 +388,7 @@ class Banner
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSecondaryAction()
     {
@@ -393,7 +396,7 @@ class Banner
     }
     
     /**
-     * @param string|null $secondaryAction
+     * @param mixed|null $secondaryAction
      */
     public function setSecondaryAction($secondaryAction)
     {

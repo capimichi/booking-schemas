@@ -27,9 +27,10 @@ class Badge
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("closedFacilities")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Badges\Badge::closedFacilities
      */
     protected $closedFacilities;
     
@@ -69,7 +70,7 @@ class Badge
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getClosedFacilities()
     {
@@ -77,7 +78,7 @@ class Badge
     }
     
     /**
-     * @param string|null $closedFacilities
+     * @param mixed|null $closedFacilities
      */
     public function setClosedFacilities($closedFacilities)
     {

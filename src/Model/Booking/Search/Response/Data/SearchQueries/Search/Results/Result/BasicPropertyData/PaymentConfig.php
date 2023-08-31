@@ -20,9 +20,10 @@ class PaymentConfig
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("installments")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig::installments
      */
     protected $installments;
     
@@ -45,7 +46,7 @@ class PaymentConfig
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getInstallments()
     {
@@ -53,7 +54,7 @@ class PaymentConfig
     }
     
     /**
-     * @param string|null $installments
+     * @param mixed|null $installments
      */
     public function setInstallments($installments)
     {

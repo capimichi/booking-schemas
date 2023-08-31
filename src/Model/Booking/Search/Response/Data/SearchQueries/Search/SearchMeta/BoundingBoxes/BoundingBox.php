@@ -20,30 +20,34 @@ class BoundingBox
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("neLat")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox::neLat
      */
     protected $neLat;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("neLon")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox::neLon
      */
     protected $neLon;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("swLat")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox::swLat
      */
     protected $swLat;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("swLon")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox::swLon
      */
     protected $swLon;
     
@@ -73,7 +77,7 @@ class BoundingBox
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getNeLat()
     {
@@ -81,7 +85,7 @@ class BoundingBox
     }
     
     /**
-     * @param string|null $neLat
+     * @param mixed|null $neLat
      */
     public function setNeLat($neLat)
     {
@@ -90,7 +94,7 @@ class BoundingBox
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getNeLon()
     {
@@ -98,7 +102,7 @@ class BoundingBox
     }
     
     /**
-     * @param string|null $neLon
+     * @param mixed|null $neLon
      */
     public function setNeLon($neLon)
     {
@@ -107,7 +111,7 @@ class BoundingBox
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSwLat()
     {
@@ -115,7 +119,7 @@ class BoundingBox
     }
     
     /**
-     * @param string|null $swLat
+     * @param mixed|null $swLat
      */
     public function setSwLat($swLat)
     {
@@ -124,7 +128,7 @@ class BoundingBox
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getSwLon()
     {
@@ -132,7 +136,7 @@ class BoundingBox
     }
     
     /**
-     * @param string|null $swLon
+     * @param mixed|null $swLon
      */
     public function setSwLon($swLon)
     {

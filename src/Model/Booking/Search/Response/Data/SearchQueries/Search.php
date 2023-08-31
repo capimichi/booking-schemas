@@ -62,16 +62,18 @@ class Search
     protected $filters;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("frontierThemes")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search::frontierThemes
      */
     protected $frontierThemes;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("oneOfThreeDeal")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search::oneOfThreeDeal
      */
     protected $oneOfThreeDeal;
     
@@ -104,9 +106,10 @@ class Search
     protected $results;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("rocketmilesSearchUuid")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search::rocketmilesSearchUuid
      */
     protected $rocketmilesSearchUuid;
     
@@ -273,7 +276,7 @@ class Search
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getFrontierThemes()
     {
@@ -281,7 +284,7 @@ class Search
     }
     
     /**
-     * @param string|null $frontierThemes
+     * @param mixed|null $frontierThemes
      */
     public function setFrontierThemes($frontierThemes)
     {
@@ -290,7 +293,7 @@ class Search
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getOneOfThreeDeal()
     {
@@ -298,7 +301,7 @@ class Search
     }
     
     /**
-     * @param string|null $oneOfThreeDeal
+     * @param mixed|null $oneOfThreeDeal
      */
     public function setOneOfThreeDeal($oneOfThreeDeal)
     {
@@ -375,7 +378,7 @@ class Search
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getRocketmilesSearchUuid()
     {
@@ -383,7 +386,7 @@ class Search
     }
     
     /**
-     * @param string|null $rocketmilesSearchUuid
+     * @param mixed|null $rocketmilesSearchUuid
      */
     public function setRocketmilesSearchUuid($rocketmilesSearchUuid)
     {

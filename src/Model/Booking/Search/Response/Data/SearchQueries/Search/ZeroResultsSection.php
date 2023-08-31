@@ -27,23 +27,26 @@ class ZeroResultsSection
     protected $paragraphs;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("primaryAction")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\ZeroResultsSection::primaryAction
      */
     protected $primaryAction;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("title")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\ZeroResultsSection::title
      */
     protected $title;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("type")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\ZeroResultsSection::type
      */
     protected $type;
     
@@ -83,7 +86,7 @@ class ZeroResultsSection
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getPrimaryAction()
     {
@@ -91,7 +94,7 @@ class ZeroResultsSection
     }
     
     /**
-     * @param string|null $primaryAction
+     * @param mixed|null $primaryAction
      */
     public function setPrimaryAction($primaryAction)
     {
@@ -100,7 +103,7 @@ class ZeroResultsSection
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getTitle()
     {
@@ -108,7 +111,7 @@ class ZeroResultsSection
     }
     
     /**
-     * @param string|null $title
+     * @param mixed|null $title
      */
     public function setTitle($title)
     {
@@ -117,7 +120,7 @@ class ZeroResultsSection
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getType()
     {
@@ -125,7 +128,7 @@ class ZeroResultsSection
     }
     
     /**
-     * @param string|null $type
+     * @param mixed|null $type
      */
     public function setType($type)
     {

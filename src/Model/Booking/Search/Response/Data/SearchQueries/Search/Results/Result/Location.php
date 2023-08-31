@@ -27,9 +27,10 @@ class Location
     protected $beachDistance;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("beachWalkingTime")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location::beachWalkingTime
      */
     protected $beachWalkingTime;
     
@@ -41,9 +42,10 @@ class Location
     protected $displayLocation;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("geoDistanceMeters")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location::geoDistanceMeters
      */
     protected $geoDistanceMeters;
     
@@ -111,7 +113,7 @@ class Location
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getBeachWalkingTime()
     {
@@ -119,7 +121,7 @@ class Location
     }
     
     /**
-     * @param string|null $beachWalkingTime
+     * @param mixed|null $beachWalkingTime
      */
     public function setBeachWalkingTime($beachWalkingTime)
     {
@@ -145,7 +147,7 @@ class Location
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getGeoDistanceMeters()
     {
@@ -153,7 +155,7 @@ class Location
     }
     
     /**
-     * @param string|null $geoDistanceMeters
+     * @param mixed|null $geoDistanceMeters
      */
     public function setGeoDistanceMeters($geoDistanceMeters)
     {

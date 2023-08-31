@@ -20,9 +20,10 @@ class Policies
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("enableJapaneseUsersSpecialCase")
+     * @var mixed|null
+     * @Serializer\Exclude
+     * TODO: Find out type for
+     *  Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Policies::enableJapaneseUsersSpecialCase
      */
     protected $enableJapaneseUsersSpecialCase;
     
@@ -59,7 +60,7 @@ class Policies
     
     
     /**
-     * @return string|null
+     * @return mixed|null
      */
     public function getEnableJapaneseUsersSpecialCase()
     {
@@ -67,7 +68,7 @@ class Policies
     }
     
     /**
-     * @param string|null $enableJapaneseUsersSpecialCase
+     * @param mixed|null $enableJapaneseUsersSpecialCase
      */
     public function setEnableJapaneseUsersSpecialCase($enableJapaneseUsersSpecialCase)
     {
