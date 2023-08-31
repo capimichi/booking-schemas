@@ -13,18 +13,25 @@ class RecommendedFilterOption
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\AdditionalLabel|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\AdditionalLabel")
-     * @Serializer\SerializedName("additionalLabel")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $additionalLabel;
+    protected $typename;
     
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("count")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\StarRating|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\StarRating")
+     * @Serializer\SerializedName("starRating")
      */
-    protected $count;
+    protected $starRating;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("urlId")
+     */
+    protected $urlId;
     
     /**
      * @var int|null
@@ -41,18 +48,18 @@ class RecommendedFilterOption
     protected $selected;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("urlId")
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("count")
      */
-    protected $urlId;
+    protected $count;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\AdditionalLabel|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\AdditionalLabel")
+     * @Serializer\SerializedName("additionalLabel")
      */
-    protected $typename;
+    protected $additionalLabel;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\Value|null
@@ -61,45 +68,55 @@ class RecommendedFilterOption
      */
     protected $value;
     
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\StarRating|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\StarRating")
-     * @Serializer\SerializedName("starRating")
-     */
-    protected $starRating;
-    
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\AdditionalLabel|null
+     * @return string|null
      */
-    public function getAdditionalLabel()
+    public function getTypename()
     {
-        return $this->additionalLabel;
+        return $this->typename;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\AdditionalLabel|null $additionalLabel
+     * @param string|null $typename
      */
-    public function setAdditionalLabel($additionalLabel)
+    public function setTypename($typename)
     {
-        $this->additionalLabel = $additionalLabel;
+        $this->typename = $typename;
     }
     
     
     /**
-     * @return int|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\StarRating|null
      */
-    public function getCount()
+    public function getStarRating()
     {
-        return $this->count;
+        return $this->starRating;
     }
     
     /**
-     * @param int|null $count
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\StarRating|null $starRating
      */
-    public function setCount($count)
+    public function setStarRating($starRating)
     {
-        $this->count = $count;
+        $this->starRating = $starRating;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getUrlId()
+    {
+        return $this->urlId;
+    }
+    
+    /**
+     * @param string|null $urlId
+     */
+    public function setUrlId($urlId)
+    {
+        $this->urlId = $urlId;
     }
     
     
@@ -138,36 +155,36 @@ class RecommendedFilterOption
     
     
     /**
-     * @return string|null
+     * @return int|null
      */
-    public function getUrlId()
+    public function getCount()
     {
-        return $this->urlId;
+        return $this->count;
     }
     
     /**
-     * @param string|null $urlId
+     * @param int|null $count
      */
-    public function setUrlId($urlId)
+    public function setCount($count)
     {
-        $this->urlId = $urlId;
+        $this->count = $count;
     }
     
     
     /**
-     * @return string|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\AdditionalLabel|null
      */
-    public function getTypename()
+    public function getAdditionalLabel()
     {
-        return $this->typename;
+        return $this->additionalLabel;
     }
     
     /**
-     * @param string|null $typename
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\AdditionalLabel|null $additionalLabel
      */
-    public function setTypename($typename)
+    public function setAdditionalLabel($additionalLabel)
     {
-        $this->typename = $typename;
+        $this->additionalLabel = $additionalLabel;
     }
     
     
@@ -185,23 +202,6 @@ class RecommendedFilterOption
     public function setValue($value)
     {
         $this->value = $value;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\StarRating|null
-     */
-    public function getStarRating()
-    {
-        return $this->starRating;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\StarRating|null $starRating
-     */
-    public function setStarRating($starRating)
-    {
-        $this->starRating = $starRating;
     }
     
     

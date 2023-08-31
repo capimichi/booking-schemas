@@ -13,20 +13,6 @@ class Dates
 {
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("checkout")
-     */
-    protected $checkout;
-    
-    /**
      * @var int|null
      * @Serializer\Type("int")
      * @Serializer\SerializedName("lengthOfStayInDays")
@@ -40,39 +26,19 @@ class Dates
      */
     protected $checkin;
     
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
+     */
+    protected $typename;
     
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("checkout")
      */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getCheckout()
-    {
-        return $this->checkout;
-    }
-    
-    /**
-     * @param string|null $checkout
-     */
-    public function setCheckout($checkout)
-    {
-        $this->checkout = $checkout;
-    }
+    protected $checkout;
     
     
     /**
@@ -106,6 +72,40 @@ class Dates
     public function setCheckin($checkin)
     {
         $this->checkin = $checkin;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getCheckout()
+    {
+        return $this->checkout;
+    }
+    
+    /**
+     * @param string|null $checkout
+     */
+    public function setCheckout($checkout)
+    {
+        $this->checkout = $checkout;
     }
     
     

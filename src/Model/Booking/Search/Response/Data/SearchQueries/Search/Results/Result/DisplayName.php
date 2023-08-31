@@ -13,11 +13,11 @@ class DisplayName
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag")
-     * @Serializer\SerializedName("translationTag")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $translationTag;
+    protected $typename;
     
     /**
      * @var string|null
@@ -27,27 +27,27 @@ class DisplayName
     protected $text;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag")
+     * @Serializer\SerializedName("translationTag")
      */
-    protected $typename;
+    protected $translationTag;
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag|null
+     * @return string|null
      */
-    public function getTranslationTag()
+    public function getTypename()
     {
-        return $this->translationTag;
+        return $this->typename;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag|null $translationTag
+     * @param string|null $typename
      */
-    public function setTranslationTag($translationTag)
+    public function setTypename($typename)
     {
-        $this->translationTag = $translationTag;
+        $this->typename = $typename;
     }
     
     
@@ -69,19 +69,19 @@ class DisplayName
     
     
     /**
-     * @return string|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag|null
      */
-    public function getTypename()
+    public function getTranslationTag()
     {
-        return $this->typename;
+        return $this->translationTag;
     }
     
     /**
-     * @param string|null $typename
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName\TranslationTag|null $translationTag
      */
-    public function setTypename($typename)
+    public function setTranslationTag($translationTag)
     {
-        $this->typename = $typename;
+        $this->translationTag = $translationTag;
     }
     
     

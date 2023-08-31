@@ -15,20 +15,6 @@ class SliderOptionsPerStay
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("minSelectedFormatted")
-     */
-    protected $minSelectedFormatted;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("selectedRange")
-     */
-    protected $selectedRange;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
@@ -36,16 +22,9 @@ class SliderOptionsPerStay
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("title")
+     * @Serializer\SerializedName("currency")
      */
-    protected $title;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("maxSelected")
-     */
-    protected $maxSelected;
+    protected $currency;
     
     /**
      * @var array|null
@@ -64,9 +43,23 @@ class SliderOptionsPerStay
     /**
      * @var string|null
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("maxSelected")
+     */
+    protected $maxSelected;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("min")
      */
     protected $min;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("minPriceStep")
+     */
+    protected $minPriceStep;
     
     /**
      * @var string|null
@@ -78,50 +71,23 @@ class SliderOptionsPerStay
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("currency")
+     * @Serializer\SerializedName("minSelectedFormatted")
      */
-    protected $currency;
+    protected $minSelectedFormatted;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("minPriceStep")
+     * @Serializer\SerializedName("selectedRange")
      */
-    protected $minPriceStep;
-    
+    protected $selectedRange;
     
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("title")
      */
-    public function getMinSelectedFormatted()
-    {
-        return $this->minSelectedFormatted;
-    }
-    
-    /**
-     * @param string|null $minSelectedFormatted
-     */
-    public function setMinSelectedFormatted($minSelectedFormatted)
-    {
-        $this->minSelectedFormatted = $minSelectedFormatted;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getSelectedRange()
-    {
-        return $this->selectedRange;
-    }
-    
-    /**
-     * @param string|null $selectedRange
-     */
-    public function setSelectedRange($selectedRange)
-    {
-        $this->selectedRange = $selectedRange;
-    }
+    protected $title;
     
     
     /**
@@ -144,34 +110,17 @@ class SliderOptionsPerStay
     /**
      * @return string|null
      */
-    public function getTitle()
+    public function getCurrency()
     {
-        return $this->title;
+        return $this->currency;
     }
     
     /**
-     * @param string|null $title
+     * @param string|null $currency
      */
-    public function setTitle($title)
+    public function setCurrency($currency)
     {
-        $this->title = $title;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getMaxSelected()
-    {
-        return $this->maxSelected;
-    }
-    
-    /**
-     * @param string|null $maxSelected
-     */
-    public function setMaxSelected($maxSelected)
-    {
-        $this->maxSelected = $maxSelected;
+        $this->currency = $currency;
     }
     
     
@@ -212,6 +161,23 @@ class SliderOptionsPerStay
     /**
      * @return string|null
      */
+    public function getMaxSelected()
+    {
+        return $this->maxSelected;
+    }
+    
+    /**
+     * @param string|null $maxSelected
+     */
+    public function setMaxSelected($maxSelected)
+    {
+        $this->maxSelected = $maxSelected;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
     public function getMin()
     {
         return $this->min;
@@ -223,6 +189,23 @@ class SliderOptionsPerStay
     public function setMin($min)
     {
         $this->min = $min;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getMinPriceStep()
+    {
+        return $this->minPriceStep;
+    }
+    
+    /**
+     * @param string|null $minPriceStep
+     */
+    public function setMinPriceStep($minPriceStep)
+    {
+        $this->minPriceStep = $minPriceStep;
     }
     
     
@@ -246,34 +229,51 @@ class SliderOptionsPerStay
     /**
      * @return string|null
      */
-    public function getCurrency()
+    public function getMinSelectedFormatted()
     {
-        return $this->currency;
+        return $this->minSelectedFormatted;
     }
     
     /**
-     * @param string|null $currency
+     * @param string|null $minSelectedFormatted
      */
-    public function setCurrency($currency)
+    public function setMinSelectedFormatted($minSelectedFormatted)
     {
-        $this->currency = $currency;
+        $this->minSelectedFormatted = $minSelectedFormatted;
     }
     
     
     /**
      * @return string|null
      */
-    public function getMinPriceStep()
+    public function getSelectedRange()
     {
-        return $this->minPriceStep;
+        return $this->selectedRange;
     }
     
     /**
-     * @param string|null $minPriceStep
+     * @param string|null $selectedRange
      */
-    public function setMinPriceStep($minPriceStep)
+    public function setSelectedRange($selectedRange)
     {
-        $this->minPriceStep = $minPriceStep;
+        $this->selectedRange = $selectedRange;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+    
+    /**
+     * @param string|null $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
     }
     
     

@@ -22,16 +22,16 @@ class Bed
     /**
      * @var int|null
      * @Serializer\Type("int")
-     * @Serializer\SerializedName("count")
+     * @Serializer\SerializedName("type")
      */
-    protected $count;
+    protected $type;
     
     /**
      * @var int|null
      * @Serializer\Type("int")
-     * @Serializer\SerializedName("type")
+     * @Serializer\SerializedName("count")
      */
-    protected $type;
+    protected $count;
     
     
     /**
@@ -54,23 +54,6 @@ class Bed
     /**
      * @return int|null
      */
-    public function getCount()
-    {
-        return $this->count;
-    }
-    
-    /**
-     * @param int|null $count
-     */
-    public function setCount($count)
-    {
-        $this->count = $count;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
     public function getType()
     {
         return $this->type;
@@ -82,6 +65,23 @@ class Bed
     public function setType($type)
     {
         $this->type = $type;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getCount()
+    {
+        return $this->count;
+    }
+    
+    /**
+     * @param int|null $count
+     */
+    public function setCount($count)
+    {
+        $this->count = $count;
     }
     
     

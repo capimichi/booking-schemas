@@ -13,35 +13,18 @@ class Data
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries")
-     * @Serializer\SerializedName("searchQueries")
-     */
-    protected $searchQueries;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\GeniusVipEnrolledProgram|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\GeniusVipEnrolledProgram")
      * @Serializer\SerializedName("geniusVipEnrolledProgram")
      */
     protected $geniusVipEnrolledProgram;
     
-    
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries|null
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries")
+     * @Serializer\SerializedName("searchQueries")
      */
-    public function getSearchQueries()
-    {
-        return $this->searchQueries;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries|null $searchQueries
-     */
-    public function setSearchQueries($searchQueries)
-    {
-        $this->searchQueries = $searchQueries;
-    }
+    protected $searchQueries;
     
     
     /**
@@ -58,6 +41,23 @@ class Data
     public function setGeniusVipEnrolledProgram($geniusVipEnrolledProgram)
     {
         $this->geniusVipEnrolledProgram = $geniusVipEnrolledProgram;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries|null
+     */
+    public function getSearchQueries()
+    {
+        return $this->searchQueries;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries|null $searchQueries
+     */
+    public function setSearchQueries($searchQueries)
+    {
+        $this->searchQueries = $searchQueries;
     }
     
     

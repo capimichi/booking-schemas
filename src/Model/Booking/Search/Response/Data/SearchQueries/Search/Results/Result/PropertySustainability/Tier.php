@@ -15,33 +15,16 @@ class Tier
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("type")
-     */
-    protected $type;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
     
-    
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("type")
      */
-    public function getType()
-    {
-        return $this->type;
-    }
-    
-    /**
-     * @param string|null $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
+    protected $type;
     
     
     /**
@@ -58,6 +41,23 @@ class Tier
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+    
+    /**
+     * @param string|null $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
     }
     
     

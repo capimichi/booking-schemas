@@ -15,33 +15,16 @@ class SecondaryTextTag
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("translation")
-     */
-    protected $translation;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
     
-    
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("translation")
      */
-    public function getTranslation()
-    {
-        return $this->translation;
-    }
-    
-    /**
-     * @param string|null $translation
-     */
-    public function setTranslation($translation)
-    {
-        $this->translation = $translation;
-    }
+    protected $translation;
     
     
     /**
@@ -58,6 +41,23 @@ class SecondaryTextTag
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTranslation()
+    {
+        return $this->translation;
+    }
+    
+    /**
+     * @param string|null $translation
+     */
+    public function setTranslation($translation)
+    {
+        $this->translation = $translation;
     }
     
     

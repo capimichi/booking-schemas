@@ -27,6 +27,13 @@ class Main
     protected $highResJpegUrl;
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\HighResUrl|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\HighResUrl")
+     * @Serializer\SerializedName("highResUrl")
+     */
+    protected $highResUrl;
+    
+    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\LowResJpegUrl|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\LowResJpegUrl")
      * @Serializer\SerializedName("lowResJpegUrl")
@@ -39,13 +46,6 @@ class Main
      * @Serializer\SerializedName("lowResUrl")
      */
     protected $lowResUrl;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\HighResUrl|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\HighResUrl")
-     * @Serializer\SerializedName("highResUrl")
-     */
-    protected $highResUrl;
     
     
     /**
@@ -83,6 +83,23 @@ class Main
     
     
     /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\HighResUrl|null
+     */
+    public function getHighResUrl()
+    {
+        return $this->highResUrl;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\HighResUrl|null $highResUrl
+     */
+    public function setHighResUrl($highResUrl)
+    {
+        $this->highResUrl = $highResUrl;
+    }
+    
+    
+    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\LowResJpegUrl|null
      */
     public function getLowResJpegUrl()
@@ -113,23 +130,6 @@ class Main
     public function setLowResUrl($lowResUrl)
     {
         $this->lowResUrl = $lowResUrl;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\HighResUrl|null
-     */
-    public function getHighResUrl()
-    {
-        return $this->highResUrl;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos\Main\HighResUrl|null $highResUrl
-     */
-    public function setHighResUrl($highResUrl)
-    {
-        $this->highResUrl = $highResUrl;
     }
     
     

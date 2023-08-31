@@ -15,9 +15,9 @@ class Ribbon
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @Serializer\SerializedName("text")
      */
-    protected $typename;
+    protected $text;
     
     /**
      * @var string|null
@@ -29,25 +29,25 @@ class Ribbon
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("text")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $text;
+    protected $typename;
     
     
     /**
      * @return string|null
      */
-    public function getTypename()
+    public function getText()
     {
-        return $this->typename;
+        return $this->text;
     }
     
     /**
-     * @param string|null $typename
+     * @param string|null $text
      */
-    public function setTypename($typename)
+    public function setText($text)
     {
-        $this->typename = $typename;
+        $this->text = $text;
     }
     
     
@@ -71,17 +71,17 @@ class Ribbon
     /**
      * @return string|null
      */
-    public function getText()
+    public function getTypename()
     {
-        return $this->text;
+        return $this->typename;
     }
     
     /**
-     * @param string|null $text
+     * @param string|null $typename
      */
-    public function setText($text)
+    public function setTypename($typename)
     {
-        $this->text = $text;
+        $this->typename = $typename;
     }
     
     

@@ -13,11 +13,11 @@ class Ski
 {
     
     /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("isSkiExperience")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $isSkiExperience;
+    protected $typename;
     
     /**
      * @var bool|null
@@ -27,27 +27,27 @@ class Ski
     protected $isSkiScaleUfi;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("isSkiExperience")
      */
-    protected $typename;
+    protected $isSkiExperience;
     
     
     /**
-     * @return bool|null
+     * @return string|null
      */
-    public function getIsSkiExperience()
+    public function getTypename()
     {
-        return $this->isSkiExperience;
+        return $this->typename;
     }
     
     /**
-     * @param bool|null $isSkiExperience
+     * @param string|null $typename
      */
-    public function setIsSkiExperience($isSkiExperience)
+    public function setTypename($typename)
     {
-        $this->isSkiExperience = $isSkiExperience;
+        $this->typename = $typename;
     }
     
     
@@ -69,19 +69,19 @@ class Ski
     
     
     /**
-     * @return string|null
+     * @return bool|null
      */
-    public function getTypename()
+    public function getIsSkiExperience()
     {
-        return $this->typename;
+        return $this->isSkiExperience;
     }
     
     /**
-     * @param string|null $typename
+     * @param bool|null $isSkiExperience
      */
-    public function setTypename($typename)
+    public function setIsSkiExperience($isSkiExperience)
     {
-        $this->typename = $typename;
+        $this->isSkiExperience = $isSkiExperience;
     }
     
     

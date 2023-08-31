@@ -13,13 +13,6 @@ class Option
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\CaptionTranslationTag|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\CaptionTranslationTag")
-     * @Serializer\SerializedName("captionTranslationTag")
-     */
-    protected $captionTranslationTag;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
@@ -27,11 +20,11 @@ class Option
     protected $typename;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\TooltipTranslationTag|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\TooltipTranslationTag")
-     * @Serializer\SerializedName("tooltipTranslationTag")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\CaptionTranslationTag|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\CaptionTranslationTag")
+     * @Serializer\SerializedName("captionTranslationTag")
      */
-    protected $tooltipTranslationTag;
+    protected $captionTranslationTag;
     
     /**
      * @var bool|null
@@ -41,28 +34,18 @@ class Option
     protected $isSelected;
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\TooltipTranslationTag|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\TooltipTranslationTag")
+     * @Serializer\SerializedName("tooltipTranslationTag")
+     */
+    protected $tooltipTranslationTag;
+    
+    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("type")
      */
     protected $type;
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\CaptionTranslationTag|null
-     */
-    public function getCaptionTranslationTag()
-    {
-        return $this->captionTranslationTag;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\CaptionTranslationTag|null $captionTranslationTag
-     */
-    public function setCaptionTranslationTag($captionTranslationTag)
-    {
-        $this->captionTranslationTag = $captionTranslationTag;
-    }
     
     
     /**
@@ -83,19 +66,19 @@ class Option
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\TooltipTranslationTag|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\CaptionTranslationTag|null
      */
-    public function getTooltipTranslationTag()
+    public function getCaptionTranslationTag()
     {
-        return $this->tooltipTranslationTag;
+        return $this->captionTranslationTag;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\TooltipTranslationTag|null $tooltipTranslationTag
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\CaptionTranslationTag|null $captionTranslationTag
      */
-    public function setTooltipTranslationTag($tooltipTranslationTag)
+    public function setCaptionTranslationTag($captionTranslationTag)
     {
-        $this->tooltipTranslationTag = $tooltipTranslationTag;
+        $this->captionTranslationTag = $captionTranslationTag;
     }
     
     
@@ -113,6 +96,23 @@ class Option
     public function setIsSelected($isSelected)
     {
         $this->isSelected = $isSelected;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\TooltipTranslationTag|null
+     */
+    public function getTooltipTranslationTag()
+    {
+        return $this->tooltipTranslationTag;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option\TooltipTranslationTag|null $tooltipTranslationTag
+     */
+    public function setTooltipTranslationTag($tooltipTranslationTag)
+    {
+        $this->tooltipTranslationTag = $tooltipTranslationTag;
     }
     
     

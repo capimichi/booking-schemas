@@ -15,6 +15,13 @@ class AdditionalLabel
     /**
      * @var string|null
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("text")
+     */
+    protected $text;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
@@ -26,12 +33,22 @@ class AdditionalLabel
      */
     protected $translationTag;
     
+    
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("text")
+     * @return string|null
      */
-    protected $text;
+    public function getText()
+    {
+        return $this->text;
+    }
+    
+    /**
+     * @param string|null $text
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+    }
     
     
     /**
@@ -65,23 +82,6 @@ class AdditionalLabel
     public function setTranslationTag($translationTag)
     {
         $this->translationTag = $translationTag;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getText()
-    {
-        return $this->text;
-    }
-    
-    /**
-     * @param string|null $text
-     */
-    public function setText($text)
-    {
-        $this->text = $text;
     }
     
     

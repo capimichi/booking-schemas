@@ -22,16 +22,16 @@ class Breadcrumb
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("name")
+     * @Serializer\SerializedName("destType")
      */
-    protected $name;
+    protected $destType;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("destType")
+     * @Serializer\SerializedName("name")
      */
-    protected $destType;
+    protected $name;
     
     /**
      * @var string[]|null
@@ -61,23 +61,6 @@ class Breadcrumb
     /**
      * @return string|null
      */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * @param string|null $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
     public function getDestType()
     {
         return $this->destType;
@@ -89,6 +72,23 @@ class Breadcrumb
     public function setDestType($destType)
     {
         $this->destType = $destType;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    /**
+     * @param string|null $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
     
     

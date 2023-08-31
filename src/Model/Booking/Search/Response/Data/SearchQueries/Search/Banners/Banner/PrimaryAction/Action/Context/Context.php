@@ -15,13 +15,6 @@ class Context
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("key")
-     */
-    protected $key;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("value")
      */
     protected $value;
@@ -33,22 +26,12 @@ class Context
      */
     protected $typename;
     
-    
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("key")
      */
-    public function getKey()
-    {
-        return $this->key;
-    }
-    
-    /**
-     * @param string|null $key
-     */
-    public function setKey($key)
-    {
-        $this->key = $key;
-    }
+    protected $key;
     
     
     /**
@@ -82,6 +65,23 @@ class Context
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getKey()
+    {
+        return $this->key;
+    }
+    
+    /**
+     * @param string|null $key
+     */
+    public function setKey($key)
+    {
+        $this->key = $key;
     }
     
     

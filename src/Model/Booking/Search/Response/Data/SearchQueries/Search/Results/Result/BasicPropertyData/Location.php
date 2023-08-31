@@ -29,16 +29,16 @@ class Location
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("countryCode")
+     * @Serializer\SerializedName("city")
      */
-    protected $countryCode;
+    protected $city;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("city")
+     * @Serializer\SerializedName("countryCode")
      */
-    protected $city;
+    protected $countryCode;
     
     
     /**
@@ -78,23 +78,6 @@ class Location
     /**
      * @return string|null
      */
-    public function getCountryCode()
-    {
-        return $this->countryCode;
-    }
-    
-    /**
-     * @param string|null $countryCode
-     */
-    public function setCountryCode($countryCode)
-    {
-        $this->countryCode = $countryCode;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
     public function getCity()
     {
         return $this->city;
@@ -106,6 +89,23 @@ class Location
     public function setCity($city)
     {
         $this->city = $city;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getCountryCode()
+    {
+        return $this->countryCode;
+    }
+    
+    /**
+     * @param string|null $countryCode
+     */
+    public function setCountryCode($countryCode)
+    {
+        $this->countryCode = $countryCode;
     }
     
     

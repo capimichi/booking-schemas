@@ -13,46 +13,11 @@ class Persuasion
 {
     
     /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("preferredPlus")
-     */
-    protected $preferredPlus;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("highlighted")
-     */
-    protected $highlighted;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("nativeAdsTracking")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $nativeAdsTracking;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("nativeAdId")
-     */
-    protected $nativeAdId;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("preferred")
-     */
-    protected $preferred;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("sponsoredAdsData")
-     */
-    protected $sponsoredAdsData;
+    protected $typename;
     
     /**
      * @var bool|null
@@ -64,16 +29,9 @@ class Persuasion
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @Serializer\SerializedName("bookedXTimesMessage")
      */
-    protected $typename;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("nativeAdsCpc")
-     */
-    protected $nativeAdsCpc;
+    protected $bookedXTimesMessage;
     
     /**
      * @var bool|null
@@ -85,6 +43,48 @@ class Persuasion
     /**
      * @var bool|null
      * @Serializer\Type("bool")
+     * @Serializer\SerializedName("highlighted")
+     */
+    protected $highlighted;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("nativeAdId")
+     */
+    protected $nativeAdId;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("nativeAdsCpc")
+     */
+    protected $nativeAdsCpc;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("nativeAdsTracking")
+     */
+    protected $nativeAdsTracking;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("preferred")
+     */
+    protected $preferred;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("preferredPlus")
+     */
+    protected $preferredPlus;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
      * @Serializer\SerializedName("showNativeAdLabel")
      */
     protected $showNativeAdLabel;
@@ -92,110 +92,25 @@ class Persuasion
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("bookedXTimesMessage")
+     * @Serializer\SerializedName("sponsoredAdsData")
      */
-    protected $bookedXTimesMessage;
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getPreferredPlus()
-    {
-        return $this->preferredPlus;
-    }
-    
-    /**
-     * @param bool|null $preferredPlus
-     */
-    public function setPreferredPlus($preferredPlus)
-    {
-        $this->preferredPlus = $preferredPlus;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getHighlighted()
-    {
-        return $this->highlighted;
-    }
-    
-    /**
-     * @param bool|null $highlighted
-     */
-    public function setHighlighted($highlighted)
-    {
-        $this->highlighted = $highlighted;
-    }
+    protected $sponsoredAdsData;
     
     
     /**
      * @return string|null
      */
-    public function getNativeAdsTracking()
+    public function getTypename()
     {
-        return $this->nativeAdsTracking;
+        return $this->typename;
     }
     
     /**
-     * @param string|null $nativeAdsTracking
+     * @param string|null $typename
      */
-    public function setNativeAdsTracking($nativeAdsTracking)
+    public function setTypename($typename)
     {
-        $this->nativeAdsTracking = $nativeAdsTracking;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getNativeAdId()
-    {
-        return $this->nativeAdId;
-    }
-    
-    /**
-     * @param string|null $nativeAdId
-     */
-    public function setNativeAdId($nativeAdId)
-    {
-        $this->nativeAdId = $nativeAdId;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getPreferred()
-    {
-        return $this->preferred;
-    }
-    
-    /**
-     * @param bool|null $preferred
-     */
-    public function setPreferred($preferred)
-    {
-        $this->preferred = $preferred;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getSponsoredAdsData()
-    {
-        return $this->sponsoredAdsData;
-    }
-    
-    /**
-     * @param string|null $sponsoredAdsData
-     */
-    public function setSponsoredAdsData($sponsoredAdsData)
-    {
-        $this->sponsoredAdsData = $sponsoredAdsData;
+        $this->typename = $typename;
     }
     
     
@@ -219,34 +134,17 @@ class Persuasion
     /**
      * @return string|null
      */
-    public function getTypename()
+    public function getBookedXTimesMessage()
     {
-        return $this->typename;
+        return $this->bookedXTimesMessage;
     }
     
     /**
-     * @param string|null $typename
+     * @param string|null $bookedXTimesMessage
      */
-    public function setTypename($typename)
+    public function setBookedXTimesMessage($bookedXTimesMessage)
     {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getNativeAdsCpc()
-    {
-        return $this->nativeAdsCpc;
-    }
-    
-    /**
-     * @param string|null $nativeAdsCpc
-     */
-    public function setNativeAdsCpc($nativeAdsCpc)
-    {
-        $this->nativeAdsCpc = $nativeAdsCpc;
+        $this->bookedXTimesMessage = $bookedXTimesMessage;
     }
     
     
@@ -270,6 +168,108 @@ class Persuasion
     /**
      * @return bool|null
      */
+    public function getHighlighted()
+    {
+        return $this->highlighted;
+    }
+    
+    /**
+     * @param bool|null $highlighted
+     */
+    public function setHighlighted($highlighted)
+    {
+        $this->highlighted = $highlighted;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getNativeAdId()
+    {
+        return $this->nativeAdId;
+    }
+    
+    /**
+     * @param string|null $nativeAdId
+     */
+    public function setNativeAdId($nativeAdId)
+    {
+        $this->nativeAdId = $nativeAdId;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getNativeAdsCpc()
+    {
+        return $this->nativeAdsCpc;
+    }
+    
+    /**
+     * @param string|null $nativeAdsCpc
+     */
+    public function setNativeAdsCpc($nativeAdsCpc)
+    {
+        $this->nativeAdsCpc = $nativeAdsCpc;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getNativeAdsTracking()
+    {
+        return $this->nativeAdsTracking;
+    }
+    
+    /**
+     * @param string|null $nativeAdsTracking
+     */
+    public function setNativeAdsTracking($nativeAdsTracking)
+    {
+        $this->nativeAdsTracking = $nativeAdsTracking;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
+    public function getPreferred()
+    {
+        return $this->preferred;
+    }
+    
+    /**
+     * @param bool|null $preferred
+     */
+    public function setPreferred($preferred)
+    {
+        $this->preferred = $preferred;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
+    public function getPreferredPlus()
+    {
+        return $this->preferredPlus;
+    }
+    
+    /**
+     * @param bool|null $preferredPlus
+     */
+    public function setPreferredPlus($preferredPlus)
+    {
+        $this->preferredPlus = $preferredPlus;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
     public function getShowNativeAdLabel()
     {
         return $this->showNativeAdLabel;
@@ -287,17 +287,17 @@ class Persuasion
     /**
      * @return string|null
      */
-    public function getBookedXTimesMessage()
+    public function getSponsoredAdsData()
     {
-        return $this->bookedXTimesMessage;
+        return $this->sponsoredAdsData;
     }
     
     /**
-     * @param string|null $bookedXTimesMessage
+     * @param string|null $sponsoredAdsData
      */
-    public function setBookedXTimesMessage($bookedXTimesMessage)
+    public function setSponsoredAdsData($sponsoredAdsData)
     {
-        $this->bookedXTimesMessage = $bookedXTimesMessage;
+        $this->sponsoredAdsData = $sponsoredAdsData;
     }
     
     

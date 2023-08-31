@@ -13,35 +13,18 @@ class Sorter
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option")
-     * @Serializer\SerializedName("option")
-     */
-    protected $option;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
     
-    
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option|null
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option")
+     * @Serializer\SerializedName("option")
      */
-    public function getOption()
-    {
-        return $this->option;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option|null $option
-     */
-    public function setOption($option)
-    {
-        $this->option = $option;
-    }
+    protected $option;
     
     
     /**
@@ -58,6 +41,23 @@ class Sorter
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option|null
+     */
+    public function getOption()
+    {
+        return $this->option;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Sorters\Sorter\Option|null $option
+     */
+    public function setOption($option)
+    {
+        $this->option = $option;
     }
     
     

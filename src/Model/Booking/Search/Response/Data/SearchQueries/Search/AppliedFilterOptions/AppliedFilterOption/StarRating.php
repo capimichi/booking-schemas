@@ -13,6 +13,20 @@ class StarRating
 {
     
     /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("value")
+     */
+    protected $value;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("symbol")
+     */
+    protected $symbol;
+    
+    /**
      * @var bool|null
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("showAdditionalInfoIcon")
@@ -29,23 +43,43 @@ class StarRating
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("symbol")
-     */
-    protected $symbol;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("value")
-     */
-    protected $value;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+    
+    /**
+     * @param int|null $value
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getSymbol()
+    {
+        return $this->symbol;
+    }
+    
+    /**
+     * @param string|null $symbol
+     */
+    public function setSymbol($symbol)
+    {
+        $this->symbol = $symbol;
+    }
     
     
     /**
@@ -79,40 +113,6 @@ class StarRating
     public function setCaption($caption)
     {
         $this->caption = $caption;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getSymbol()
-    {
-        return $this->symbol;
-    }
-    
-    /**
-     * @param string|null $symbol
-     */
-    public function setSymbol($symbol)
-    {
-        $this->symbol = $symbol;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getValue()
-    {
-        return $this->value;
-    }
-    
-    /**
-     * @param int|null $value
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
     }
     
     

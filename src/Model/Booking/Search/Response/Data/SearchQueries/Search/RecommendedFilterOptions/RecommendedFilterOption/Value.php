@@ -20,18 +20,18 @@ class Value
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("text")
-     */
-    protected $text;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\Value\TranslationTag|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\Value\TranslationTag")
      * @Serializer\SerializedName("translationTag")
      */
     protected $translationTag;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("text")
+     */
+    protected $text;
     
     
     /**
@@ -52,23 +52,6 @@ class Value
     
     
     /**
-     * @return string|null
-     */
-    public function getText()
-    {
-        return $this->text;
-    }
-    
-    /**
-     * @param string|null $text
-     */
-    public function setText($text)
-    {
-        $this->text = $text;
-    }
-    
-    
-    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\RecommendedFilterOptions\RecommendedFilterOption\Value\TranslationTag|null
      */
     public function getTranslationTag()
@@ -82,6 +65,23 @@ class Value
     public function setTranslationTag($translationTag)
     {
         $this->translationTag = $translationTag;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+    
+    /**
+     * @param string|null $text
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
     }
     
     

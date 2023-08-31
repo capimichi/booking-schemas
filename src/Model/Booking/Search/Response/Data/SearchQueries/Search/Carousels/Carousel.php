@@ -13,11 +13,53 @@ class Carousel
 {
     
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("priority")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("themeId")
      */
-    protected $priority;
+    protected $themeId;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
+     */
+    protected $typename;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("name")
+     */
+    protected $name;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("contentType")
+     */
+    protected $contentType;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("aggregatedCountsByFilterId")
+     */
+    protected $aggregatedCountsByFilterId;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("title")
+     */
+    protected $title;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("slides")
+     */
+    protected $slides;
     
     /**
      * @var int|null
@@ -34,13 +76,6 @@ class Carousel
     protected $carouselId;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("soldoutProperties")
-     */
-    protected $soldoutProperties;
-    
-    /**
      * @var int|null
      * @Serializer\Type("int")
      * @Serializer\SerializedName("position")
@@ -48,69 +83,136 @@ class Carousel
     protected $position;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("contentType")
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("priority")
      */
-    protected $contentType;
+    protected $priority;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("slides")
+     * @Serializer\SerializedName("soldoutProperties")
      */
-    protected $slides;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("title")
-     */
-    protected $title;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("themeId")
-     */
-    protected $themeId;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("aggregatedCountsByFilterId")
-     */
-    protected $aggregatedCountsByFilterId;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("name")
-     */
-    protected $name;
+    protected $soldoutProperties;
     
     
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getPriority()
+    public function getThemeId()
     {
-        return $this->priority;
+        return $this->themeId;
     }
     
     /**
-     * @param int|null $priority
+     * @param string|null $themeId
      */
-    public function setPriority($priority)
+    public function setThemeId($themeId)
     {
-        $this->priority = $priority;
+        $this->themeId = $themeId;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    /**
+     * @param string|null $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getContentType()
+    {
+        return $this->contentType;
+    }
+    
+    /**
+     * @param string|null $contentType
+     */
+    public function setContentType($contentType)
+    {
+        $this->contentType = $contentType;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getAggregatedCountsByFilterId()
+    {
+        return $this->aggregatedCountsByFilterId;
+    }
+    
+    /**
+     * @param string|null $aggregatedCountsByFilterId
+     */
+    public function setAggregatedCountsByFilterId($aggregatedCountsByFilterId)
+    {
+        $this->aggregatedCountsByFilterId = $aggregatedCountsByFilterId;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+    
+    /**
+     * @param string|null $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getSlides()
+    {
+        return $this->slides;
+    }
+    
+    /**
+     * @param string|null $slides
+     */
+    public function setSlides($slides)
+    {
+        $this->slides = $slides;
     }
     
     
@@ -149,23 +251,6 @@ class Carousel
     
     
     /**
-     * @return string|null
-     */
-    public function getSoldoutProperties()
-    {
-        return $this->soldoutProperties;
-    }
-    
-    /**
-     * @param string|null $soldoutProperties
-     */
-    public function setSoldoutProperties($soldoutProperties)
-    {
-        $this->soldoutProperties = $soldoutProperties;
-    }
-    
-    
-    /**
      * @return int|null
      */
     public function getPosition()
@@ -183,121 +268,36 @@ class Carousel
     
     
     /**
-     * @return string|null
+     * @return int|null
      */
-    public function getContentType()
+    public function getPriority()
     {
-        return $this->contentType;
+        return $this->priority;
     }
     
     /**
-     * @param string|null $contentType
+     * @param int|null $priority
      */
-    public function setContentType($contentType)
+    public function setPriority($priority)
     {
-        $this->contentType = $contentType;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getSlides()
-    {
-        return $this->slides;
-    }
-    
-    /**
-     * @param string|null $slides
-     */
-    public function setSlides($slides)
-    {
-        $this->slides = $slides;
+        $this->priority = $priority;
     }
     
     
     /**
      * @return string|null
      */
-    public function getTypename()
+    public function getSoldoutProperties()
     {
-        return $this->typename;
+        return $this->soldoutProperties;
     }
     
     /**
-     * @param string|null $typename
+     * @param string|null $soldoutProperties
      */
-    public function setTypename($typename)
+    public function setSoldoutProperties($soldoutProperties)
     {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-    
-    /**
-     * @param string|null $title
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getThemeId()
-    {
-        return $this->themeId;
-    }
-    
-    /**
-     * @param string|null $themeId
-     */
-    public function setThemeId($themeId)
-    {
-        $this->themeId = $themeId;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getAggregatedCountsByFilterId()
-    {
-        return $this->aggregatedCountsByFilterId;
-    }
-    
-    /**
-     * @param string|null $aggregatedCountsByFilterId
-     */
-    public function setAggregatedCountsByFilterId($aggregatedCountsByFilterId)
-    {
-        $this->aggregatedCountsByFilterId = $aggregatedCountsByFilterId;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * @param string|null $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
+        $this->soldoutProperties = $soldoutProperties;
     }
     
     

@@ -13,18 +13,11 @@ class PriceDisplayInfoIrene
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException>")
-     * @Serializer\SerializedName("taxExceptions")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice")
+     * @Serializer\SerializedName("displayPrice")
      */
-    protected $taxExceptions;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges")
-     * @Serializer\SerializedName("excludedCharges")
-     */
-    protected $excludedCharges;
+    protected $displayPrice;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Discounts\Discount[]|null
@@ -34,25 +27,11 @@ class PriceDisplayInfoIrene
     protected $discounts;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ChargesInfo|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ChargesInfo")
-     * @Serializer\SerializedName("chargesInfo")
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("useRoundedAmount")
      */
-    protected $chargesInfo;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards")
-     * @Serializer\SerializedName("rewards")
-     */
-    protected $rewards;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice")
-     * @Serializer\SerializedName("displayPrice")
-     */
-    protected $displayPrice;
+    protected $useRoundedAmount;
     
     /**
      * @var string|null
@@ -62,18 +41,25 @@ class PriceDisplayInfoIrene
     protected $typename;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Badges\Badge[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Badges\Badge>")
-     * @Serializer\SerializedName("badges")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards")
+     * @Serializer\SerializedName("rewards")
      */
-    protected $badges;
+    protected $rewards;
     
     /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("useRoundedAmount")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException>")
+     * @Serializer\SerializedName("taxExceptions")
      */
-    protected $useRoundedAmount;
+    protected $taxExceptions;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ChargesInfo|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ChargesInfo")
+     * @Serializer\SerializedName("chargesInfo")
+     */
+    protected $chargesInfo;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\PriceBeforeDiscount|null
@@ -82,38 +68,35 @@ class PriceDisplayInfoIrene
      */
     protected $priceBeforeDiscount;
     
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Badges\Badge[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Badges\Badge>")
+     * @Serializer\SerializedName("badges")
+     */
+    protected $badges;
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException[]|null
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges")
+     * @Serializer\SerializedName("excludedCharges")
      */
-    public function getTaxExceptions()
+    protected $excludedCharges;
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice|null
+     */
+    public function getDisplayPrice()
     {
-        return $this->taxExceptions;
+        return $this->displayPrice;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException[]|null $taxExceptions
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice|null $displayPrice
      */
-    public function setTaxExceptions($taxExceptions)
+    public function setDisplayPrice($displayPrice)
     {
-        $this->taxExceptions = $taxExceptions;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges|null
-     */
-    public function getExcludedCharges()
-    {
-        return $this->excludedCharges;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges|null $excludedCharges
-     */
-    public function setExcludedCharges($excludedCharges)
-    {
-        $this->excludedCharges = $excludedCharges;
+        $this->displayPrice = $displayPrice;
     }
     
     
@@ -135,53 +118,19 @@ class PriceDisplayInfoIrene
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ChargesInfo|null
+     * @return bool|null
      */
-    public function getChargesInfo()
+    public function getUseRoundedAmount()
     {
-        return $this->chargesInfo;
+        return $this->useRoundedAmount;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ChargesInfo|null $chargesInfo
+     * @param bool|null $useRoundedAmount
      */
-    public function setChargesInfo($chargesInfo)
+    public function setUseRoundedAmount($useRoundedAmount)
     {
-        $this->chargesInfo = $chargesInfo;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards|null
-     */
-    public function getRewards()
-    {
-        return $this->rewards;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards|null $rewards
-     */
-    public function setRewards($rewards)
-    {
-        $this->rewards = $rewards;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice|null
-     */
-    public function getDisplayPrice()
-    {
-        return $this->displayPrice;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice|null $displayPrice
-     */
-    public function setDisplayPrice($displayPrice)
-    {
-        $this->displayPrice = $displayPrice;
+        $this->useRoundedAmount = $useRoundedAmount;
     }
     
     
@@ -203,36 +152,53 @@ class PriceDisplayInfoIrene
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Badges\Badge[]|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards|null
      */
-    public function getBadges()
+    public function getRewards()
     {
-        return $this->badges;
+        return $this->rewards;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Badges\Badge[]|null $badges
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards|null $rewards
      */
-    public function setBadges($badges)
+    public function setRewards($rewards)
     {
-        $this->badges = $badges;
+        $this->rewards = $rewards;
     }
     
     
     /**
-     * @return bool|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException[]|null
      */
-    public function getUseRoundedAmount()
+    public function getTaxExceptions()
     {
-        return $this->useRoundedAmount;
+        return $this->taxExceptions;
     }
     
     /**
-     * @param bool|null $useRoundedAmount
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\TaxExceptions\TaxException[]|null $taxExceptions
      */
-    public function setUseRoundedAmount($useRoundedAmount)
+    public function setTaxExceptions($taxExceptions)
     {
-        $this->useRoundedAmount = $useRoundedAmount;
+        $this->taxExceptions = $taxExceptions;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ChargesInfo|null
+     */
+    public function getChargesInfo()
+    {
+        return $this->chargesInfo;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ChargesInfo|null $chargesInfo
+     */
+    public function setChargesInfo($chargesInfo)
+    {
+        $this->chargesInfo = $chargesInfo;
     }
     
     
@@ -250,6 +216,40 @@ class PriceDisplayInfoIrene
     public function setPriceBeforeDiscount($priceBeforeDiscount)
     {
         $this->priceBeforeDiscount = $priceBeforeDiscount;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Badges\Badge[]|null
+     */
+    public function getBadges()
+    {
+        return $this->badges;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Badges\Badge[]|null $badges
+     */
+    public function setBadges($badges)
+    {
+        $this->badges = $badges;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges|null
+     */
+    public function getExcludedCharges()
+    {
+        return $this->excludedCharges;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges|null $excludedCharges
+     */
+    public function setExcludedCharges($excludedCharges)
+    {
+        $this->excludedCharges = $excludedCharges;
     }
     
     

@@ -13,18 +13,11 @@ class PropertySustainability
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Tier|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Tier")
-     * @Serializer\SerializedName("tier")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $tier;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\ChainProgrammes\ChainProgramme[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\ChainProgrammes\ChainProgramme>")
-     * @Serializer\SerializedName("chainProgrammes")
-     */
-    protected $chainProgrammes;
+    protected $typename;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Certifications\Certification[]|null
@@ -34,18 +27,11 @@ class PropertySustainability
     protected $certifications;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\ChainProgrammes\ChainProgramme[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\ChainProgrammes\ChainProgramme>")
+     * @Serializer\SerializedName("chainProgrammes")
      */
-    protected $typename;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("isSustainable")
-     */
-    protected $isSustainable;
+    protected $chainProgrammes;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Facilities\Facility[]|null
@@ -55,44 +41,41 @@ class PropertySustainability
     protected $facilities;
     
     /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("isSustainable")
+     */
+    protected $isSustainable;
+    
+    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("levelId")
      */
     protected $levelId;
     
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Tier|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Tier")
+     * @Serializer\SerializedName("tier")
+     */
+    protected $tier;
+    
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Tier|null
+     * @return string|null
      */
-    public function getTier()
+    public function getTypename()
     {
-        return $this->tier;
+        return $this->typename;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Tier|null $tier
+     * @param string|null $typename
      */
-    public function setTier($tier)
+    public function setTypename($typename)
     {
-        $this->tier = $tier;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\ChainProgrammes\ChainProgramme[]|null
-     */
-    public function getChainProgrammes()
-    {
-        return $this->chainProgrammes;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\ChainProgrammes\ChainProgramme[]|null $chainProgrammes
-     */
-    public function setChainProgrammes($chainProgrammes)
-    {
-        $this->chainProgrammes = $chainProgrammes;
+        $this->typename = $typename;
     }
     
     
@@ -114,36 +97,19 @@ class PropertySustainability
     
     
     /**
-     * @return string|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\ChainProgrammes\ChainProgramme[]|null
      */
-    public function getTypename()
+    public function getChainProgrammes()
     {
-        return $this->typename;
+        return $this->chainProgrammes;
     }
     
     /**
-     * @param string|null $typename
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\ChainProgrammes\ChainProgramme[]|null $chainProgrammes
      */
-    public function setTypename($typename)
+    public function setChainProgrammes($chainProgrammes)
     {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getIsSustainable()
-    {
-        return $this->isSustainable;
-    }
-    
-    /**
-     * @param bool|null $isSustainable
-     */
-    public function setIsSustainable($isSustainable)
-    {
-        $this->isSustainable = $isSustainable;
+        $this->chainProgrammes = $chainProgrammes;
     }
     
     
@@ -165,6 +131,23 @@ class PropertySustainability
     
     
     /**
+     * @return bool|null
+     */
+    public function getIsSustainable()
+    {
+        return $this->isSustainable;
+    }
+    
+    /**
+     * @param bool|null $isSustainable
+     */
+    public function setIsSustainable($isSustainable)
+    {
+        $this->isSustainable = $isSustainable;
+    }
+    
+    
+    /**
      * @return string|null
      */
     public function getLevelId()
@@ -178,6 +161,23 @@ class PropertySustainability
     public function setLevelId($levelId)
     {
         $this->levelId = $levelId;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Tier|null
+     */
+    public function getTier()
+    {
+        return $this->tier;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability\Tier|null $tier
+     */
+    public function setTier($tier)
+    {
+        $this->tier = $tier;
     }
     
     

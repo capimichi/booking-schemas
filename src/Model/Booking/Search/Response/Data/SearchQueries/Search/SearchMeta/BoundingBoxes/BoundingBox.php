@@ -15,9 +15,9 @@ class BoundingBox
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("type")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $type;
+    protected $typename;
     
     /**
      * @var string|null
@@ -29,23 +29,16 @@ class BoundingBox
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("swLat")
-     */
-    protected $swLat;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("neLon")
      */
     protected $neLon;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("swLat")
+     */
+    protected $swLat;
     
     /**
      * @var string|null
@@ -54,21 +47,28 @@ class BoundingBox
      */
     protected $swLon;
     
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("type")
+     */
+    protected $type;
+    
     
     /**
      * @return string|null
      */
-    public function getType()
+    public function getTypename()
     {
-        return $this->type;
+        return $this->typename;
     }
     
     /**
-     * @param string|null $type
+     * @param string|null $typename
      */
-    public function setType($type)
+    public function setTypename($typename)
     {
-        $this->type = $type;
+        $this->typename = $typename;
     }
     
     
@@ -92,40 +92,6 @@ class BoundingBox
     /**
      * @return string|null
      */
-    public function getSwLat()
-    {
-        return $this->swLat;
-    }
-    
-    /**
-     * @param string|null $swLat
-     */
-    public function setSwLat($swLat)
-    {
-        $this->swLat = $swLat;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
     public function getNeLon()
     {
         return $this->neLon;
@@ -143,6 +109,23 @@ class BoundingBox
     /**
      * @return string|null
      */
+    public function getSwLat()
+    {
+        return $this->swLat;
+    }
+    
+    /**
+     * @param string|null $swLat
+     */
+    public function setSwLat($swLat)
+    {
+        $this->swLat = $swLat;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
     public function getSwLon()
     {
         return $this->swLon;
@@ -154,6 +137,23 @@ class BoundingBox
     public function setSwLon($swLon)
     {
         $this->swLon = $swLon;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+    
+    /**
+     * @param string|null $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
     }
     
     

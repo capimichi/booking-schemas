@@ -34,11 +34,25 @@ class Filter
     protected $field;
     
     /**
-     * @var array|null
-     * @Serializer\Type("array")
-     * @Serializer\SerializedName("trackOnClick")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\FilterLayout|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\FilterLayout")
+     * @Serializer\SerializedName("filterLayout")
      */
-    protected $trackOnClick;
+    protected $filterLayout;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("filterStyle")
+     */
+    protected $filterStyle;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("name")
+     */
+    protected $name;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option[]|null
@@ -48,11 +62,18 @@ class Filter
     protected $options;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\FilterLayout|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\FilterLayout")
-     * @Serializer\SerializedName("filterLayout")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions")
+     * @Serializer\SerializedName("sliderOptions")
      */
-    protected $filterLayout;
+    protected $sliderOptions;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay")
+     * @Serializer\SerializedName("sliderOptionsPerStay")
+     */
+    protected $sliderOptionsPerStay;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\StepperOptions\StepperOption[]|null
@@ -64,37 +85,9 @@ class Filter
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("name")
+     * @Serializer\SerializedName("subtitle")
      */
-    protected $name;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions")
-     * @Serializer\SerializedName("sliderOptions")
-     */
-    protected $sliderOptions;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\TrackOnView\TrackOnView[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\TrackOnView\TrackOnView>")
-     * @Serializer\SerializedName("trackOnView")
-     */
-    protected $trackOnView;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("filterStyle")
-     */
-    protected $filterStyle;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay")
-     * @Serializer\SerializedName("sliderOptionsPerStay")
-     */
-    protected $sliderOptionsPerStay;
+    protected $subtitle;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Title|null
@@ -104,11 +97,18 @@ class Filter
     protected $title;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("subtitle")
+     * @var array|null
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("trackOnClick")
      */
-    protected $subtitle;
+    protected $trackOnClick;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\TrackOnView\TrackOnView[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\TrackOnView\TrackOnView>")
+     * @Serializer\SerializedName("trackOnView")
+     */
+    protected $trackOnView;
     
     
     /**
@@ -163,19 +163,53 @@ class Filter
     
     
     /**
-     * @return array|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\FilterLayout|null
      */
-    public function getTrackOnClick()
+    public function getFilterLayout()
     {
-        return $this->trackOnClick;
+        return $this->filterLayout;
     }
     
     /**
-     * @param array|null $trackOnClick
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\FilterLayout|null $filterLayout
      */
-    public function setTrackOnClick($trackOnClick)
+    public function setFilterLayout($filterLayout)
     {
-        $this->trackOnClick = $trackOnClick;
+        $this->filterLayout = $filterLayout;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getFilterStyle()
+    {
+        return $this->filterStyle;
+    }
+    
+    /**
+     * @param string|null $filterStyle
+     */
+    public function setFilterStyle($filterStyle)
+    {
+        $this->filterStyle = $filterStyle;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    /**
+     * @param string|null $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
     
     
@@ -197,19 +231,36 @@ class Filter
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\FilterLayout|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions|null
      */
-    public function getFilterLayout()
+    public function getSliderOptions()
     {
-        return $this->filterLayout;
+        return $this->sliderOptions;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\FilterLayout|null $filterLayout
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions|null $sliderOptions
      */
-    public function setFilterLayout($filterLayout)
+    public function setSliderOptions($sliderOptions)
     {
-        $this->filterLayout = $filterLayout;
+        $this->sliderOptions = $sliderOptions;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay|null
+     */
+    public function getSliderOptionsPerStay()
+    {
+        return $this->sliderOptionsPerStay;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay|null $sliderOptionsPerStay
+     */
+    public function setSliderOptionsPerStay($sliderOptionsPerStay)
+    {
+        $this->sliderOptionsPerStay = $sliderOptionsPerStay;
     }
     
     
@@ -233,85 +284,17 @@ class Filter
     /**
      * @return string|null
      */
-    public function getName()
+    public function getSubtitle()
     {
-        return $this->name;
+        return $this->subtitle;
     }
     
     /**
-     * @param string|null $name
+     * @param string|null $subtitle
      */
-    public function setName($name)
+    public function setSubtitle($subtitle)
     {
-        $this->name = $name;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions|null
-     */
-    public function getSliderOptions()
-    {
-        return $this->sliderOptions;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptions|null $sliderOptions
-     */
-    public function setSliderOptions($sliderOptions)
-    {
-        $this->sliderOptions = $sliderOptions;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\TrackOnView\TrackOnView[]|null
-     */
-    public function getTrackOnView()
-    {
-        return $this->trackOnView;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\TrackOnView\TrackOnView[]|null $trackOnView
-     */
-    public function setTrackOnView($trackOnView)
-    {
-        $this->trackOnView = $trackOnView;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getFilterStyle()
-    {
-        return $this->filterStyle;
-    }
-    
-    /**
-     * @param string|null $filterStyle
-     */
-    public function setFilterStyle($filterStyle)
-    {
-        $this->filterStyle = $filterStyle;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay|null
-     */
-    public function getSliderOptionsPerStay()
-    {
-        return $this->sliderOptionsPerStay;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\SliderOptionsPerStay|null $sliderOptionsPerStay
-     */
-    public function setSliderOptionsPerStay($sliderOptionsPerStay)
-    {
-        $this->sliderOptionsPerStay = $sliderOptionsPerStay;
+        $this->subtitle = $subtitle;
     }
     
     
@@ -333,19 +316,36 @@ class Filter
     
     
     /**
-     * @return string|null
+     * @return array|null
      */
-    public function getSubtitle()
+    public function getTrackOnClick()
     {
-        return $this->subtitle;
+        return $this->trackOnClick;
     }
     
     /**
-     * @param string|null $subtitle
+     * @param array|null $trackOnClick
      */
-    public function setSubtitle($subtitle)
+    public function setTrackOnClick($trackOnClick)
     {
-        $this->subtitle = $subtitle;
+        $this->trackOnClick = $trackOnClick;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\TrackOnView\TrackOnView[]|null
+     */
+    public function getTrackOnView()
+    {
+        return $this->trackOnView;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\TrackOnView\TrackOnView[]|null $trackOnView
+     */
+    public function setTrackOnView($trackOnView)
+    {
+        $this->trackOnView = $trackOnView;
     }
     
     

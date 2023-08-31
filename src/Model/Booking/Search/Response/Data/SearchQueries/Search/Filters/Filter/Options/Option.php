@@ -13,18 +13,11 @@ class Option
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnDeSelect\TrackOnDeSelect[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnDeSelect\TrackOnDeSelect>")
-     * @Serializer\SerializedName("trackOnDeSelect")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $trackOnDeSelect;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("count")
-     */
-    protected $count;
+    protected $typename;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel|null
@@ -36,23 +29,30 @@ class Option
     /**
      * @var int|null
      * @Serializer\Type("int")
+     * @Serializer\SerializedName("count")
+     */
+    protected $count;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
      * @Serializer\SerializedName("optionId")
      */
     protected $optionId;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("selected")
      */
-    protected $typename;
+    protected $selected;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("urlId")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating")
+     * @Serializer\SerializedName("starRating")
      */
-    protected $urlId;
+    protected $starRating;
     
     /**
      * @var array|null
@@ -64,23 +64,37 @@ class Option
     /**
      * @var array|null
      * @Serializer\Type("array")
-     * @Serializer\SerializedName("trackOnViewPopular")
+     * @Serializer\SerializedName("trackOnClickPopular")
      */
-    protected $trackOnViewPopular;
+    protected $trackOnClickPopular;
     
     /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("selected")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnDeSelect\TrackOnDeSelect[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnDeSelect\TrackOnDeSelect>")
+     * @Serializer\SerializedName("trackOnDeSelect")
      */
-    protected $selected;
+    protected $trackOnDeSelect;
     
     /**
      * @var array|null
      * @Serializer\Type("array")
-     * @Serializer\SerializedName("trackOnClickPopular")
+     * @Serializer\SerializedName("trackOnDeSelectPopular")
      */
-    protected $trackOnClickPopular;
+    protected $trackOnDeSelectPopular;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnSelect\TrackOnSelect[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnSelect\TrackOnSelect>")
+     * @Serializer\SerializedName("trackOnSelect")
+     */
+    protected $trackOnSelect;
+    
+    /**
+     * @var array|null
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("trackOnSelectPopular")
+     */
+    protected $trackOnSelectPopular;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnView\TrackOnView[]|null
@@ -92,23 +106,16 @@ class Option
     /**
      * @var array|null
      * @Serializer\Type("array")
-     * @Serializer\SerializedName("trackOnSelectPopular")
+     * @Serializer\SerializedName("trackOnViewPopular")
      */
-    protected $trackOnSelectPopular;
+    protected $trackOnViewPopular;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnSelect\TrackOnSelect[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnSelect\TrackOnSelect>")
-     * @Serializer\SerializedName("trackOnSelect")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("urlId")
      */
-    protected $trackOnSelect;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating")
-     * @Serializer\SerializedName("starRating")
-     */
-    protected $starRating;
+    protected $urlId;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\Value|null
@@ -117,45 +124,21 @@ class Option
      */
     protected $value;
     
-    /**
-     * @var array|null
-     * @Serializer\Type("array")
-     * @Serializer\SerializedName("trackOnDeSelectPopular")
-     */
-    protected $trackOnDeSelectPopular;
-    
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnDeSelect\TrackOnDeSelect[]|null
+     * @return string|null
      */
-    public function getTrackOnDeSelect()
+    public function getTypename()
     {
-        return $this->trackOnDeSelect;
+        return $this->typename;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnDeSelect\TrackOnDeSelect[]|null $trackOnDeSelect
+     * @param string|null $typename
      */
-    public function setTrackOnDeSelect($trackOnDeSelect)
+    public function setTypename($typename)
     {
-        $this->trackOnDeSelect = $trackOnDeSelect;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getCount()
-    {
-        return $this->count;
-    }
-    
-    /**
-     * @param int|null $count
-     */
-    public function setCount($count)
-    {
-        $this->count = $count;
+        $this->typename = $typename;
     }
     
     
@@ -179,6 +162,23 @@ class Option
     /**
      * @return int|null
      */
+    public function getCount()
+    {
+        return $this->count;
+    }
+    
+    /**
+     * @param int|null $count
+     */
+    public function setCount($count)
+    {
+        $this->count = $count;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
     public function getOptionId()
     {
         return $this->optionId;
@@ -194,36 +194,36 @@ class Option
     
     
     /**
-     * @return string|null
+     * @return bool|null
      */
-    public function getTypename()
+    public function getSelected()
     {
-        return $this->typename;
+        return $this->selected;
     }
     
     /**
-     * @param string|null $typename
+     * @param bool|null $selected
      */
-    public function setTypename($typename)
+    public function setSelected($selected)
     {
-        $this->typename = $typename;
+        $this->selected = $selected;
     }
     
     
     /**
-     * @return string|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating|null
      */
-    public function getUrlId()
+    public function getStarRating()
     {
-        return $this->urlId;
+        return $this->starRating;
     }
     
     /**
-     * @param string|null $urlId
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating|null $starRating
      */
-    public function setUrlId($urlId)
+    public function setStarRating($starRating)
     {
-        $this->urlId = $urlId;
+        $this->starRating = $starRating;
     }
     
     
@@ -247,40 +247,6 @@ class Option
     /**
      * @return array|null
      */
-    public function getTrackOnViewPopular()
-    {
-        return $this->trackOnViewPopular;
-    }
-    
-    /**
-     * @param array|null $trackOnViewPopular
-     */
-    public function setTrackOnViewPopular($trackOnViewPopular)
-    {
-        $this->trackOnViewPopular = $trackOnViewPopular;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getSelected()
-    {
-        return $this->selected;
-    }
-    
-    /**
-     * @param bool|null $selected
-     */
-    public function setSelected($selected)
-    {
-        $this->selected = $selected;
-    }
-    
-    
-    /**
-     * @return array|null
-     */
     public function getTrackOnClickPopular()
     {
         return $this->trackOnClickPopular;
@@ -292,6 +258,74 @@ class Option
     public function setTrackOnClickPopular($trackOnClickPopular)
     {
         $this->trackOnClickPopular = $trackOnClickPopular;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnDeSelect\TrackOnDeSelect[]|null
+     */
+    public function getTrackOnDeSelect()
+    {
+        return $this->trackOnDeSelect;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnDeSelect\TrackOnDeSelect[]|null $trackOnDeSelect
+     */
+    public function setTrackOnDeSelect($trackOnDeSelect)
+    {
+        $this->trackOnDeSelect = $trackOnDeSelect;
+    }
+    
+    
+    /**
+     * @return array|null
+     */
+    public function getTrackOnDeSelectPopular()
+    {
+        return $this->trackOnDeSelectPopular;
+    }
+    
+    /**
+     * @param array|null $trackOnDeSelectPopular
+     */
+    public function setTrackOnDeSelectPopular($trackOnDeSelectPopular)
+    {
+        $this->trackOnDeSelectPopular = $trackOnDeSelectPopular;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnSelect\TrackOnSelect[]|null
+     */
+    public function getTrackOnSelect()
+    {
+        return $this->trackOnSelect;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnSelect\TrackOnSelect[]|null $trackOnSelect
+     */
+    public function setTrackOnSelect($trackOnSelect)
+    {
+        $this->trackOnSelect = $trackOnSelect;
+    }
+    
+    
+    /**
+     * @return array|null
+     */
+    public function getTrackOnSelectPopular()
+    {
+        return $this->trackOnSelectPopular;
+    }
+    
+    /**
+     * @param array|null $trackOnSelectPopular
+     */
+    public function setTrackOnSelectPopular($trackOnSelectPopular)
+    {
+        $this->trackOnSelectPopular = $trackOnSelectPopular;
     }
     
     
@@ -315,51 +349,34 @@ class Option
     /**
      * @return array|null
      */
-    public function getTrackOnSelectPopular()
+    public function getTrackOnViewPopular()
     {
-        return $this->trackOnSelectPopular;
+        return $this->trackOnViewPopular;
     }
     
     /**
-     * @param array|null $trackOnSelectPopular
+     * @param array|null $trackOnViewPopular
      */
-    public function setTrackOnSelectPopular($trackOnSelectPopular)
+    public function setTrackOnViewPopular($trackOnViewPopular)
     {
-        $this->trackOnSelectPopular = $trackOnSelectPopular;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnSelect\TrackOnSelect[]|null
-     */
-    public function getTrackOnSelect()
-    {
-        return $this->trackOnSelect;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\TrackOnSelect\TrackOnSelect[]|null $trackOnSelect
-     */
-    public function setTrackOnSelect($trackOnSelect)
-    {
-        $this->trackOnSelect = $trackOnSelect;
+        $this->trackOnViewPopular = $trackOnViewPopular;
     }
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating|null
+     * @return string|null
      */
-    public function getStarRating()
+    public function getUrlId()
     {
-        return $this->starRating;
+        return $this->urlId;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating|null $starRating
+     * @param string|null $urlId
      */
-    public function setStarRating($starRating)
+    public function setUrlId($urlId)
     {
-        $this->starRating = $starRating;
+        $this->urlId = $urlId;
     }
     
     
@@ -377,23 +394,6 @@ class Option
     public function setValue($value)
     {
         $this->value = $value;
-    }
-    
-    
-    /**
-     * @return array|null
-     */
-    public function getTrackOnDeSelectPopular()
-    {
-        return $this->trackOnDeSelectPopular;
-    }
-    
-    /**
-     * @param array|null $trackOnDeSelectPopular
-     */
-    public function setTrackOnDeSelectPopular($trackOnDeSelectPopular)
-    {
-        $this->trackOnDeSelectPopular = $trackOnDeSelectPopular;
     }
     
     

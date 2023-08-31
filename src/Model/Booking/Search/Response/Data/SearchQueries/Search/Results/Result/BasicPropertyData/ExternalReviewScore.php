@@ -15,16 +15,9 @@ class ExternalReviewScore
     /**
      * @var int|null
      * @Serializer\Type("int")
-     * @Serializer\SerializedName("score")
+     * @Serializer\SerializedName("reviewCount")
      */
-    protected $score;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
+    protected $reviewCount;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore\TotalScoreTextTag|null
@@ -34,11 +27,11 @@ class ExternalReviewScore
     protected $totalScoreTextTag;
     
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("reviewCount")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $reviewCount;
+    protected $typename;
     
     /**
      * @var bool|null
@@ -47,38 +40,28 @@ class ExternalReviewScore
      */
     protected $showScore;
     
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("score")
+     */
+    protected $score;
+    
     
     /**
      * @return int|null
      */
-    public function getScore()
+    public function getReviewCount()
     {
-        return $this->score;
+        return $this->reviewCount;
     }
     
     /**
-     * @param int|null $score
+     * @param int|null $reviewCount
      */
-    public function setScore($score)
+    public function setReviewCount($reviewCount)
     {
-        $this->score = $score;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
+        $this->reviewCount = $reviewCount;
     }
     
     
@@ -100,19 +83,19 @@ class ExternalReviewScore
     
     
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getReviewCount()
+    public function getTypename()
     {
-        return $this->reviewCount;
+        return $this->typename;
     }
     
     /**
-     * @param int|null $reviewCount
+     * @param string|null $typename
      */
-    public function setReviewCount($reviewCount)
+    public function setTypename($typename)
     {
-        $this->reviewCount = $reviewCount;
+        $this->typename = $typename;
     }
     
     
@@ -130,6 +113,23 @@ class ExternalReviewScore
     public function setShowScore($showScore)
     {
         $this->showScore = $showScore;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getScore()
+    {
+        return $this->score;
+    }
+    
+    /**
+     * @param int|null $score
+     */
+    public function setScore($score)
+    {
+        $this->score = $score;
     }
     
     

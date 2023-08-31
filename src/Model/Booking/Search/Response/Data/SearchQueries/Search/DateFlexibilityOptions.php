@@ -13,35 +13,18 @@ class DateFlexibilityOptions
 {
     
     /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("enabled")
-     */
-    protected $enabled;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
     
-    
     /**
-     * @return bool|null
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("enabled")
      */
-    public function getEnabled()
-    {
-        return $this->enabled;
-    }
-    
-    /**
-     * @param bool|null $enabled
-     */
-    public function setEnabled($enabled)
-    {
-        $this->enabled = $enabled;
-    }
+    protected $enabled;
     
     
     /**
@@ -58,6 +41,23 @@ class DateFlexibilityOptions
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+    
+    /**
+     * @param bool|null $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
     }
     
     

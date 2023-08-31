@@ -13,35 +13,18 @@ class BlockMatchTags
 {
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
-    
-    /**
      * @var bool|null
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("childStaysForFree")
      */
     protected $childStaysForFree;
     
-    
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
-    }
+    protected $typename;
     
     
     /**
@@ -58,6 +41,23 @@ class BlockMatchTags
     public function setChildStaysForFree($childStaysForFree)
     {
         $this->childStaysForFree = $childStaysForFree;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
     }
     
     

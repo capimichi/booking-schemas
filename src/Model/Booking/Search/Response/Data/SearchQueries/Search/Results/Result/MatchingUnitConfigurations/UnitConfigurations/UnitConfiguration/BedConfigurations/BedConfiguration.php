@@ -13,6 +13,13 @@ class BedConfiguration
 {
     
     /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbAllBeds")
+     */
+    protected $nbAllBeds;
+    
+    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
@@ -26,12 +33,22 @@ class BedConfiguration
      */
     protected $beds;
     
+    
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbAllBeds")
+     * @return int|null
      */
-    protected $nbAllBeds;
+    public function getNbAllBeds()
+    {
+        return $this->nbAllBeds;
+    }
+    
+    /**
+     * @param int|null $nbAllBeds
+     */
+    public function setNbAllBeds($nbAllBeds)
+    {
+        $this->nbAllBeds = $nbAllBeds;
+    }
     
     
     /**
@@ -65,23 +82,6 @@ class BedConfiguration
     public function setBeds($beds)
     {
         $this->beds = $beds;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getNbAllBeds()
-    {
-        return $this->nbAllBeds;
-    }
-    
-    /**
-     * @param int|null $nbAllBeds
-     */
-    public function setNbAllBeds($nbAllBeds)
-    {
-        $this->nbAllBeds = $nbAllBeds;
     }
     
     

@@ -13,25 +13,11 @@ class BasicPropertyData
 {
     
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("ufi")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $ufi;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("isTestProperty")
-     */
-    protected $isTestProperty;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore")
-     * @Serializer\SerializedName("reviewScore")
-     */
-    protected $reviewScore;
+    protected $typename;
     
     /**
      * @var int|null
@@ -41,32 +27,18 @@ class BasicPropertyData
     protected $accommodationTypeId;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig")
-     * @Serializer\SerializedName("paymentConfig")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\AlternativeExternalReviewsScore|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\AlternativeExternalReviewsScore")
+     * @Serializer\SerializedName("alternativeExternalReviewsScore")
      */
-    protected $paymentConfig;
+    protected $alternativeExternalReviewsScore;
     
     /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("isClosed")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore")
+     * @Serializer\SerializedName("externalReviewScore")
      */
-    protected $isClosed;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos")
-     * @Serializer\SerializedName("photos")
-     */
-    protected $photos;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("pageName")
-     */
-    protected $pageName;
+    protected $externalReviewScore;
     
     /**
      * @var int|null
@@ -76,25 +48,18 @@ class BasicPropertyData
     protected $id;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating")
-     * @Serializer\SerializedName("starRating")
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("isClosed")
      */
-    protected $starRating;
+    protected $isClosed;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("isTestProperty")
      */
-    protected $typename;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\AlternativeExternalReviewsScore|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\AlternativeExternalReviewsScore")
-     * @Serializer\SerializedName("alternativeExternalReviewsScore")
-     */
-    protected $alternativeExternalReviewsScore;
+    protected $isTestProperty;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Location|null
@@ -104,61 +69,62 @@ class BasicPropertyData
     protected $location;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore")
-     * @Serializer\SerializedName("externalReviewScore")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("pageName")
      */
-    protected $externalReviewScore;
+    protected $pageName;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig")
+     * @Serializer\SerializedName("paymentConfig")
+     */
+    protected $paymentConfig;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos")
+     * @Serializer\SerializedName("photos")
+     */
+    protected $photos;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore")
+     * @Serializer\SerializedName("reviewScore")
+     */
+    protected $reviewScore;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating")
+     * @Serializer\SerializedName("starRating")
+     */
+    protected $starRating;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("ufi")
+     */
+    protected $ufi;
     
     
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getUfi()
+    public function getTypename()
     {
-        return $this->ufi;
+        return $this->typename;
     }
     
     /**
-     * @param int|null $ufi
+     * @param string|null $typename
      */
-    public function setUfi($ufi)
+    public function setTypename($typename)
     {
-        $this->ufi = $ufi;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getIsTestProperty()
-    {
-        return $this->isTestProperty;
-    }
-    
-    /**
-     * @param bool|null $isTestProperty
-     */
-    public function setIsTestProperty($isTestProperty)
-    {
-        $this->isTestProperty = $isTestProperty;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore|null
-     */
-    public function getReviewScore()
-    {
-        return $this->reviewScore;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore|null $reviewScore
-     */
-    public function setReviewScore($reviewScore)
-    {
-        $this->reviewScore = $reviewScore;
+        $this->typename = $typename;
     }
     
     
@@ -180,70 +146,36 @@ class BasicPropertyData
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\AlternativeExternalReviewsScore|null
      */
-    public function getPaymentConfig()
+    public function getAlternativeExternalReviewsScore()
     {
-        return $this->paymentConfig;
+        return $this->alternativeExternalReviewsScore;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig|null $paymentConfig
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\AlternativeExternalReviewsScore|null $alternativeExternalReviewsScore
      */
-    public function setPaymentConfig($paymentConfig)
+    public function setAlternativeExternalReviewsScore($alternativeExternalReviewsScore)
     {
-        $this->paymentConfig = $paymentConfig;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getIsClosed()
-    {
-        return $this->isClosed;
-    }
-    
-    /**
-     * @param bool|null $isClosed
-     */
-    public function setIsClosed($isClosed)
-    {
-        $this->isClosed = $isClosed;
+        $this->alternativeExternalReviewsScore = $alternativeExternalReviewsScore;
     }
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore|null
      */
-    public function getPhotos()
+    public function getExternalReviewScore()
     {
-        return $this->photos;
+        return $this->externalReviewScore;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos|null $photos
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore|null $externalReviewScore
      */
-    public function setPhotos($photos)
+    public function setExternalReviewScore($externalReviewScore)
     {
-        $this->photos = $photos;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getPageName()
-    {
-        return $this->pageName;
-    }
-    
-    /**
-     * @param string|null $pageName
-     */
-    public function setPageName($pageName)
-    {
-        $this->pageName = $pageName;
+        $this->externalReviewScore = $externalReviewScore;
     }
     
     
@@ -265,53 +197,36 @@ class BasicPropertyData
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating|null
+     * @return bool|null
      */
-    public function getStarRating()
+    public function getIsClosed()
     {
-        return $this->starRating;
+        return $this->isClosed;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating|null $starRating
+     * @param bool|null $isClosed
      */
-    public function setStarRating($starRating)
+    public function setIsClosed($isClosed)
     {
-        $this->starRating = $starRating;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
+        $this->isClosed = $isClosed;
     }
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\AlternativeExternalReviewsScore|null
+     * @return bool|null
      */
-    public function getAlternativeExternalReviewsScore()
+    public function getIsTestProperty()
     {
-        return $this->alternativeExternalReviewsScore;
+        return $this->isTestProperty;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\AlternativeExternalReviewsScore|null $alternativeExternalReviewsScore
+     * @param bool|null $isTestProperty
      */
-    public function setAlternativeExternalReviewsScore($alternativeExternalReviewsScore)
+    public function setIsTestProperty($isTestProperty)
     {
-        $this->alternativeExternalReviewsScore = $alternativeExternalReviewsScore;
+        $this->isTestProperty = $isTestProperty;
     }
     
     
@@ -333,19 +248,104 @@ class BasicPropertyData
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore|null
+     * @return string|null
      */
-    public function getExternalReviewScore()
+    public function getPageName()
     {
-        return $this->externalReviewScore;
+        return $this->pageName;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ExternalReviewScore|null $externalReviewScore
+     * @param string|null $pageName
      */
-    public function setExternalReviewScore($externalReviewScore)
+    public function setPageName($pageName)
     {
-        $this->externalReviewScore = $externalReviewScore;
+        $this->pageName = $pageName;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig|null
+     */
+    public function getPaymentConfig()
+    {
+        return $this->paymentConfig;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\PaymentConfig|null $paymentConfig
+     */
+    public function setPaymentConfig($paymentConfig)
+    {
+        $this->paymentConfig = $paymentConfig;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos|null
+     */
+    public function getPhotos()
+    {
+        return $this->photos;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\Photos|null $photos
+     */
+    public function setPhotos($photos)
+    {
+        $this->photos = $photos;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore|null
+     */
+    public function getReviewScore()
+    {
+        return $this->reviewScore;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore|null $reviewScore
+     */
+    public function setReviewScore($reviewScore)
+    {
+        $this->reviewScore = $reviewScore;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating|null
+     */
+    public function getStarRating()
+    {
+        return $this->starRating;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating|null $starRating
+     */
+    public function setStarRating($starRating)
+    {
+        $this->starRating = $starRating;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getUfi()
+    {
+        return $this->ufi;
+    }
+    
+    /**
+     * @param int|null $ufi
+     */
+    public function setUfi($ufi)
+    {
+        $this->ufi = $ufi;
     }
     
     

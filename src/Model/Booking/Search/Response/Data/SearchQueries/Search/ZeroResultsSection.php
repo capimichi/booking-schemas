@@ -15,16 +15,23 @@ class ZeroResultsSection
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("primaryAction")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $primaryAction;
+    protected $typename;
+    
+    /**
+     * @var array|null
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("paragraphs")
+     */
+    protected $paragraphs;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @Serializer\SerializedName("primaryAction")
      */
-    protected $typename;
+    protected $primaryAction;
     
     /**
      * @var string|null
@@ -39,30 +46,6 @@ class ZeroResultsSection
      * @Serializer\SerializedName("type")
      */
     protected $type;
-    
-    /**
-     * @var array|null
-     * @Serializer\Type("array")
-     * @Serializer\SerializedName("paragraphs")
-     */
-    protected $paragraphs;
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getPrimaryAction()
-    {
-        return $this->primaryAction;
-    }
-    
-    /**
-     * @param string|null $primaryAction
-     */
-    public function setPrimaryAction($primaryAction)
-    {
-        $this->primaryAction = $primaryAction;
-    }
     
     
     /**
@@ -79,6 +62,40 @@ class ZeroResultsSection
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return array|null
+     */
+    public function getParagraphs()
+    {
+        return $this->paragraphs;
+    }
+    
+    /**
+     * @param array|null $paragraphs
+     */
+    public function setParagraphs($paragraphs)
+    {
+        $this->paragraphs = $paragraphs;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getPrimaryAction()
+    {
+        return $this->primaryAction;
+    }
+    
+    /**
+     * @param string|null $primaryAction
+     */
+    public function setPrimaryAction($primaryAction)
+    {
+        $this->primaryAction = $primaryAction;
     }
     
     
@@ -113,23 +130,6 @@ class ZeroResultsSection
     public function setType($type)
     {
         $this->type = $type;
-    }
-    
-    
-    /**
-     * @return array|null
-     */
-    public function getParagraphs()
-    {
-        return $this->paragraphs;
-    }
-    
-    /**
-     * @param array|null $paragraphs
-     */
-    public function setParagraphs($paragraphs)
-    {
-        $this->paragraphs = $paragraphs;
     }
     
     

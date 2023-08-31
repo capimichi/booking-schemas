@@ -13,11 +13,11 @@ class BlockId
 {
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("roomId")
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("mealPlanId")
      */
-    protected $roomId;
+    protected $mealPlanId;
     
     /**
      * @var int|null
@@ -29,23 +29,9 @@ class BlockId
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("policyGroupId")
-     */
-    protected $policyGroupId;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("mealPlanId")
-     */
-    protected $mealPlanId;
     
     /**
      * @var string|null
@@ -54,21 +40,35 @@ class BlockId
      */
     protected $packageId;
     
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("policyGroupId")
+     */
+    protected $policyGroupId;
     
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("roomId")
      */
-    public function getRoomId()
+    protected $roomId;
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getMealPlanId()
     {
-        return $this->roomId;
+        return $this->mealPlanId;
     }
     
     /**
-     * @param string|null $roomId
+     * @param int|null $mealPlanId
      */
-    public function setRoomId($roomId)
+    public function setMealPlanId($mealPlanId)
     {
-        $this->roomId = $roomId;
+        $this->mealPlanId = $mealPlanId;
     }
     
     
@@ -92,23 +92,6 @@ class BlockId
     /**
      * @return string|null
      */
-    public function getPolicyGroupId()
-    {
-        return $this->policyGroupId;
-    }
-    
-    /**
-     * @param string|null $policyGroupId
-     */
-    public function setPolicyGroupId($policyGroupId)
-    {
-        $this->policyGroupId = $policyGroupId;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
     public function getTypename()
     {
         return $this->typename;
@@ -120,23 +103,6 @@ class BlockId
     public function setTypename($typename)
     {
         $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getMealPlanId()
-    {
-        return $this->mealPlanId;
-    }
-    
-    /**
-     * @param int|null $mealPlanId
-     */
-    public function setMealPlanId($mealPlanId)
-    {
-        $this->mealPlanId = $mealPlanId;
     }
     
     
@@ -154,6 +120,40 @@ class BlockId
     public function setPackageId($packageId)
     {
         $this->packageId = $packageId;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getPolicyGroupId()
+    {
+        return $this->policyGroupId;
+    }
+    
+    /**
+     * @param string|null $policyGroupId
+     */
+    public function setPolicyGroupId($policyGroupId)
+    {
+        $this->policyGroupId = $policyGroupId;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getRoomId()
+    {
+        return $this->roomId;
+    }
+    
+    /**
+     * @param string|null $roomId
+     */
+    public function setRoomId($roomId)
+    {
+        $this->roomId = $roomId;
     }
     
     

@@ -13,95 +13,18 @@ class Result
 {
     
     /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
+     */
+    protected $typename;
+    
+    /**
      * @var bool|null
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("acceptsWalletCredit")
      */
     protected $acceptsWalletCredit;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("recommendedDatesLabel")
-     */
-    protected $recommendedDatesLabel;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MealPlanIncluded|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MealPlanIncluded")
-     * @Serializer\SerializedName("mealPlanIncluded")
-     */
-    protected $mealPlanIncluded;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location")
-     * @Serializer\SerializedName("location")
-     */
-    protected $location;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability")
-     * @Serializer\SerializedName("propertySustainability")
-     */
-    protected $propertySustainability;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene")
-     * @Serializer\SerializedName("priceDisplayInfoIrene")
-     */
-    protected $priceDisplayInfoIrene;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Ribbon|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Ribbon")
-     * @Serializer\SerializedName("ribbon")
-     */
-    protected $ribbon;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("licenseDetails")
-     */
-    protected $licenseDetails;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbWishlists")
-     */
-    protected $nbWishlists;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("showGeniusLoginMessage")
-     */
-    protected $showGeniusLoginMessage;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("showAdLabel")
-     */
-    protected $showAdLabel;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName")
-     * @Serializer\SerializedName("displayName")
-     */
-    protected $displayName;
-    
-    /**
-     * @var array|null
-     * @Serializer\Type("array")
-     * @Serializer\SerializedName("bookerExperienceContentUIComponentProps")
-     */
-    protected $bookerExperienceContentUIComponentProps;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Badges\Badge[]|null
@@ -111,27 +34,6 @@ class Result
     protected $badges;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion")
-     * @Serializer\SerializedName("persuasion")
-     */
-    protected $persuasion;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("showPrivateHostMessage")
-     */
-    protected $showPrivateHostMessage;
-    
-    /**
-     * @var array|null
-     * @Serializer\Type("array")
-     * @Serializer\SerializedName("topPhotos")
-     */
-    protected $topPhotos;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData")
      * @Serializer\SerializedName("basicPropertyData")
@@ -139,25 +41,46 @@ class Result
     protected $basicPropertyData;
     
     /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("isNewlyOpened")
-     */
-    protected $isNewlyOpened;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\RecommendedDate|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\RecommendedDate")
-     * @Serializer\SerializedName("recommendedDate")
-     */
-    protected $recommendedDate;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block[]|null
      * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block>")
      * @Serializer\SerializedName("blocks")
      */
     protected $blocks;
+    
+    /**
+     * @var array|null
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("bookerExperienceContentUIComponentProps")
+     */
+    protected $bookerExperienceContentUIComponentProps;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("bundleRatesAvailable")
+     */
+    protected $bundleRatesAvailable;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges")
+     * @Serializer\SerializedName("customBadges")
+     */
+    protected $customBadges;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Description|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Description")
+     * @Serializer\SerializedName("description")
+     */
+    protected $description;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName")
+     * @Serializer\SerializedName("displayName")
+     */
+    protected $displayName;
     
     /**
      * @var string|null
@@ -176,23 +99,58 @@ class Result
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("isInCompanyBudget")
      */
     protected $isInCompanyBudget;
     
     /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("isNewlyOpened")
+     */
+    protected $isNewlyOpened;
+    
+    /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("description")
+     * @Serializer\SerializedName("licenseDetails")
      */
-    protected $description;
+    protected $licenseDetails;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location")
+     * @Serializer\SerializedName("location")
+     */
+    protected $location;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations")
+     * @Serializer\SerializedName("matchingUnitConfigurations")
+     */
+    protected $matchingUnitConfigurations;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MealPlanIncluded|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MealPlanIncluded")
+     * @Serializer\SerializedName("mealPlanIncluded")
+     */
+    protected $mealPlanIncluded;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbWishlists")
+     */
+    protected $nbWishlists;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion")
+     * @Serializer\SerializedName("persuasion")
+     */
+    protected $persuasion;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Policies|null
@@ -202,11 +160,46 @@ class Result
     protected $policies;
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene")
+     * @Serializer\SerializedName("priceDisplayInfoIrene")
+     */
+    protected $priceDisplayInfoIrene;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability")
+     * @Serializer\SerializedName("propertySustainability")
+     */
+    protected $propertySustainability;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\RecommendedDate|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\RecommendedDate")
+     * @Serializer\SerializedName("recommendedDate")
+     */
+    protected $recommendedDate;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("recommendedDatesLabel")
+     */
+    protected $recommendedDatesLabel;
+    
+    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("relocationMode")
      */
     protected $relocationMode;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Ribbon|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Ribbon")
+     * @Serializer\SerializedName("ribbon")
+     */
+    protected $ribbon;
     
     /**
      * @var array|null
@@ -218,23 +211,23 @@ class Result
     /**
      * @var bool|null
      * @Serializer\Type("bool")
-     * @Serializer\SerializedName("visibilityBoosterEnabled")
+     * @Serializer\SerializedName("showAdLabel")
      */
-    protected $visibilityBoosterEnabled;
+    protected $showAdLabel;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\TrackOnView\TrackOnView[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\TrackOnView\TrackOnView>")
-     * @Serializer\SerializedName("trackOnView")
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("showGeniusLoginMessage")
      */
-    protected $trackOnView;
+    protected $showGeniusLoginMessage;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations")
-     * @Serializer\SerializedName("matchingUnitConfigurations")
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("showPrivateHostMessage")
      */
-    protected $matchingUnitConfigurations;
+    protected $showPrivateHostMessage;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo|null
@@ -244,18 +237,42 @@ class Result
     protected $soldOutInfo;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges")
-     * @Serializer\SerializedName("customBadges")
+     * @var array|null
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("topPhotos")
      */
-    protected $customBadges;
+    protected $topPhotos;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\TrackOnView\TrackOnView[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\TrackOnView\TrackOnView>")
+     * @Serializer\SerializedName("trackOnView")
+     */
+    protected $trackOnView;
     
     /**
      * @var bool|null
      * @Serializer\Type("bool")
-     * @Serializer\SerializedName("bundleRatesAvailable")
+     * @Serializer\SerializedName("visibilityBoosterEnabled")
      */
-    protected $bundleRatesAvailable;
+    protected $visibilityBoosterEnabled;
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
+    }
     
     
     /**
@@ -272,210 +289,6 @@ class Result
     public function setAcceptsWalletCredit($acceptsWalletCredit)
     {
         $this->acceptsWalletCredit = $acceptsWalletCredit;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getRecommendedDatesLabel()
-    {
-        return $this->recommendedDatesLabel;
-    }
-    
-    /**
-     * @param string|null $recommendedDatesLabel
-     */
-    public function setRecommendedDatesLabel($recommendedDatesLabel)
-    {
-        $this->recommendedDatesLabel = $recommendedDatesLabel;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MealPlanIncluded|null
-     */
-    public function getMealPlanIncluded()
-    {
-        return $this->mealPlanIncluded;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MealPlanIncluded|null $mealPlanIncluded
-     */
-    public function setMealPlanIncluded($mealPlanIncluded)
-    {
-        $this->mealPlanIncluded = $mealPlanIncluded;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location|null
-     */
-    public function getLocation()
-    {
-        return $this->location;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location|null $location
-     */
-    public function setLocation($location)
-    {
-        $this->location = $location;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability|null
-     */
-    public function getPropertySustainability()
-    {
-        return $this->propertySustainability;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability|null $propertySustainability
-     */
-    public function setPropertySustainability($propertySustainability)
-    {
-        $this->propertySustainability = $propertySustainability;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene|null
-     */
-    public function getPriceDisplayInfoIrene()
-    {
-        return $this->priceDisplayInfoIrene;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene|null $priceDisplayInfoIrene
-     */
-    public function setPriceDisplayInfoIrene($priceDisplayInfoIrene)
-    {
-        $this->priceDisplayInfoIrene = $priceDisplayInfoIrene;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Ribbon|null
-     */
-    public function getRibbon()
-    {
-        return $this->ribbon;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Ribbon|null $ribbon
-     */
-    public function setRibbon($ribbon)
-    {
-        $this->ribbon = $ribbon;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getLicenseDetails()
-    {
-        return $this->licenseDetails;
-    }
-    
-    /**
-     * @param string|null $licenseDetails
-     */
-    public function setLicenseDetails($licenseDetails)
-    {
-        $this->licenseDetails = $licenseDetails;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getNbWishlists()
-    {
-        return $this->nbWishlists;
-    }
-    
-    /**
-     * @param int|null $nbWishlists
-     */
-    public function setNbWishlists($nbWishlists)
-    {
-        $this->nbWishlists = $nbWishlists;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getShowGeniusLoginMessage()
-    {
-        return $this->showGeniusLoginMessage;
-    }
-    
-    /**
-     * @param bool|null $showGeniusLoginMessage
-     */
-    public function setShowGeniusLoginMessage($showGeniusLoginMessage)
-    {
-        $this->showGeniusLoginMessage = $showGeniusLoginMessage;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getShowAdLabel()
-    {
-        return $this->showAdLabel;
-    }
-    
-    /**
-     * @param bool|null $showAdLabel
-     */
-    public function setShowAdLabel($showAdLabel)
-    {
-        $this->showAdLabel = $showAdLabel;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName|null
-     */
-    public function getDisplayName()
-    {
-        return $this->displayName;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName|null $displayName
-     */
-    public function setDisplayName($displayName)
-    {
-        $this->displayName = $displayName;
-    }
-    
-    
-    /**
-     * @return array|null
-     */
-    public function getBookerExperienceContentUIComponentProps()
-    {
-        return $this->bookerExperienceContentUIComponentProps;
-    }
-    
-    /**
-     * @param array|null $bookerExperienceContentUIComponentProps
-     */
-    public function setBookerExperienceContentUIComponentProps($bookerExperienceContentUIComponentProps)
-    {
-        $this->bookerExperienceContentUIComponentProps = $bookerExperienceContentUIComponentProps;
     }
     
     
@@ -497,57 +310,6 @@ class Result
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion|null
-     */
-    public function getPersuasion()
-    {
-        return $this->persuasion;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion|null $persuasion
-     */
-    public function setPersuasion($persuasion)
-    {
-        $this->persuasion = $persuasion;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getShowPrivateHostMessage()
-    {
-        return $this->showPrivateHostMessage;
-    }
-    
-    /**
-     * @param bool|null $showPrivateHostMessage
-     */
-    public function setShowPrivateHostMessage($showPrivateHostMessage)
-    {
-        $this->showPrivateHostMessage = $showPrivateHostMessage;
-    }
-    
-    
-    /**
-     * @return array|null
-     */
-    public function getTopPhotos()
-    {
-        return $this->topPhotos;
-    }
-    
-    /**
-     * @param array|null $topPhotos
-     */
-    public function setTopPhotos($topPhotos)
-    {
-        $this->topPhotos = $topPhotos;
-    }
-    
-    
-    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData|null
      */
     public function getBasicPropertyData()
@@ -565,40 +327,6 @@ class Result
     
     
     /**
-     * @return bool|null
-     */
-    public function getIsNewlyOpened()
-    {
-        return $this->isNewlyOpened;
-    }
-    
-    /**
-     * @param bool|null $isNewlyOpened
-     */
-    public function setIsNewlyOpened($isNewlyOpened)
-    {
-        $this->isNewlyOpened = $isNewlyOpened;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\RecommendedDate|null
-     */
-    public function getRecommendedDate()
-    {
-        return $this->recommendedDate;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\RecommendedDate|null $recommendedDate
-     */
-    public function setRecommendedDate($recommendedDate)
-    {
-        $this->recommendedDate = $recommendedDate;
-    }
-    
-    
-    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block[]|null
      */
     public function getBlocks()
@@ -612,6 +340,91 @@ class Result
     public function setBlocks($blocks)
     {
         $this->blocks = $blocks;
+    }
+    
+    
+    /**
+     * @return array|null
+     */
+    public function getBookerExperienceContentUIComponentProps()
+    {
+        return $this->bookerExperienceContentUIComponentProps;
+    }
+    
+    /**
+     * @param array|null $bookerExperienceContentUIComponentProps
+     */
+    public function setBookerExperienceContentUIComponentProps($bookerExperienceContentUIComponentProps)
+    {
+        $this->bookerExperienceContentUIComponentProps = $bookerExperienceContentUIComponentProps;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
+    public function getBundleRatesAvailable()
+    {
+        return $this->bundleRatesAvailable;
+    }
+    
+    /**
+     * @param bool|null $bundleRatesAvailable
+     */
+    public function setBundleRatesAvailable($bundleRatesAvailable)
+    {
+        $this->bundleRatesAvailable = $bundleRatesAvailable;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges|null
+     */
+    public function getCustomBadges()
+    {
+        return $this->customBadges;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges|null $customBadges
+     */
+    public function setCustomBadges($customBadges)
+    {
+        $this->customBadges = $customBadges;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Description|null
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Description|null $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName|null
+     */
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\DisplayName|null $displayName
+     */
+    public function setDisplayName($displayName)
+    {
+        $this->displayName = $displayName;
     }
     
     
@@ -652,23 +465,6 @@ class Result
     /**
      * @return string|null
      */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
     public function getIsInCompanyBudget()
     {
         return $this->isInCompanyBudget;
@@ -684,19 +480,121 @@ class Result
     
     
     /**
-     * @return string|null
+     * @return bool|null
      */
-    public function getDescription()
+    public function getIsNewlyOpened()
     {
-        return $this->description;
+        return $this->isNewlyOpened;
     }
     
     /**
-     * @param string|null $description
+     * @param bool|null $isNewlyOpened
      */
-    public function setDescription($description)
+    public function setIsNewlyOpened($isNewlyOpened)
     {
-        $this->description = $description;
+        $this->isNewlyOpened = $isNewlyOpened;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getLicenseDetails()
+    {
+        return $this->licenseDetails;
+    }
+    
+    /**
+     * @param string|null $licenseDetails
+     */
+    public function setLicenseDetails($licenseDetails)
+    {
+        $this->licenseDetails = $licenseDetails;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location|null
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Location|null $location
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations|null
+     */
+    public function getMatchingUnitConfigurations()
+    {
+        return $this->matchingUnitConfigurations;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations|null $matchingUnitConfigurations
+     */
+    public function setMatchingUnitConfigurations($matchingUnitConfigurations)
+    {
+        $this->matchingUnitConfigurations = $matchingUnitConfigurations;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MealPlanIncluded|null
+     */
+    public function getMealPlanIncluded()
+    {
+        return $this->mealPlanIncluded;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MealPlanIncluded|null $mealPlanIncluded
+     */
+    public function setMealPlanIncluded($mealPlanIncluded)
+    {
+        $this->mealPlanIncluded = $mealPlanIncluded;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getNbWishlists()
+    {
+        return $this->nbWishlists;
+    }
+    
+    /**
+     * @param int|null $nbWishlists
+     */
+    public function setNbWishlists($nbWishlists)
+    {
+        $this->nbWishlists = $nbWishlists;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion|null
+     */
+    public function getPersuasion()
+    {
+        return $this->persuasion;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Persuasion|null $persuasion
+     */
+    public function setPersuasion($persuasion)
+    {
+        $this->persuasion = $persuasion;
     }
     
     
@@ -718,6 +616,74 @@ class Result
     
     
     /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene|null
+     */
+    public function getPriceDisplayInfoIrene()
+    {
+        return $this->priceDisplayInfoIrene;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene|null $priceDisplayInfoIrene
+     */
+    public function setPriceDisplayInfoIrene($priceDisplayInfoIrene)
+    {
+        $this->priceDisplayInfoIrene = $priceDisplayInfoIrene;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability|null
+     */
+    public function getPropertySustainability()
+    {
+        return $this->propertySustainability;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PropertySustainability|null $propertySustainability
+     */
+    public function setPropertySustainability($propertySustainability)
+    {
+        $this->propertySustainability = $propertySustainability;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\RecommendedDate|null
+     */
+    public function getRecommendedDate()
+    {
+        return $this->recommendedDate;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\RecommendedDate|null $recommendedDate
+     */
+    public function setRecommendedDate($recommendedDate)
+    {
+        $this->recommendedDate = $recommendedDate;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getRecommendedDatesLabel()
+    {
+        return $this->recommendedDatesLabel;
+    }
+    
+    /**
+     * @param string|null $recommendedDatesLabel
+     */
+    public function setRecommendedDatesLabel($recommendedDatesLabel)
+    {
+        $this->recommendedDatesLabel = $recommendedDatesLabel;
+    }
+    
+    
+    /**
      * @return string|null
      */
     public function getRelocationMode()
@@ -731,6 +697,23 @@ class Result
     public function setRelocationMode($relocationMode)
     {
         $this->relocationMode = $relocationMode;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Ribbon|null
+     */
+    public function getRibbon()
+    {
+        return $this->ribbon;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Ribbon|null $ribbon
+     */
+    public function setRibbon($ribbon)
+    {
+        $this->ribbon = $ribbon;
     }
     
     
@@ -754,51 +737,51 @@ class Result
     /**
      * @return bool|null
      */
-    public function getVisibilityBoosterEnabled()
+    public function getShowAdLabel()
     {
-        return $this->visibilityBoosterEnabled;
+        return $this->showAdLabel;
     }
     
     /**
-     * @param bool|null $visibilityBoosterEnabled
+     * @param bool|null $showAdLabel
      */
-    public function setVisibilityBoosterEnabled($visibilityBoosterEnabled)
+    public function setShowAdLabel($showAdLabel)
     {
-        $this->visibilityBoosterEnabled = $visibilityBoosterEnabled;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\TrackOnView\TrackOnView[]|null
-     */
-    public function getTrackOnView()
-    {
-        return $this->trackOnView;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\TrackOnView\TrackOnView[]|null $trackOnView
-     */
-    public function setTrackOnView($trackOnView)
-    {
-        $this->trackOnView = $trackOnView;
+        $this->showAdLabel = $showAdLabel;
     }
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations|null
+     * @return bool|null
      */
-    public function getMatchingUnitConfigurations()
+    public function getShowGeniusLoginMessage()
     {
-        return $this->matchingUnitConfigurations;
+        return $this->showGeniusLoginMessage;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations|null $matchingUnitConfigurations
+     * @param bool|null $showGeniusLoginMessage
      */
-    public function setMatchingUnitConfigurations($matchingUnitConfigurations)
+    public function setShowGeniusLoginMessage($showGeniusLoginMessage)
     {
-        $this->matchingUnitConfigurations = $matchingUnitConfigurations;
+        $this->showGeniusLoginMessage = $showGeniusLoginMessage;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
+    public function getShowPrivateHostMessage()
+    {
+        return $this->showPrivateHostMessage;
+    }
+    
+    /**
+     * @param bool|null $showPrivateHostMessage
+     */
+    public function setShowPrivateHostMessage($showPrivateHostMessage)
+    {
+        $this->showPrivateHostMessage = $showPrivateHostMessage;
     }
     
     
@@ -820,36 +803,53 @@ class Result
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges|null
+     * @return array|null
      */
-    public function getCustomBadges()
+    public function getTopPhotos()
     {
-        return $this->customBadges;
+        return $this->topPhotos;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\CustomBadges|null $customBadges
+     * @param array|null $topPhotos
      */
-    public function setCustomBadges($customBadges)
+    public function setTopPhotos($topPhotos)
     {
-        $this->customBadges = $customBadges;
+        $this->topPhotos = $topPhotos;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\TrackOnView\TrackOnView[]|null
+     */
+    public function getTrackOnView()
+    {
+        return $this->trackOnView;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\TrackOnView\TrackOnView[]|null $trackOnView
+     */
+    public function setTrackOnView($trackOnView)
+    {
+        $this->trackOnView = $trackOnView;
     }
     
     
     /**
      * @return bool|null
      */
-    public function getBundleRatesAvailable()
+    public function getVisibilityBoosterEnabled()
     {
-        return $this->bundleRatesAvailable;
+        return $this->visibilityBoosterEnabled;
     }
     
     /**
-     * @param bool|null $bundleRatesAvailable
+     * @param bool|null $visibilityBoosterEnabled
      */
-    public function setBundleRatesAvailable($bundleRatesAvailable)
+    public function setVisibilityBoosterEnabled($visibilityBoosterEnabled)
     {
-        $this->bundleRatesAvailable = $bundleRatesAvailable;
+        $this->visibilityBoosterEnabled = $visibilityBoosterEnabled;
     }
     
     

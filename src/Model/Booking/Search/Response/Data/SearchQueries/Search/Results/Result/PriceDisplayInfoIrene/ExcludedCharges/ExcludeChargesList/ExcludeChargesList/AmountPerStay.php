@@ -15,16 +15,23 @@ class AmountPerStay
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("amountUnformatted")
+     * @Serializer\SerializedName("amount")
      */
-    protected $amountUnformatted;
+    protected $amount;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("amount")
+     * @Serializer\SerializedName("currency")
      */
-    protected $amount;
+    protected $currency;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("amountUnformatted")
+     */
+    protected $amountUnformatted;
     
     /**
      * @var string|null
@@ -39,30 +46,6 @@ class AmountPerStay
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("currency")
-     */
-    protected $currency;
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getAmountUnformatted()
-    {
-        return $this->amountUnformatted;
-    }
-    
-    /**
-     * @param string|null $amountUnformatted
-     */
-    public function setAmountUnformatted($amountUnformatted)
-    {
-        $this->amountUnformatted = $amountUnformatted;
-    }
     
     
     /**
@@ -79,6 +62,40 @@ class AmountPerStay
     public function setAmount($amount)
     {
         $this->amount = $amount;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+    
+    /**
+     * @param string|null $currency
+     */
+    public function setCurrency($currency)
+    {
+        $this->currency = $currency;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getAmountUnformatted()
+    {
+        return $this->amountUnformatted;
+    }
+    
+    /**
+     * @param string|null $amountUnformatted
+     */
+    public function setAmountUnformatted($amountUnformatted)
+    {
+        $this->amountUnformatted = $amountUnformatted;
     }
     
     
@@ -113,23 +130,6 @@ class AmountPerStay
     public function setTypename($typename)
     {
         $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getCurrency()
-    {
-        return $this->currency;
-    }
-    
-    /**
-     * @param string|null $currency
-     */
-    public function setCurrency($currency)
-    {
-        $this->currency = $currency;
     }
     
     

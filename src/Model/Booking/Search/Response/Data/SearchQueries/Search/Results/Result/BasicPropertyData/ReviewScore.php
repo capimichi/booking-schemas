@@ -13,11 +13,39 @@ class ReviewScore
 {
     
     /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
+     */
+    protected $typename;
+    
+    /**
      * @var int|null
      * @Serializer\Type("int")
+     * @Serializer\SerializedName("reviewCount")
+     */
+    protected $reviewCount;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("score")
+     */
+    protected $score;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("secondaryScore")
      */
     protected $secondaryScore;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\SecondaryTextTag|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\SecondaryTextTag")
+     * @Serializer\SerializedName("secondaryTextTag")
+     */
+    protected $secondaryTextTag;
     
     /**
      * @var bool|null
@@ -34,43 +62,66 @@ class ReviewScore
     protected $showSecondaryScore;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\SecondaryTextTag|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\SecondaryTextTag")
-     * @Serializer\SerializedName("secondaryTextTag")
-     */
-    protected $secondaryTextTag;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\TotalScoreTextTag|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\TotalScoreTextTag")
      * @Serializer\SerializedName("totalScoreTextTag")
      */
     protected $totalScoreTextTag;
     
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("reviewCount")
-     */
-    protected $reviewCount;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @return string|null
      */
-    protected $typename;
+    public function getTypename()
+    {
+        return $this->typename;
+    }
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("score")
+     * @param string|null $typename
      */
-    protected $score;
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
+    }
     
     
     /**
      * @return int|null
+     */
+    public function getReviewCount()
+    {
+        return $this->reviewCount;
+    }
+    
+    /**
+     * @param int|null $reviewCount
+     */
+    public function setReviewCount($reviewCount)
+    {
+        $this->reviewCount = $reviewCount;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getScore()
+    {
+        return $this->score;
+    }
+    
+    /**
+     * @param string|null $score
+     */
+    public function setScore($score)
+    {
+        $this->score = $score;
+    }
+    
+    
+    /**
+     * @return string|null
      */
     public function getSecondaryScore()
     {
@@ -78,11 +129,28 @@ class ReviewScore
     }
     
     /**
-     * @param int|null $secondaryScore
+     * @param string|null $secondaryScore
      */
     public function setSecondaryScore($secondaryScore)
     {
         $this->secondaryScore = $secondaryScore;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\SecondaryTextTag|null
+     */
+    public function getSecondaryTextTag()
+    {
+        return $this->secondaryTextTag;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\SecondaryTextTag|null $secondaryTextTag
+     */
+    public function setSecondaryTextTag($secondaryTextTag)
+    {
+        $this->secondaryTextTag = $secondaryTextTag;
     }
     
     
@@ -121,23 +189,6 @@ class ReviewScore
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\SecondaryTextTag|null
-     */
-    public function getSecondaryTextTag()
-    {
-        return $this->secondaryTextTag;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\SecondaryTextTag|null $secondaryTextTag
-     */
-    public function setSecondaryTextTag($secondaryTextTag)
-    {
-        $this->secondaryTextTag = $secondaryTextTag;
-    }
-    
-    
-    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\ReviewScore\TotalScoreTextTag|null
      */
     public function getTotalScoreTextTag()
@@ -151,57 +202,6 @@ class ReviewScore
     public function setTotalScoreTextTag($totalScoreTextTag)
     {
         $this->totalScoreTextTag = $totalScoreTextTag;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getReviewCount()
-    {
-        return $this->reviewCount;
-    }
-    
-    /**
-     * @param int|null $reviewCount
-     */
-    public function setReviewCount($reviewCount)
-    {
-        $this->reviewCount = $reviewCount;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getScore()
-    {
-        return $this->score;
-    }
-    
-    /**
-     * @param string|null $score
-     */
-    public function setScore($score)
-    {
-        $this->score = $score;
     }
     
     

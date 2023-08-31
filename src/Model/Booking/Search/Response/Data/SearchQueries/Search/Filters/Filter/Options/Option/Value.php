@@ -15,6 +15,13 @@ class Value
     /**
      * @var string|null
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
+     */
+    protected $typename;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("text")
      */
     protected $text;
@@ -26,12 +33,22 @@ class Value
      */
     protected $translationTag;
     
+    
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @return string|null
      */
-    protected $typename;
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
+    }
     
     
     /**
@@ -65,23 +82,6 @@ class Value
     public function setTranslationTag($translationTag)
     {
         $this->translationTag = $translationTag;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
     }
     
     

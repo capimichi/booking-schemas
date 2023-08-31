@@ -15,16 +15,16 @@ class OnlyXLeftMessage
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("tag")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $tag;
+    protected $typename;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("translation")
+     * @Serializer\SerializedName("tag")
      */
-    protected $translation;
+    protected $tag;
     
     /**
      * @var array|null
@@ -36,9 +36,26 @@ class OnlyXLeftMessage
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @Serializer\SerializedName("translation")
      */
-    protected $typename;
+    protected $translation;
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
+    }
     
     
     /**
@@ -55,23 +72,6 @@ class OnlyXLeftMessage
     public function setTag($tag)
     {
         $this->tag = $tag;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTranslation()
-    {
-        return $this->translation;
-    }
-    
-    /**
-     * @param string|null $translation
-     */
-    public function setTranslation($translation)
-    {
-        $this->translation = $translation;
     }
     
     
@@ -95,17 +95,17 @@ class OnlyXLeftMessage
     /**
      * @return string|null
      */
-    public function getTypename()
+    public function getTranslation()
     {
-        return $this->typename;
+        return $this->translation;
     }
     
     /**
-     * @param string|null $typename
+     * @param string|null $translation
      */
-    public function setTypename($typename)
+    public function setTranslation($translation)
     {
-        $this->typename = $typename;
+        $this->translation = $translation;
     }
     
     

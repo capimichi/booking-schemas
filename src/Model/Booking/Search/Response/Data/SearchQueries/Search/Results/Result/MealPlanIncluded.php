@@ -15,13 +15,6 @@ class MealPlanIncluded
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("mealPlanType")
-     */
-    protected $mealPlanType;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
@@ -29,26 +22,16 @@ class MealPlanIncluded
     /**
      * @var string|null
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("mealPlanType")
+     */
+    protected $mealPlanType;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("text")
      */
     protected $text;
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getMealPlanType()
-    {
-        return $this->mealPlanType;
-    }
-    
-    /**
-     * @param string|null $mealPlanType
-     */
-    public function setMealPlanType($mealPlanType)
-    {
-        $this->mealPlanType = $mealPlanType;
-    }
     
     
     /**
@@ -65,6 +48,23 @@ class MealPlanIncluded
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getMealPlanType()
+    {
+        return $this->mealPlanType;
+    }
+    
+    /**
+     * @param string|null $mealPlanType
+     */
+    public function setMealPlanType($mealPlanType)
+    {
+        $this->mealPlanType = $mealPlanType;
     }
     
     

@@ -22,6 +22,13 @@ class SkiLandmarkData
     /**
      * @var string|null
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("slopeTotalLengthFormatted")
+     */
+    protected $slopeTotalLengthFormatted;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
@@ -32,13 +39,6 @@ class SkiLandmarkData
      * @Serializer\SerializedName("totalLiftsCount")
      */
     protected $totalLiftsCount;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("slopeTotalLengthFormatted")
-     */
-    protected $slopeTotalLengthFormatted;
     
     
     /**
@@ -55,6 +55,23 @@ class SkiLandmarkData
     public function setResortId($resortId)
     {
         $this->resortId = $resortId;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getSlopeTotalLengthFormatted()
+    {
+        return $this->slopeTotalLengthFormatted;
+    }
+    
+    /**
+     * @param string|null $slopeTotalLengthFormatted
+     */
+    public function setSlopeTotalLengthFormatted($slopeTotalLengthFormatted)
+    {
+        $this->slopeTotalLengthFormatted = $slopeTotalLengthFormatted;
     }
     
     
@@ -89,23 +106,6 @@ class SkiLandmarkData
     public function setTotalLiftsCount($totalLiftsCount)
     {
         $this->totalLiftsCount = $totalLiftsCount;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getSlopeTotalLengthFormatted()
-    {
-        return $this->slopeTotalLengthFormatted;
-    }
-    
-    /**
-     * @param string|null $slopeTotalLengthFormatted
-     */
-    public function setSlopeTotalLengthFormatted($slopeTotalLengthFormatted)
-    {
-        $this->slopeTotalLengthFormatted = $slopeTotalLengthFormatted;
     }
     
     

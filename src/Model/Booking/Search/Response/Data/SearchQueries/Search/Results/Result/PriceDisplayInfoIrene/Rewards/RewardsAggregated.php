@@ -13,13 +13,6 @@ class RewardsAggregated
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\Copy|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\Copy")
-     * @Serializer\SerializedName("copy")
-     */
-    protected $copy;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
@@ -27,28 +20,18 @@ class RewardsAggregated
     protected $typename;
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\Copy|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\Copy")
+     * @Serializer\SerializedName("copy")
+     */
+    protected $copy;
+    
+    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\AmountPerStay|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\AmountPerStay")
      * @Serializer\SerializedName("amountPerStay")
      */
     protected $amountPerStay;
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\Copy|null
-     */
-    public function getCopy()
-    {
-        return $this->copy;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\Copy|null $copy
-     */
-    public function setCopy($copy)
-    {
-        $this->copy = $copy;
-    }
     
     
     /**
@@ -65,6 +48,23 @@ class RewardsAggregated
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\Copy|null
+     */
+    public function getCopy()
+    {
+        return $this->copy;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\Rewards\RewardsAggregated\Copy|null $copy
+     */
+    public function setCopy($copy)
+    {
+        $this->copy = $copy;
     }
     
     

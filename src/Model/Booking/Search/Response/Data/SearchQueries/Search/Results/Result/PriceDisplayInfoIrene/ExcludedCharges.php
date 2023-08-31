@@ -13,13 +13,6 @@ class ExcludedCharges
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList>")
-     * @Serializer\SerializedName("excludeChargesList")
-     */
-    protected $excludeChargesList;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesAggregated|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesAggregated")
      * @Serializer\SerializedName("excludeChargesAggregated")
@@ -33,22 +26,12 @@ class ExcludedCharges
      */
     protected $typename;
     
-    
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList[]|null
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList>")
+     * @Serializer\SerializedName("excludeChargesList")
      */
-    public function getExcludeChargesList()
-    {
-        return $this->excludeChargesList;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList[]|null $excludeChargesList
-     */
-    public function setExcludeChargesList($excludeChargesList)
-    {
-        $this->excludeChargesList = $excludeChargesList;
-    }
+    protected $excludeChargesList;
     
     
     /**
@@ -82,6 +65,23 @@ class ExcludedCharges
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList[]|null
+     */
+    public function getExcludeChargesList()
+    {
+        return $this->excludeChargesList;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\ExcludedCharges\ExcludeChargesList\ExcludeChargesList[]|null $excludeChargesList
+     */
+    public function setExcludeChargesList($excludeChargesList)
+    {
+        $this->excludeChargesList = $excludeChargesList;
     }
     
     

@@ -20,39 +20,11 @@ class Block
     protected $blockId;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\ThirdPartyInventoryContext|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\ThirdPartyInventoryContext")
-     * @Serializer\SerializedName("thirdPartyInventoryContext")
-     */
-    protected $thirdPartyInventoryContext;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\FinalPrice|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\FinalPrice")
      * @Serializer\SerializedName("finalPrice")
      */
     protected $finalPrice;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("hasCrib")
-     */
-    protected $hasCrib;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OnlyXLeftMessage|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OnlyXLeftMessage")
-     * @Serializer\SerializedName("onlyXLeftMessage")
-     */
-    protected $onlyXLeftMessage;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OriginalPrice|null
@@ -62,11 +34,11 @@ class Block
     protected $originalPrice;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\BlockMatchTags|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\BlockMatchTags")
-     * @Serializer\SerializedName("blockMatchTags")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\ThirdPartyInventoryContext|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\ThirdPartyInventoryContext")
+     * @Serializer\SerializedName("thirdPartyInventoryContext")
      */
-    protected $blockMatchTags;
+    protected $thirdPartyInventoryContext;
     
     /**
      * @var string|null
@@ -74,6 +46,34 @@ class Block
      * @Serializer\SerializedName("freeCancellationUntil")
      */
     protected $freeCancellationUntil;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
+     */
+    protected $typename;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OnlyXLeftMessage|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OnlyXLeftMessage")
+     * @Serializer\SerializedName("onlyXLeftMessage")
+     */
+    protected $onlyXLeftMessage;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\BlockMatchTags|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\BlockMatchTags")
+     * @Serializer\SerializedName("blockMatchTags")
+     */
+    protected $blockMatchTags;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("hasCrib")
+     */
+    protected $hasCrib;
     
     
     /**
@@ -90,23 +90,6 @@ class Block
     public function setBlockId($blockId)
     {
         $this->blockId = $blockId;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\ThirdPartyInventoryContext|null
-     */
-    public function getThirdPartyInventoryContext()
-    {
-        return $this->thirdPartyInventoryContext;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\ThirdPartyInventoryContext|null $thirdPartyInventoryContext
-     */
-    public function setThirdPartyInventoryContext($thirdPartyInventoryContext)
-    {
-        $this->thirdPartyInventoryContext = $thirdPartyInventoryContext;
     }
     
     
@@ -128,6 +111,57 @@ class Block
     
     
     /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OriginalPrice|null
+     */
+    public function getOriginalPrice()
+    {
+        return $this->originalPrice;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OriginalPrice|null $originalPrice
+     */
+    public function setOriginalPrice($originalPrice)
+    {
+        $this->originalPrice = $originalPrice;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\ThirdPartyInventoryContext|null
+     */
+    public function getThirdPartyInventoryContext()
+    {
+        return $this->thirdPartyInventoryContext;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\ThirdPartyInventoryContext|null $thirdPartyInventoryContext
+     */
+    public function setThirdPartyInventoryContext($thirdPartyInventoryContext)
+    {
+        $this->thirdPartyInventoryContext = $thirdPartyInventoryContext;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getFreeCancellationUntil()
+    {
+        return $this->freeCancellationUntil;
+    }
+    
+    /**
+     * @param string|null $freeCancellationUntil
+     */
+    public function setFreeCancellationUntil($freeCancellationUntil)
+    {
+        $this->freeCancellationUntil = $freeCancellationUntil;
+    }
+    
+    
+    /**
      * @return string|null
      */
     public function getTypename()
@@ -141,23 +175,6 @@ class Block
     public function setTypename($typename)
     {
         $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getHasCrib()
-    {
-        return $this->hasCrib;
-    }
-    
-    /**
-     * @param bool|null $hasCrib
-     */
-    public function setHasCrib($hasCrib)
-    {
-        $this->hasCrib = $hasCrib;
     }
     
     
@@ -179,23 +196,6 @@ class Block
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OriginalPrice|null
-     */
-    public function getOriginalPrice()
-    {
-        return $this->originalPrice;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\OriginalPrice|null $originalPrice
-     */
-    public function setOriginalPrice($originalPrice)
-    {
-        $this->originalPrice = $originalPrice;
-    }
-    
-    
-    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\Blocks\Block\BlockMatchTags|null
      */
     public function getBlockMatchTags()
@@ -213,19 +213,19 @@ class Block
     
     
     /**
-     * @return string|null
+     * @return bool|null
      */
-    public function getFreeCancellationUntil()
+    public function getHasCrib()
     {
-        return $this->freeCancellationUntil;
+        return $this->hasCrib;
     }
     
     /**
-     * @param string|null $freeCancellationUntil
+     * @param bool|null $hasCrib
      */
-    public function setFreeCancellationUntil($freeCancellationUntil)
+    public function setHasCrib($hasCrib)
     {
-        $this->freeCancellationUntil = $freeCancellationUntil;
+        $this->hasCrib = $hasCrib;
     }
     
     

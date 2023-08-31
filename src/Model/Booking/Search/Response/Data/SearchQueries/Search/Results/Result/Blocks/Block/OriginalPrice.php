@@ -13,11 +13,11 @@ class OriginalPrice
 {
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("currency")
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("amount")
      */
-    protected $currency;
+    protected $amount;
     
     /**
      * @var string|null
@@ -29,25 +29,25 @@ class OriginalPrice
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("amount")
+     * @Serializer\SerializedName("currency")
      */
-    protected $amount;
+    protected $currency;
     
     
     /**
-     * @return string|null
+     * @return int|null
      */
-    public function getCurrency()
+    public function getAmount()
     {
-        return $this->currency;
+        return $this->amount;
     }
     
     /**
-     * @param string|null $currency
+     * @param int|null $amount
      */
-    public function setCurrency($currency)
+    public function setAmount($amount)
     {
-        $this->currency = $currency;
+        $this->amount = $amount;
     }
     
     
@@ -71,17 +71,17 @@ class OriginalPrice
     /**
      * @return string|null
      */
-    public function getAmount()
+    public function getCurrency()
     {
-        return $this->amount;
+        return $this->currency;
     }
     
     /**
-     * @param string|null $amount
+     * @param string|null $currency
      */
-    public function setAmount($amount)
+    public function setCurrency($currency)
     {
-        $this->amount = $amount;
+        $this->currency = $currency;
     }
     
     

@@ -20,18 +20,18 @@ class AdditionalLabel
     protected $typename;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel\TranslationTag|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel\TranslationTag")
-     * @Serializer\SerializedName("translationTag")
-     */
-    protected $translationTag;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("text")
      */
     protected $text;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel\TranslationTag|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel\TranslationTag")
+     * @Serializer\SerializedName("translationTag")
+     */
+    protected $translationTag;
     
     
     /**
@@ -52,23 +52,6 @@ class AdditionalLabel
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel\TranslationTag|null
-     */
-    public function getTranslationTag()
-    {
-        return $this->translationTag;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel\TranslationTag|null $translationTag
-     */
-    public function setTranslationTag($translationTag)
-    {
-        $this->translationTag = $translationTag;
-    }
-    
-    
-    /**
      * @return string|null
      */
     public function getText()
@@ -82,6 +65,23 @@ class AdditionalLabel
     public function setText($text)
     {
         $this->text = $text;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel\TranslationTag|null
+     */
+    public function getTranslationTag()
+    {
+        return $this->translationTag;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\AdditionalLabel\TranslationTag|null $translationTag
+     */
+    public function setTranslationTag($translationTag)
+    {
+        $this->translationTag = $translationTag;
     }
     
     

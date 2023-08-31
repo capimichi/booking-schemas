@@ -13,6 +13,13 @@ class MatchingUnitConfigurations
 {
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration")
+     * @Serializer\SerializedName("commonConfiguration")
+     */
+    protected $commonConfiguration;
+    
+    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration[]|null
      * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration>")
      * @Serializer\SerializedName("unitConfigurations")
@@ -26,12 +33,22 @@ class MatchingUnitConfigurations
      */
     protected $typename;
     
+    
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration")
-     * @Serializer\SerializedName("commonConfiguration")
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration|null
      */
-    protected $commonConfiguration;
+    public function getCommonConfiguration()
+    {
+        return $this->commonConfiguration;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration|null $commonConfiguration
+     */
+    public function setCommonConfiguration($commonConfiguration)
+    {
+        $this->commonConfiguration = $commonConfiguration;
+    }
     
     
     /**
@@ -65,23 +82,6 @@ class MatchingUnitConfigurations
     public function setTypename($typename)
     {
         $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration|null
-     */
-    public function getCommonConfiguration()
-    {
-        return $this->commonConfiguration;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\CommonConfiguration|null $commonConfiguration
-     */
-    public function setCommonConfiguration($commonConfiguration)
-    {
-        $this->commonConfiguration = $commonConfiguration;
     }
     
     

@@ -15,23 +15,16 @@ class Beach
     /**
      * @var bool|null
      * @Serializer\Type("bool")
-     * @Serializer\SerializedName("isBeachDestinationWithoutBeach")
-     */
-    protected $isBeachDestinationWithoutBeach;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("isBeachUfi")
-     */
-    protected $isBeachUfi;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
      * @Serializer\SerializedName("isEnabledBeachUfi")
      */
     protected $isEnabledBeachUfi;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("isBeachDestinationWithoutBeach")
+     */
+    protected $isBeachDestinationWithoutBeach;
     
     /**
      * @var string|null
@@ -43,43 +36,16 @@ class Beach
     /**
      * @var bool|null
      * @Serializer\Type("bool")
+     * @Serializer\SerializedName("isBeachUfi")
+     */
+    protected $isBeachUfi;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
      * @Serializer\SerializedName("isCoastalBeachRegion")
      */
     protected $isCoastalBeachRegion;
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getIsBeachDestinationWithoutBeach()
-    {
-        return $this->isBeachDestinationWithoutBeach;
-    }
-    
-    /**
-     * @param bool|null $isBeachDestinationWithoutBeach
-     */
-    public function setIsBeachDestinationWithoutBeach($isBeachDestinationWithoutBeach)
-    {
-        $this->isBeachDestinationWithoutBeach = $isBeachDestinationWithoutBeach;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getIsBeachUfi()
-    {
-        return $this->isBeachUfi;
-    }
-    
-    /**
-     * @param bool|null $isBeachUfi
-     */
-    public function setIsBeachUfi($isBeachUfi)
-    {
-        $this->isBeachUfi = $isBeachUfi;
-    }
     
     
     /**
@@ -100,6 +66,23 @@ class Beach
     
     
     /**
+     * @return bool|null
+     */
+    public function getIsBeachDestinationWithoutBeach()
+    {
+        return $this->isBeachDestinationWithoutBeach;
+    }
+    
+    /**
+     * @param bool|null $isBeachDestinationWithoutBeach
+     */
+    public function setIsBeachDestinationWithoutBeach($isBeachDestinationWithoutBeach)
+    {
+        $this->isBeachDestinationWithoutBeach = $isBeachDestinationWithoutBeach;
+    }
+    
+    
+    /**
      * @return string|null
      */
     public function getTypename()
@@ -113,6 +96,23 @@ class Beach
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
+    public function getIsBeachUfi()
+    {
+        return $this->isBeachUfi;
+    }
+    
+    /**
+     * @param bool|null $isBeachUfi
+     */
+    public function setIsBeachUfi($isBeachUfi)
+    {
+        $this->isBeachUfi = $isBeachUfi;
     }
     
     

@@ -13,6 +13,13 @@ class FinalPrice
 {
     
     /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("amount")
+     */
+    protected $amount;
+    
+    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
@@ -26,12 +33,22 @@ class FinalPrice
      */
     protected $currency;
     
+    
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("amount")
+     * @return int|null
      */
-    protected $amount;
+    public function getAmount()
+    {
+        return $this->amount;
+    }
+    
+    /**
+     * @param int|null $amount
+     */
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+    }
     
     
     /**
@@ -65,23 +82,6 @@ class FinalPrice
     public function setCurrency($currency)
     {
         $this->currency = $currency;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getAmount()
-    {
-        return $this->amount;
-    }
-    
-    /**
-     * @param string|null $amount
-     */
-    public function setAmount($amount)
-    {
-        $this->amount = $amount;
     }
     
     

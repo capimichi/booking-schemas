@@ -15,27 +15,6 @@ class Location
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("publicTransportDistanceDescription")
-     */
-    protected $publicTransportDistanceDescription;
-    
-    /**
-     * @var string[]|null
-     * @Serializer\Type("array<string>")
-     * @Serializer\SerializedName("nearbyBeachNames")
-     */
-    protected $nearbyBeachNames;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("beachDistance")
-     */
-    protected $beachDistance;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
@@ -43,16 +22,9 @@ class Location
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("skiLiftDistance")
+     * @Serializer\SerializedName("beachDistance")
      */
-    protected $skiLiftDistance;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("geoDistanceMeters")
-     */
-    protected $geoDistanceMeters;
+    protected $beachDistance;
     
     /**
      * @var string|null
@@ -71,60 +43,37 @@ class Location
     /**
      * @var string|null
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("geoDistanceMeters")
+     */
+    protected $geoDistanceMeters;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("mainDistance")
      */
     protected $mainDistance;
     
+    /**
+     * @var string[]|null
+     * @Serializer\Type("array<string>")
+     * @Serializer\SerializedName("nearbyBeachNames")
+     */
+    protected $nearbyBeachNames;
     
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("publicTransportDistanceDescription")
      */
-    public function getPublicTransportDistanceDescription()
-    {
-        return $this->publicTransportDistanceDescription;
-    }
+    protected $publicTransportDistanceDescription;
     
     /**
-     * @param string|null $publicTransportDistanceDescription
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("skiLiftDistance")
      */
-    public function setPublicTransportDistanceDescription($publicTransportDistanceDescription)
-    {
-        $this->publicTransportDistanceDescription = $publicTransportDistanceDescription;
-    }
-    
-    
-    /**
-     * @return string[]|null
-     */
-    public function getNearbyBeachNames()
-    {
-        return $this->nearbyBeachNames;
-    }
-    
-    /**
-     * @param string[]|null $nearbyBeachNames
-     */
-    public function setNearbyBeachNames($nearbyBeachNames)
-    {
-        $this->nearbyBeachNames = $nearbyBeachNames;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getBeachDistance()
-    {
-        return $this->beachDistance;
-    }
-    
-    /**
-     * @param string|null $beachDistance
-     */
-    public function setBeachDistance($beachDistance)
-    {
-        $this->beachDistance = $beachDistance;
-    }
+    protected $skiLiftDistance;
     
     
     /**
@@ -147,34 +96,17 @@ class Location
     /**
      * @return string|null
      */
-    public function getSkiLiftDistance()
+    public function getBeachDistance()
     {
-        return $this->skiLiftDistance;
+        return $this->beachDistance;
     }
     
     /**
-     * @param string|null $skiLiftDistance
+     * @param string|null $beachDistance
      */
-    public function setSkiLiftDistance($skiLiftDistance)
+    public function setBeachDistance($beachDistance)
     {
-        $this->skiLiftDistance = $skiLiftDistance;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getGeoDistanceMeters()
-    {
-        return $this->geoDistanceMeters;
-    }
-    
-    /**
-     * @param string|null $geoDistanceMeters
-     */
-    public function setGeoDistanceMeters($geoDistanceMeters)
-    {
-        $this->geoDistanceMeters = $geoDistanceMeters;
+        $this->beachDistance = $beachDistance;
     }
     
     
@@ -215,6 +147,23 @@ class Location
     /**
      * @return string|null
      */
+    public function getGeoDistanceMeters()
+    {
+        return $this->geoDistanceMeters;
+    }
+    
+    /**
+     * @param string|null $geoDistanceMeters
+     */
+    public function setGeoDistanceMeters($geoDistanceMeters)
+    {
+        $this->geoDistanceMeters = $geoDistanceMeters;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
     public function getMainDistance()
     {
         return $this->mainDistance;
@@ -226,6 +175,57 @@ class Location
     public function setMainDistance($mainDistance)
     {
         $this->mainDistance = $mainDistance;
+    }
+    
+    
+    /**
+     * @return string[]|null
+     */
+    public function getNearbyBeachNames()
+    {
+        return $this->nearbyBeachNames;
+    }
+    
+    /**
+     * @param string[]|null $nearbyBeachNames
+     */
+    public function setNearbyBeachNames($nearbyBeachNames)
+    {
+        $this->nearbyBeachNames = $nearbyBeachNames;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getPublicTransportDistanceDescription()
+    {
+        return $this->publicTransportDistanceDescription;
+    }
+    
+    /**
+     * @param string|null $publicTransportDistanceDescription
+     */
+    public function setPublicTransportDistanceDescription($publicTransportDistanceDescription)
+    {
+        $this->publicTransportDistanceDescription = $publicTransportDistanceDescription;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getSkiLiftDistance()
+    {
+        return $this->skiLiftDistance;
+    }
+    
+    /**
+     * @param string|null $skiLiftDistance
+     */
+    public function setSkiLiftDistance($skiLiftDistance)
+    {
+        $this->skiLiftDistance = $skiLiftDistance;
     }
     
     

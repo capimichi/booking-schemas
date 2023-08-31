@@ -15,23 +15,16 @@ class SliderOptions
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("selectedRange")
-     */
-    protected $selectedRange;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("minSelectedFormatted")
-     */
-    protected $minSelectedFormatted;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("currency")
+     */
+    protected $currency;
     
     /**
      * @var int[]|null
@@ -57,9 +50,9 @@ class SliderOptions
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("title")
+     * @Serializer\SerializedName("min")
      */
-    protected $title;
+    protected $min;
     
     /**
      * @var string|null
@@ -71,13 +64,6 @@ class SliderOptions
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("currency")
-     */
-    protected $currency;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("minSelected")
      */
     protected $minSelected;
@@ -85,43 +71,23 @@ class SliderOptions
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("min")
+     * @Serializer\SerializedName("minSelectedFormatted")
      */
-    protected $min;
-    
+    protected $minSelectedFormatted;
     
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("selectedRange")
      */
-    public function getSelectedRange()
-    {
-        return $this->selectedRange;
-    }
+    protected $selectedRange;
     
     /**
-     * @param string|null $selectedRange
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("title")
      */
-    public function setSelectedRange($selectedRange)
-    {
-        $this->selectedRange = $selectedRange;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getMinSelectedFormatted()
-    {
-        return $this->minSelectedFormatted;
-    }
-    
-    /**
-     * @param string|null $minSelectedFormatted
-     */
-    public function setMinSelectedFormatted($minSelectedFormatted)
-    {
-        $this->minSelectedFormatted = $minSelectedFormatted;
-    }
+    protected $title;
     
     
     /**
@@ -138,6 +104,23 @@ class SliderOptions
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getCurrency()
+    {
+        return $this->currency;
+    }
+    
+    /**
+     * @param string|null $currency
+     */
+    public function setCurrency($currency)
+    {
+        $this->currency = $currency;
     }
     
     
@@ -195,17 +178,17 @@ class SliderOptions
     /**
      * @return string|null
      */
-    public function getTitle()
+    public function getMin()
     {
-        return $this->title;
+        return $this->min;
     }
     
     /**
-     * @param string|null $title
+     * @param string|null $min
      */
-    public function setTitle($title)
+    public function setMin($min)
     {
-        $this->title = $title;
+        $this->min = $min;
     }
     
     
@@ -229,23 +212,6 @@ class SliderOptions
     /**
      * @return string|null
      */
-    public function getCurrency()
-    {
-        return $this->currency;
-    }
-    
-    /**
-     * @param string|null $currency
-     */
-    public function setCurrency($currency)
-    {
-        $this->currency = $currency;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
     public function getMinSelected()
     {
         return $this->minSelected;
@@ -263,17 +229,51 @@ class SliderOptions
     /**
      * @return string|null
      */
-    public function getMin()
+    public function getMinSelectedFormatted()
     {
-        return $this->min;
+        return $this->minSelectedFormatted;
     }
     
     /**
-     * @param string|null $min
+     * @param string|null $minSelectedFormatted
      */
-    public function setMin($min)
+    public function setMinSelectedFormatted($minSelectedFormatted)
     {
-        $this->min = $min;
+        $this->minSelectedFormatted = $minSelectedFormatted;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getSelectedRange()
+    {
+        return $this->selectedRange;
+    }
+    
+    /**
+     * @param string|null $selectedRange
+     */
+    public function setSelectedRange($selectedRange)
+    {
+        $this->selectedRange = $selectedRange;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+    
+    /**
+     * @param string|null $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
     }
     
     

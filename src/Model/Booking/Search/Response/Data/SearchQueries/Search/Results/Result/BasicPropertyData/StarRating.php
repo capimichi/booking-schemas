@@ -13,6 +13,20 @@ class StarRating
 {
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\TocLink|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\TocLink")
+     * @Serializer\SerializedName("tocLink")
+     */
+    protected $tocLink;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("symbol")
+     */
+    protected $symbol;
+    
+    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
@@ -34,25 +48,45 @@ class StarRating
     protected $value;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\TocLink|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\TocLink")
-     * @Serializer\SerializedName("tocLink")
-     */
-    protected $tocLink;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\Caption|null
      * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\Caption")
      * @Serializer\SerializedName("caption")
      */
     protected $caption;
     
+    
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("symbol")
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\TocLink|null
      */
-    protected $symbol;
+    public function getTocLink()
+    {
+        return $this->tocLink;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\TocLink|null $tocLink
+     */
+    public function setTocLink($tocLink)
+    {
+        $this->tocLink = $tocLink;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getSymbol()
+    {
+        return $this->symbol;
+    }
+    
+    /**
+     * @param string|null $symbol
+     */
+    public function setSymbol($symbol)
+    {
+        $this->symbol = $symbol;
+    }
     
     
     /**
@@ -107,23 +141,6 @@ class StarRating
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\TocLink|null
-     */
-    public function getTocLink()
-    {
-        return $this->tocLink;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\TocLink|null $tocLink
-     */
-    public function setTocLink($tocLink)
-    {
-        $this->tocLink = $tocLink;
-    }
-    
-    
-    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\BasicPropertyData\StarRating\Caption|null
      */
     public function getCaption()
@@ -137,23 +154,6 @@ class StarRating
     public function setCaption($caption)
     {
         $this->caption = $caption;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getSymbol()
-    {
-        return $this->symbol;
-    }
-    
-    /**
-     * @param string|null $symbol
-     */
-    public function setSymbol($symbol)
-    {
-        $this->symbol = $symbol;
     }
     
     

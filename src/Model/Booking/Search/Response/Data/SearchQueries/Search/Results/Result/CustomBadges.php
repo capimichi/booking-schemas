@@ -20,13 +20,6 @@ class CustomBadges
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("showOnlineCheckinBadge")
-     */
-    protected $showOnlineCheckinBadge;
-    
-    /**
      * @var bool|null
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("showBhTravelCreditBadge")
@@ -39,6 +32,13 @@ class CustomBadges
      * @Serializer\SerializedName("showIsWorkFriendly")
      */
     protected $showIsWorkFriendly;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("showOnlineCheckinBadge")
+     */
+    protected $showOnlineCheckinBadge;
     
     /**
      * @var bool|null
@@ -73,23 +73,6 @@ class CustomBadges
     
     
     /**
-     * @return string|null
-     */
-    public function getShowOnlineCheckinBadge()
-    {
-        return $this->showOnlineCheckinBadge;
-    }
-    
-    /**
-     * @param string|null $showOnlineCheckinBadge
-     */
-    public function setShowOnlineCheckinBadge($showOnlineCheckinBadge)
-    {
-        $this->showOnlineCheckinBadge = $showOnlineCheckinBadge;
-    }
-    
-    
-    /**
      * @return bool|null
      */
     public function getShowBhTravelCreditBadge()
@@ -120,6 +103,23 @@ class CustomBadges
     public function setShowIsWorkFriendly($showIsWorkFriendly)
     {
         $this->showIsWorkFriendly = $showIsWorkFriendly;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getShowOnlineCheckinBadge()
+    {
+        return $this->showOnlineCheckinBadge;
+    }
+    
+    /**
+     * @param string|null $showOnlineCheckinBadge
+     */
+    public function setShowOnlineCheckinBadge($showOnlineCheckinBadge)
+    {
+        $this->showOnlineCheckinBadge = $showOnlineCheckinBadge;
     }
     
     

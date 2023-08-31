@@ -15,6 +15,13 @@ class AmountPerStay
     /**
      * @var string|null
      * @Serializer\Type("string")
+     * @Serializer\SerializedName("amountRounded")
+     */
+    protected $amountRounded;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
      * @Serializer\SerializedName("amountUnformatted")
      */
     protected $amountUnformatted;
@@ -40,12 +47,22 @@ class AmountPerStay
      */
     protected $currency;
     
+    
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("amountRounded")
+     * @return string|null
      */
-    protected $amountRounded;
+    public function getAmountRounded()
+    {
+        return $this->amountRounded;
+    }
+    
+    /**
+     * @param string|null $amountRounded
+     */
+    public function setAmountRounded($amountRounded)
+    {
+        $this->amountRounded = $amountRounded;
+    }
     
     
     /**
@@ -113,23 +130,6 @@ class AmountPerStay
     public function setCurrency($currency)
     {
         $this->currency = $currency;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getAmountRounded()
-    {
-        return $this->amountRounded;
-    }
-    
-    /**
-     * @param string|null $amountRounded
-     */
-    public function setAmountRounded($amountRounded)
-    {
-        $this->amountRounded = $amountRounded;
     }
     
     

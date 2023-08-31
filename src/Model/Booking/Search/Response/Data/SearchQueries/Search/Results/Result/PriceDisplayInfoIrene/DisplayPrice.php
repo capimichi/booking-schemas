@@ -13,11 +13,11 @@ class DisplayPrice
 {
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\AmountPerStay|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\AmountPerStay")
+     * @Serializer\SerializedName("amountPerStay")
      */
-    protected $typename;
+    protected $amountPerStay;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\Copy|null
@@ -27,27 +27,27 @@ class DisplayPrice
     protected $copy;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\AmountPerStay|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\AmountPerStay")
-     * @Serializer\SerializedName("amountPerStay")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $amountPerStay;
+    protected $typename;
     
     
     /**
-     * @return string|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\AmountPerStay|null
      */
-    public function getTypename()
+    public function getAmountPerStay()
     {
-        return $this->typename;
+        return $this->amountPerStay;
     }
     
     /**
-     * @param string|null $typename
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\AmountPerStay|null $amountPerStay
      */
-    public function setTypename($typename)
+    public function setAmountPerStay($amountPerStay)
     {
-        $this->typename = $typename;
+        $this->amountPerStay = $amountPerStay;
     }
     
     
@@ -69,19 +69,19 @@ class DisplayPrice
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\AmountPerStay|null
+     * @return string|null
      */
-    public function getAmountPerStay()
+    public function getTypename()
     {
-        return $this->amountPerStay;
+        return $this->typename;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\PriceDisplayInfoIrene\DisplayPrice\AmountPerStay|null $amountPerStay
+     * @param string|null $typename
      */
-    public function setAmountPerStay($amountPerStay)
+    public function setTypename($typename)
     {
-        $this->amountPerStay = $amountPerStay;
+        $this->typename = $typename;
     }
     
     

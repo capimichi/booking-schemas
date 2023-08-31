@@ -13,25 +13,18 @@ class StarRating
 {
     
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("value")
-     */
-    protected $value;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("symbol")
-     */
-    protected $symbol;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating\Caption|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating\Caption")
+     * @Serializer\SerializedName("caption")
+     */
+    protected $caption;
     
     /**
      * @var bool|null
@@ -41,45 +34,18 @@ class StarRating
     protected $showAdditionalInfoIcon;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating\Caption|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating\Caption")
-     * @Serializer\SerializedName("caption")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("symbol")
      */
-    protected $caption;
-    
+    protected $symbol;
     
     /**
-     * @return int|null
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("value")
      */
-    public function getValue()
-    {
-        return $this->value;
-    }
-    
-    /**
-     * @param int|null $value
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getSymbol()
-    {
-        return $this->symbol;
-    }
-    
-    /**
-     * @param string|null $symbol
-     */
-    public function setSymbol($symbol)
-    {
-        $this->symbol = $symbol;
-    }
+    protected $value;
     
     
     /**
@@ -96,6 +62,23 @@ class StarRating
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating\Caption|null
+     */
+    public function getCaption()
+    {
+        return $this->caption;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating\Caption|null $caption
+     */
+    public function setCaption($caption)
+    {
+        $this->caption = $caption;
     }
     
     
@@ -117,19 +100,36 @@ class StarRating
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating\Caption|null
+     * @return string|null
      */
-    public function getCaption()
+    public function getSymbol()
     {
-        return $this->caption;
+        return $this->symbol;
     }
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Filters\Filter\Options\Option\StarRating\Caption|null $caption
+     * @param string|null $symbol
      */
-    public function setCaption($caption)
+    public function setSymbol($symbol)
     {
-        $this->caption = $caption;
+        $this->symbol = $symbol;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+    
+    /**
+     * @param int|null $value
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
     }
     
     

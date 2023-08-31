@@ -13,81 +13,11 @@ class Banner
 {
     
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbDeals")
-     */
-    protected $nbDeals;
-    
-    /**
      * @var bool|null
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("requestAlternativeDates")
      */
     protected $requestAlternativeDates;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("position")
-     */
-    protected $position;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction")
-     * @Serializer\SerializedName("primaryAction")
-     */
-    protected $primaryAction;
-    
-    /**
-     * @var array|null
-     * @Serializer\Type("array")
-     * @Serializer\SerializedName("flexibleFilterOptions")
-     */
-    protected $flexibleFilterOptions;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Paragraphs\Paragraph[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Paragraphs\Paragraph>")
-     * @Serializer\SerializedName("paragraphs")
-     */
-    protected $paragraphs;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("pendingReviewInfo")
-     */
-    protected $pendingReviewInfo;
-    
-    /**
-     * @var array|null
-     * @Serializer\Type("array")
-     * @Serializer\SerializedName("trackOnView")
-     */
-    protected $trackOnView;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("iconName")
-     */
-    protected $iconName;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("name")
-     */
-    protected $name;
     
     /**
      * @var bool|null
@@ -104,25 +34,67 @@ class Banner
     protected $imageUrl;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("type")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Paragraphs\Paragraph[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Paragraphs\Paragraph>")
+     * @Serializer\SerializedName("paragraphs")
      */
-    protected $type;
+    protected $paragraphs;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Title|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Title")
-     * @Serializer\SerializedName("title")
+     * @var array|null
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("trackOnView")
      */
-    protected $title;
+    protected $trackOnView;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction")
+     * @Serializer\SerializedName("primaryAction")
+     */
+    protected $primaryAction;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("secondaryAction")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $secondaryAction;
+    protected $typename;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("name")
+     */
+    protected $name;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbDeals")
+     */
+    protected $nbDeals;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("pendingReviewInfo")
+     */
+    protected $pendingReviewInfo;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("showAfterDismissedDuration")
+     */
+    protected $showAfterDismissedDuration;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("position")
+     */
+    protected $position;
     
     /**
      * @var array|null
@@ -132,6 +104,34 @@ class Banner
     protected $dateFlexQueryOptions;
     
     /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("iconName")
+     */
+    protected $iconName;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("secondaryAction")
+     */
+    protected $secondaryAction;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("type")
+     */
+    protected $type;
+    
+    /**
+     * @var array|null
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("flexibleFilterOptions")
+     */
+    protected $flexibleFilterOptions;
+    
+    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Metadata\Metadatum[]|null
      * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Metadata\Metadatum>")
      * @Serializer\SerializedName("metadata")
@@ -139,28 +139,11 @@ class Banner
     protected $metadata;
     
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("showAfterDismissedDuration")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Title|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Title")
+     * @Serializer\SerializedName("title")
      */
-    protected $showAfterDismissedDuration;
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getNbDeals()
-    {
-        return $this->nbDeals;
-    }
-    
-    /**
-     * @param int|null $nbDeals
-     */
-    public function setNbDeals($nbDeals)
-    {
-        $this->nbDeals = $nbDeals;
-    }
+    protected $title;
     
     
     /**
@@ -177,159 +160,6 @@ class Banner
     public function setRequestAlternativeDates($requestAlternativeDates)
     {
         $this->requestAlternativeDates = $requestAlternativeDates;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getPosition()
-    {
-        return $this->position;
-    }
-    
-    /**
-     * @param int|null $position
-     */
-    public function setPosition($position)
-    {
-        $this->position = $position;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction|null
-     */
-    public function getPrimaryAction()
-    {
-        return $this->primaryAction;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction|null $primaryAction
-     */
-    public function setPrimaryAction($primaryAction)
-    {
-        $this->primaryAction = $primaryAction;
-    }
-    
-    
-    /**
-     * @return array|null
-     */
-    public function getFlexibleFilterOptions()
-    {
-        return $this->flexibleFilterOptions;
-    }
-    
-    /**
-     * @param array|null $flexibleFilterOptions
-     */
-    public function setFlexibleFilterOptions($flexibleFilterOptions)
-    {
-        $this->flexibleFilterOptions = $flexibleFilterOptions;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Paragraphs\Paragraph[]|null
-     */
-    public function getParagraphs()
-    {
-        return $this->paragraphs;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Paragraphs\Paragraph[]|null $paragraphs
-     */
-    public function setParagraphs($paragraphs)
-    {
-        $this->paragraphs = $paragraphs;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getPendingReviewInfo()
-    {
-        return $this->pendingReviewInfo;
-    }
-    
-    /**
-     * @param string|null $pendingReviewInfo
-     */
-    public function setPendingReviewInfo($pendingReviewInfo)
-    {
-        $this->pendingReviewInfo = $pendingReviewInfo;
-    }
-    
-    
-    /**
-     * @return array|null
-     */
-    public function getTrackOnView()
-    {
-        return $this->trackOnView;
-    }
-    
-    /**
-     * @param array|null $trackOnView
-     */
-    public function setTrackOnView($trackOnView)
-    {
-        $this->trackOnView = $trackOnView;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getIconName()
-    {
-        return $this->iconName;
-    }
-    
-    /**
-     * @param string|null $iconName
-     */
-    public function setIconName($iconName)
-    {
-        $this->iconName = $iconName;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * @param string|null $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
     }
     
     
@@ -368,53 +198,155 @@ class Banner
     
     
     /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Paragraphs\Paragraph[]|null
+     */
+    public function getParagraphs()
+    {
+        return $this->paragraphs;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Paragraphs\Paragraph[]|null $paragraphs
+     */
+    public function setParagraphs($paragraphs)
+    {
+        $this->paragraphs = $paragraphs;
+    }
+    
+    
+    /**
+     * @return array|null
+     */
+    public function getTrackOnView()
+    {
+        return $this->trackOnView;
+    }
+    
+    /**
+     * @param array|null $trackOnView
+     */
+    public function setTrackOnView($trackOnView)
+    {
+        $this->trackOnView = $trackOnView;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction|null
+     */
+    public function getPrimaryAction()
+    {
+        return $this->primaryAction;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction|null $primaryAction
+     */
+    public function setPrimaryAction($primaryAction)
+    {
+        $this->primaryAction = $primaryAction;
+    }
+    
+    
+    /**
      * @return string|null
      */
-    public function getType()
+    public function getTypename()
     {
-        return $this->type;
+        return $this->typename;
     }
     
     /**
-     * @param string|null $type
+     * @param string|null $typename
      */
-    public function setType($type)
+    public function setTypename($typename)
     {
-        $this->type = $type;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Title|null
-     */
-    public function getTitle()
-    {
-        return $this->title;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Title|null $title
-     */
-    public function setTitle($title)
-    {
-        $this->title = $title;
+        $this->typename = $typename;
     }
     
     
     /**
      * @return string|null
      */
-    public function getSecondaryAction()
+    public function getName()
     {
-        return $this->secondaryAction;
+        return $this->name;
     }
     
     /**
-     * @param string|null $secondaryAction
+     * @param string|null $name
      */
-    public function setSecondaryAction($secondaryAction)
+    public function setName($name)
     {
-        $this->secondaryAction = $secondaryAction;
+        $this->name = $name;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getNbDeals()
+    {
+        return $this->nbDeals;
+    }
+    
+    /**
+     * @param int|null $nbDeals
+     */
+    public function setNbDeals($nbDeals)
+    {
+        $this->nbDeals = $nbDeals;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getPendingReviewInfo()
+    {
+        return $this->pendingReviewInfo;
+    }
+    
+    /**
+     * @param string|null $pendingReviewInfo
+     */
+    public function setPendingReviewInfo($pendingReviewInfo)
+    {
+        $this->pendingReviewInfo = $pendingReviewInfo;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getShowAfterDismissedDuration()
+    {
+        return $this->showAfterDismissedDuration;
+    }
+    
+    /**
+     * @param int|null $showAfterDismissedDuration
+     */
+    public function setShowAfterDismissedDuration($showAfterDismissedDuration)
+    {
+        $this->showAfterDismissedDuration = $showAfterDismissedDuration;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+    
+    /**
+     * @param int|null $position
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
     }
     
     
@@ -436,6 +368,74 @@ class Banner
     
     
     /**
+     * @return string|null
+     */
+    public function getIconName()
+    {
+        return $this->iconName;
+    }
+    
+    /**
+     * @param string|null $iconName
+     */
+    public function setIconName($iconName)
+    {
+        $this->iconName = $iconName;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getSecondaryAction()
+    {
+        return $this->secondaryAction;
+    }
+    
+    /**
+     * @param string|null $secondaryAction
+     */
+    public function setSecondaryAction($secondaryAction)
+    {
+        $this->secondaryAction = $secondaryAction;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+    
+    /**
+     * @param string|null $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+    
+    
+    /**
+     * @return array|null
+     */
+    public function getFlexibleFilterOptions()
+    {
+        return $this->flexibleFilterOptions;
+    }
+    
+    /**
+     * @param array|null $flexibleFilterOptions
+     */
+    public function setFlexibleFilterOptions($flexibleFilterOptions)
+    {
+        $this->flexibleFilterOptions = $flexibleFilterOptions;
+    }
+    
+    
+    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Metadata\Metadatum[]|null
      */
     public function getMetadata()
@@ -453,19 +453,19 @@ class Banner
     
     
     /**
-     * @return int|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Title|null
      */
-    public function getShowAfterDismissedDuration()
+    public function getTitle()
     {
-        return $this->showAfterDismissedDuration;
+        return $this->title;
     }
     
     /**
-     * @param int|null $showAfterDismissedDuration
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\Title|null $title
      */
-    public function setShowAfterDismissedDuration($showAfterDismissedDuration)
+    public function setTitle($title)
     {
-        $this->showAfterDismissedDuration = $showAfterDismissedDuration;
+        $this->title = $title;
     }
     
     

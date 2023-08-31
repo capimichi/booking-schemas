@@ -20,18 +20,18 @@ class Action
     protected $typename;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("name")
-     */
-    protected $name;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Action\Context\Context[]|null
      * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Action\Context\Context>")
      * @Serializer\SerializedName("context")
      */
     protected $context;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("name")
+     */
+    protected $name;
     
     
     /**
@@ -52,23 +52,6 @@ class Action
     
     
     /**
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * @param string|null $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-    
-    
-    /**
      * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Action\Context\Context[]|null
      */
     public function getContext()
@@ -82,6 +65,23 @@ class Action
     public function setContext($context)
     {
         $this->context = $context;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    /**
+     * @param string|null $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
     
     

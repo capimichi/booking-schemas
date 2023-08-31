@@ -13,6 +13,20 @@ class Policies
 {
     
     /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
+     */
+    protected $typename;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("enableJapaneseUsersSpecialCase")
+     */
+    protected $enableJapaneseUsersSpecialCase;
+    
+    /**
      * @var bool|null
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("showFreeCancellation")
@@ -26,19 +40,39 @@ class Policies
      */
     protected $showNoPrepayment;
     
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("enableJapaneseUsersSpecialCase")
-     */
-    protected $enableJapaneseUsersSpecialCase;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @return string|null
      */
-    protected $typename;
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getEnableJapaneseUsersSpecialCase()
+    {
+        return $this->enableJapaneseUsersSpecialCase;
+    }
+    
+    /**
+     * @param string|null $enableJapaneseUsersSpecialCase
+     */
+    public function setEnableJapaneseUsersSpecialCase($enableJapaneseUsersSpecialCase)
+    {
+        $this->enableJapaneseUsersSpecialCase = $enableJapaneseUsersSpecialCase;
+    }
     
     
     /**
@@ -72,40 +106,6 @@ class Policies
     public function setShowNoPrepayment($showNoPrepayment)
     {
         $this->showNoPrepayment = $showNoPrepayment;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getEnableJapaneseUsersSpecialCase()
-    {
-        return $this->enableJapaneseUsersSpecialCase;
-    }
-    
-    /**
-     * @param string|null $enableJapaneseUsersSpecialCase
-     */
-    public function setEnableJapaneseUsersSpecialCase($enableJapaneseUsersSpecialCase)
-    {
-        $this->enableJapaneseUsersSpecialCase = $enableJapaneseUsersSpecialCase;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
     }
     
     

@@ -15,16 +15,16 @@ class TrackOnView
     /**
      * @var int|null
      * @Serializer\Type("int")
-     * @Serializer\SerializedName("value")
+     * @Serializer\SerializedName("type")
      */
-    protected $value;
+    protected $type;
     
     /**
      * @var int|null
      * @Serializer\Type("int")
-     * @Serializer\SerializedName("type")
+     * @Serializer\SerializedName("value")
      */
-    protected $type;
+    protected $value;
     
     /**
      * @var string|null
@@ -44,23 +44,6 @@ class TrackOnView
     /**
      * @return int|null
      */
-    public function getValue()
-    {
-        return $this->value;
-    }
-    
-    /**
-     * @param int|null $value
-     */
-    public function setValue($value)
-    {
-        $this->value = $value;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
     public function getType()
     {
         return $this->type;
@@ -72,6 +55,23 @@ class TrackOnView
     public function setType($type)
     {
         $this->type = $type;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
+    
+    /**
+     * @param int|null $value
+     */
+    public function setValue($value)
+    {
+        $this->value = $value;
     }
     
     

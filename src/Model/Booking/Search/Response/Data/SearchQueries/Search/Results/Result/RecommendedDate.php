@@ -15,23 +15,16 @@ class RecommendedDate
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("checkin")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $checkin;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("lengthOfStay")
-     */
-    protected $lengthOfStay;
+    protected $typename;
     
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @Serializer\SerializedName("checkin")
      */
-    protected $typename;
+    protected $checkin;
     
     /**
      * @var string|null
@@ -40,39 +33,12 @@ class RecommendedDate
      */
     protected $checkout;
     
-    
     /**
-     * @return string|null
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("lengthOfStay")
      */
-    public function getCheckin()
-    {
-        return $this->checkin;
-    }
-    
-    /**
-     * @param string|null $checkin
-     */
-    public function setCheckin($checkin)
-    {
-        $this->checkin = $checkin;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getLengthOfStay()
-    {
-        return $this->lengthOfStay;
-    }
-    
-    /**
-     * @param int|null $lengthOfStay
-     */
-    public function setLengthOfStay($lengthOfStay)
-    {
-        $this->lengthOfStay = $lengthOfStay;
-    }
+    protected $lengthOfStay;
     
     
     /**
@@ -95,6 +61,23 @@ class RecommendedDate
     /**
      * @return string|null
      */
+    public function getCheckin()
+    {
+        return $this->checkin;
+    }
+    
+    /**
+     * @param string|null $checkin
+     */
+    public function setCheckin($checkin)
+    {
+        $this->checkin = $checkin;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
     public function getCheckout()
     {
         return $this->checkout;
@@ -106,6 +89,23 @@ class RecommendedDate
     public function setCheckout($checkout)
     {
         $this->checkout = $checkout;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getLengthOfStay()
+    {
+        return $this->lengthOfStay;
+    }
+    
+    /**
+     * @param int|null $lengthOfStay
+     */
+    public function setLengthOfStay($lengthOfStay)
+    {
+        $this->lengthOfStay = $lengthOfStay;
     }
     
     

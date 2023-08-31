@@ -15,33 +15,16 @@ class HighResJpegUrl
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("relativeUrl")
-     */
-    protected $relativeUrl;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
     
-    
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("relativeUrl")
      */
-    public function getRelativeUrl()
-    {
-        return $this->relativeUrl;
-    }
-    
-    /**
-     * @param string|null $relativeUrl
-     */
-    public function setRelativeUrl($relativeUrl)
-    {
-        $this->relativeUrl = $relativeUrl;
-    }
+    protected $relativeUrl;
     
     
     /**
@@ -58,6 +41,23 @@ class HighResJpegUrl
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getRelativeUrl()
+    {
+        return $this->relativeUrl;
+    }
+    
+    /**
+     * @param string|null $relativeUrl
+     */
+    public function setRelativeUrl($relativeUrl)
+    {
+        $this->relativeUrl = $relativeUrl;
     }
     
     

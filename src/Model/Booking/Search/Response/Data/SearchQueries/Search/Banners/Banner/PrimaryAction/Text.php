@@ -15,33 +15,16 @@ class Text
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("text")
-     */
-    protected $text;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
     
-    
     /**
-     * @return string|null
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("text")
      */
-    public function getText()
-    {
-        return $this->text;
-    }
-    
-    /**
-     * @param string|null $text
-     */
-    public function setText($text)
-    {
-        $this->text = $text;
-    }
+    protected $text;
     
     
     /**
@@ -58,6 +41,23 @@ class Text
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+    
+    /**
+     * @param string|null $text
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
     }
     
     

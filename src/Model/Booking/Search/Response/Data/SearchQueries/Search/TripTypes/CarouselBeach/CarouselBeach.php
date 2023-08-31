@@ -15,44 +15,9 @@ class CarouselBeach
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
-     */
-    protected $typename;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("reviewScoreFormatted")
-     */
-    protected $reviewScoreFormatted;
-    
-    /**
-     * @var string[]|null
-     * @Serializer\Type("array<string>")
-     * @Serializer\SerializedName("translatedBeachActivities")
-     */
-    protected $translatedBeachActivities;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
      * @Serializer\SerializedName("translatedSandType")
      */
     protected $translatedSandType;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("reviewScore")
-     */
-    protected $reviewScore;
-    
-    /**
-     * @var string[]|null
-     * @Serializer\Type("array<string>")
-     * @Serializer\SerializedName("photoUrl")
-     */
-    protected $photoUrl;
     
     /**
      * @var string|null
@@ -62,62 +27,46 @@ class CarouselBeach
     protected $name;
     
     /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
+     */
+    protected $typename;
+    
+    /**
+     * @var string[]|null
+     * @Serializer\Type("array<string>")
+     * @Serializer\SerializedName("photoUrl")
+     */
+    protected $photoUrl;
+    
+    /**
+     * @var string[]|null
+     * @Serializer\Type("array<string>")
+     * @Serializer\SerializedName("translatedBeachActivities")
+     */
+    protected $translatedBeachActivities;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("reviewScore")
+     */
+    protected $reviewScore;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("reviewScoreFormatted")
+     */
+    protected $reviewScoreFormatted;
+    
+    /**
      * @var int|null
      * @Serializer\Type("int")
      * @Serializer\SerializedName("beachId")
      */
     protected $beachId;
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getTypename()
-    {
-        return $this->typename;
-    }
-    
-    /**
-     * @param string|null $typename
-     */
-    public function setTypename($typename)
-    {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getReviewScoreFormatted()
-    {
-        return $this->reviewScoreFormatted;
-    }
-    
-    /**
-     * @param string|null $reviewScoreFormatted
-     */
-    public function setReviewScoreFormatted($reviewScoreFormatted)
-    {
-        $this->reviewScoreFormatted = $reviewScoreFormatted;
-    }
-    
-    
-    /**
-     * @return string[]|null
-     */
-    public function getTranslatedBeachActivities()
-    {
-        return $this->translatedBeachActivities;
-    }
-    
-    /**
-     * @param string[]|null $translatedBeachActivities
-     */
-    public function setTranslatedBeachActivities($translatedBeachActivities)
-    {
-        $this->translatedBeachActivities = $translatedBeachActivities;
-    }
     
     
     /**
@@ -140,17 +89,34 @@ class CarouselBeach
     /**
      * @return string|null
      */
-    public function getReviewScore()
+    public function getName()
     {
-        return $this->reviewScore;
+        return $this->name;
     }
     
     /**
-     * @param string|null $reviewScore
+     * @param string|null $name
      */
-    public function setReviewScore($reviewScore)
+    public function setName($name)
     {
-        $this->reviewScore = $reviewScore;
+        $this->name = $name;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
     }
     
     
@@ -172,19 +138,53 @@ class CarouselBeach
     
     
     /**
-     * @return string|null
+     * @return string[]|null
      */
-    public function getName()
+    public function getTranslatedBeachActivities()
     {
-        return $this->name;
+        return $this->translatedBeachActivities;
     }
     
     /**
-     * @param string|null $name
+     * @param string[]|null $translatedBeachActivities
      */
-    public function setName($name)
+    public function setTranslatedBeachActivities($translatedBeachActivities)
     {
-        $this->name = $name;
+        $this->translatedBeachActivities = $translatedBeachActivities;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getReviewScore()
+    {
+        return $this->reviewScore;
+    }
+    
+    /**
+     * @param int|null $reviewScore
+     */
+    public function setReviewScore($reviewScore)
+    {
+        $this->reviewScore = $reviewScore;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getReviewScoreFormatted()
+    {
+        return $this->reviewScoreFormatted;
+    }
+    
+    /**
+     * @param string|null $reviewScoreFormatted
+     */
+    public function setReviewScoreFormatted($reviewScoreFormatted)
+    {
+        $this->reviewScoreFormatted = $reviewScoreFormatted;
     }
     
     

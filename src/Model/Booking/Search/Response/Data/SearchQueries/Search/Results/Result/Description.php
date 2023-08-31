@@ -1,15 +1,15 @@
 <?php
 
-namespace Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\AppliedFilterOptions\AppliedFilterOption\AdditionalLabel;
+namespace Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result;
 
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * Class TranslationTag
+ * Class Description
  *
  * @Serializer\ExclusionPolicy("none")
  */
-class TranslationTag
+class Description
 {
     
     /**
@@ -22,9 +22,9 @@ class TranslationTag
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("translation")
+     * @Serializer\SerializedName("text")
      */
-    protected $translation;
+    protected $text;
     
     
     /**
@@ -47,17 +47,17 @@ class TranslationTag
     /**
      * @return string|null
      */
-    public function getTranslation()
+    public function getText()
     {
-        return $this->translation;
+        return $this->text;
     }
     
     /**
-     * @param string|null $translation
+     * @param string|null $text
      */
-    public function setTranslation($translation)
+    public function setText($text)
     {
-        $this->translation = $translation;
+        $this->text = $text;
     }
     
     

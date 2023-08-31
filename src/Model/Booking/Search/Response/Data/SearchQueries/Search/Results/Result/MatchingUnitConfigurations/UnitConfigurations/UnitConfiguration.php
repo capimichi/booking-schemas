@@ -13,41 +13,6 @@ class UnitConfiguration
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\UnitTypeNames\UnitTypeName[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\UnitTypeNames\UnitTypeName>")
-     * @Serializer\SerializedName("unitTypeNames")
-     */
-    protected $unitTypeNames;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\ApartmentRooms\ApartmentRoom[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\ApartmentRooms\ApartmentRoom>")
-     * @Serializer\SerializedName("apartmentRooms")
-     */
-    protected $apartmentRooms;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbLivingrooms")
-     */
-    protected $nbLivingrooms;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\LocalizedArea|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\LocalizedArea")
-     * @Serializer\SerializedName("localizedArea")
-     */
-    protected $localizedArea;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("name")
-     */
-    protected $name;
-    
-    /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\BedConfigurations\BedConfiguration[]|null
      * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\BedConfigurations\BedConfiguration>")
      * @Serializer\SerializedName("bedConfigurations")
@@ -57,16 +22,23 @@ class UnitConfiguration
     /**
      * @var int|null
      * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbUnits")
+     * @Serializer\SerializedName("nbPools")
      */
-    protected $nbUnits;
+    protected $nbPools;
     
     /**
      * @var int|null
      * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbBathrooms")
+     * @Serializer\SerializedName("nbBedrooms")
      */
-    protected $nbBathrooms;
+    protected $nbBedrooms;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("name")
+     */
+    protected $name;
     
     /**
      * @var int|null
@@ -76,18 +48,11 @@ class UnitConfiguration
     protected $nbAllBeds;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\UnitTypeNames\UnitTypeName[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\UnitTypeNames\UnitTypeName>")
+     * @Serializer\SerializedName("unitTypeNames")
      */
-    protected $typename;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbPools")
-     */
-    protected $nbPools;
+    protected $unitTypeNames;
     
     /**
      * @var int|null
@@ -104,96 +69,46 @@ class UnitConfiguration
     protected $unitId;
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\LocalizedArea|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\LocalizedArea")
+     * @Serializer\SerializedName("localizedArea")
+     */
+    protected $localizedArea;
+    
+    /**
      * @var int|null
      * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbBedrooms")
+     * @Serializer\SerializedName("nbLivingrooms")
      */
-    protected $nbBedrooms;
-    
+    protected $nbLivingrooms;
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\UnitTypeNames\UnitTypeName[]|null
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbUnits")
      */
-    public function getUnitTypeNames()
-    {
-        return $this->unitTypeNames;
-    }
+    protected $nbUnits;
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\UnitTypeNames\UnitTypeName[]|null $unitTypeNames
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    public function setUnitTypeNames($unitTypeNames)
-    {
-        $this->unitTypeNames = $unitTypeNames;
-    }
-    
+    protected $typename;
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\ApartmentRooms\ApartmentRoom[]|null
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbBathrooms")
      */
-    public function getApartmentRooms()
-    {
-        return $this->apartmentRooms;
-    }
+    protected $nbBathrooms;
     
     /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\ApartmentRooms\ApartmentRoom[]|null $apartmentRooms
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\ApartmentRooms\ApartmentRoom[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\ApartmentRooms\ApartmentRoom>")
+     * @Serializer\SerializedName("apartmentRooms")
      */
-    public function setApartmentRooms($apartmentRooms)
-    {
-        $this->apartmentRooms = $apartmentRooms;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getNbLivingrooms()
-    {
-        return $this->nbLivingrooms;
-    }
-    
-    /**
-     * @param int|null $nbLivingrooms
-     */
-    public function setNbLivingrooms($nbLivingrooms)
-    {
-        $this->nbLivingrooms = $nbLivingrooms;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\LocalizedArea|null
-     */
-    public function getLocalizedArea()
-    {
-        return $this->localizedArea;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\LocalizedArea|null $localizedArea
-     */
-    public function setLocalizedArea($localizedArea)
-    {
-        $this->localizedArea = $localizedArea;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * @param string|null $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
+    protected $apartmentRooms;
     
     
     /**
@@ -216,34 +131,51 @@ class UnitConfiguration
     /**
      * @return int|null
      */
-    public function getNbUnits()
+    public function getNbPools()
     {
-        return $this->nbUnits;
+        return $this->nbPools;
     }
     
     /**
-     * @param int|null $nbUnits
+     * @param int|null $nbPools
      */
-    public function setNbUnits($nbUnits)
+    public function setNbPools($nbPools)
     {
-        $this->nbUnits = $nbUnits;
+        $this->nbPools = $nbPools;
     }
     
     
     /**
      * @return int|null
      */
-    public function getNbBathrooms()
+    public function getNbBedrooms()
     {
-        return $this->nbBathrooms;
+        return $this->nbBedrooms;
     }
     
     /**
-     * @param int|null $nbBathrooms
+     * @param int|null $nbBedrooms
      */
-    public function setNbBathrooms($nbBathrooms)
+    public function setNbBedrooms($nbBedrooms)
     {
-        $this->nbBathrooms = $nbBathrooms;
+        $this->nbBedrooms = $nbBedrooms;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    /**
+     * @param string|null $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
     
     
@@ -265,36 +197,19 @@ class UnitConfiguration
     
     
     /**
-     * @return string|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\UnitTypeNames\UnitTypeName[]|null
      */
-    public function getTypename()
+    public function getUnitTypeNames()
     {
-        return $this->typename;
+        return $this->unitTypeNames;
     }
     
     /**
-     * @param string|null $typename
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\UnitTypeNames\UnitTypeName[]|null $unitTypeNames
      */
-    public function setTypename($typename)
+    public function setUnitTypeNames($unitTypeNames)
     {
-        $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getNbPools()
-    {
-        return $this->nbPools;
-    }
-    
-    /**
-     * @param int|null $nbPools
-     */
-    public function setNbPools($nbPools)
-    {
-        $this->nbPools = $nbPools;
+        $this->unitTypeNames = $unitTypeNames;
     }
     
     
@@ -333,19 +248,104 @@ class UnitConfiguration
     
     
     /**
-     * @return int|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\LocalizedArea|null
      */
-    public function getNbBedrooms()
+    public function getLocalizedArea()
     {
-        return $this->nbBedrooms;
+        return $this->localizedArea;
     }
     
     /**
-     * @param int|null $nbBedrooms
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\LocalizedArea|null $localizedArea
      */
-    public function setNbBedrooms($nbBedrooms)
+    public function setLocalizedArea($localizedArea)
     {
-        $this->nbBedrooms = $nbBedrooms;
+        $this->localizedArea = $localizedArea;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getNbLivingrooms()
+    {
+        return $this->nbLivingrooms;
+    }
+    
+    /**
+     * @param int|null $nbLivingrooms
+     */
+    public function setNbLivingrooms($nbLivingrooms)
+    {
+        $this->nbLivingrooms = $nbLivingrooms;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getNbUnits()
+    {
+        return $this->nbUnits;
+    }
+    
+    /**
+     * @param int|null $nbUnits
+     */
+    public function setNbUnits($nbUnits)
+    {
+        $this->nbUnits = $nbUnits;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getTypename()
+    {
+        return $this->typename;
+    }
+    
+    /**
+     * @param string|null $typename
+     */
+    public function setTypename($typename)
+    {
+        $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getNbBathrooms()
+    {
+        return $this->nbBathrooms;
+    }
+    
+    /**
+     * @param int|null $nbBathrooms
+     */
+    public function setNbBathrooms($nbBathrooms)
+    {
+        $this->nbBathrooms = $nbBathrooms;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\ApartmentRooms\ApartmentRoom[]|null
+     */
+    public function getApartmentRooms()
+    {
+        return $this->apartmentRooms;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\MatchingUnitConfigurations\UnitConfigurations\UnitConfiguration\ApartmentRooms\ApartmentRoom[]|null $apartmentRooms
+     */
+    public function setApartmentRooms($apartmentRooms)
+    {
+        $this->apartmentRooms = $apartmentRooms;
     }
     
     

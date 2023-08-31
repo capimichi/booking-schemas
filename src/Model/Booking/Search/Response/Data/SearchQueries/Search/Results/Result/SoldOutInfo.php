@@ -20,6 +20,13 @@ class SoldOutInfo
     protected $typename;
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo\AlternativeDatesMessages\AlternativeDatesMessage[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo\AlternativeDatesMessages\AlternativeDatesMessage>")
+     * @Serializer\SerializedName("alternativeDatesMessages")
+     */
+    protected $alternativeDatesMessages;
+    
+    /**
      * @var bool|null
      * @Serializer\Type("bool")
      * @Serializer\SerializedName("isSoldOut")
@@ -32,13 +39,6 @@ class SoldOutInfo
      * @Serializer\SerializedName("messages")
      */
     protected $messages;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo\AlternativeDatesMessages\AlternativeDatesMessage[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo\AlternativeDatesMessages\AlternativeDatesMessage>")
-     * @Serializer\SerializedName("alternativeDatesMessages")
-     */
-    protected $alternativeDatesMessages;
     
     
     /**
@@ -55,6 +55,23 @@ class SoldOutInfo
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo\AlternativeDatesMessages\AlternativeDatesMessage[]|null
+     */
+    public function getAlternativeDatesMessages()
+    {
+        return $this->alternativeDatesMessages;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo\AlternativeDatesMessages\AlternativeDatesMessage[]|null $alternativeDatesMessages
+     */
+    public function setAlternativeDatesMessages($alternativeDatesMessages)
+    {
+        $this->alternativeDatesMessages = $alternativeDatesMessages;
     }
     
     
@@ -89,23 +106,6 @@ class SoldOutInfo
     public function setMessages($messages)
     {
         $this->messages = $messages;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo\AlternativeDatesMessages\AlternativeDatesMessage[]|null
-     */
-    public function getAlternativeDatesMessages()
-    {
-        return $this->alternativeDatesMessages;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Results\Result\SoldOutInfo\AlternativeDatesMessages\AlternativeDatesMessage[]|null $alternativeDatesMessages
-     */
-    public function setAlternativeDatesMessages($alternativeDatesMessages)
-    {
-        $this->alternativeDatesMessages = $alternativeDatesMessages;
     }
     
     

@@ -13,11 +13,11 @@ class Pagination
 {
     
     /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbResultsTotal")
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $nbResultsTotal;
+    protected $typename;
     
     /**
      * @var int|null
@@ -27,27 +27,27 @@ class Pagination
     protected $nbResultsPerPage;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbResultsTotal")
      */
-    protected $typename;
+    protected $nbResultsTotal;
     
     
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getNbResultsTotal()
+    public function getTypename()
     {
-        return $this->nbResultsTotal;
+        return $this->typename;
     }
     
     /**
-     * @param int|null $nbResultsTotal
+     * @param string|null $typename
      */
-    public function setNbResultsTotal($nbResultsTotal)
+    public function setTypename($typename)
     {
-        $this->nbResultsTotal = $nbResultsTotal;
+        $this->typename = $typename;
     }
     
     
@@ -69,19 +69,19 @@ class Pagination
     
     
     /**
-     * @return string|null
+     * @return int|null
      */
-    public function getTypename()
+    public function getNbResultsTotal()
     {
-        return $this->typename;
+        return $this->nbResultsTotal;
     }
     
     /**
-     * @param string|null $typename
+     * @param int|null $nbResultsTotal
      */
-    public function setTypename($typename)
+    public function setNbResultsTotal($nbResultsTotal)
     {
-        $this->typename = $typename;
+        $this->nbResultsTotal = $nbResultsTotal;
     }
     
     

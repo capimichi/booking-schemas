@@ -20,18 +20,18 @@ class PrimaryAction
     protected $action;
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Text|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Text")
-     * @Serializer\SerializedName("text")
-     */
-    protected $text;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
+    
+    /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Text|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Text")
+     * @Serializer\SerializedName("text")
+     */
+    protected $text;
     
     
     /**
@@ -52,23 +52,6 @@ class PrimaryAction
     
     
     /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Text|null
-     */
-    public function getText()
-    {
-        return $this->text;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Text|null $text
-     */
-    public function setText($text)
-    {
-        $this->text = $text;
-    }
-    
-    
-    /**
      * @return string|null
      */
     public function getTypename()
@@ -82,6 +65,23 @@ class PrimaryAction
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Text|null
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\Banners\Banner\PrimaryAction\Text|null $text
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
     }
     
     

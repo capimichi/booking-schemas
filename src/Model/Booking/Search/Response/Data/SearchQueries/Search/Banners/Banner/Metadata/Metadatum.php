@@ -15,9 +15,9 @@ class Metadatum
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("value")
+     * @Serializer\SerializedName("__typename")
      */
-    protected $value;
+    protected $typename;
     
     /**
      * @var string|null
@@ -29,25 +29,25 @@ class Metadatum
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("__typename")
+     * @Serializer\SerializedName("value")
      */
-    protected $typename;
+    protected $value;
     
     
     /**
      * @return string|null
      */
-    public function getValue()
+    public function getTypename()
     {
-        return $this->value;
+        return $this->typename;
     }
     
     /**
-     * @param string|null $value
+     * @param string|null $typename
      */
-    public function setValue($value)
+    public function setTypename($typename)
     {
-        $this->value = $value;
+        $this->typename = $typename;
     }
     
     
@@ -71,17 +71,17 @@ class Metadatum
     /**
      * @return string|null
      */
-    public function getTypename()
+    public function getValue()
     {
-        return $this->typename;
+        return $this->value;
     }
     
     /**
-     * @param string|null $typename
+     * @param string|null $value
      */
-    public function setTypename($typename)
+    public function setValue($value)
     {
-        $this->typename = $typename;
+        $this->value = $value;
     }
     
     

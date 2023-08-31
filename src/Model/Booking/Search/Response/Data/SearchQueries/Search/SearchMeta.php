@@ -13,81 +13,11 @@ class SearchMeta
 {
     
     /**
-     * @var array|null
-     * @Serializer\Type("array")
-     * @Serializer\SerializedName("childrenAges")
-     */
-    protected $childrenAges;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbAdults")
-     */
-    protected $nbAdults;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox[]|null
-     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox>")
-     * @Serializer\SerializedName("boundingBoxes")
-     */
-    protected $boundingBoxes;
-    
-    /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\Dates|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\Dates")
-     * @Serializer\SerializedName("dates")
-     */
-    protected $dates;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("maxLengthOfStayInDays")
-     */
-    protected $maxLengthOfStayInDays;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbRooms")
-     */
-    protected $nbRooms;
-    
-    /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("userHasSelectedFilters")
-     */
-    protected $userHasSelectedFilters;
-    
-    /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("customerValueStatus")
-     */
-    protected $customerValueStatus;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("destId")
-     */
-    protected $destId;
-    
-    /**
-     * @var int|null
-     * @Serializer\Type("int")
-     * @Serializer\SerializedName("nbChildren")
-     */
-    protected $nbChildren;
     
     /**
      * @var string|null
@@ -106,9 +36,9 @@ class SearchMeta
     /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("destType")
+     * @Serializer\SerializedName("affiliateVerticalType")
      */
-    protected $destType;
+    protected $affiliateVerticalType;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\AvailabilityInfo|null
@@ -118,28 +48,81 @@ class SearchMeta
     protected $availabilityInfo;
     
     /**
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox[]|null
+     * @Serializer\Type("array<Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox>")
+     * @Serializer\SerializedName("boundingBoxes")
+     */
+    protected $boundingBoxes;
+    
+    /**
+     * @var array|null
+     * @Serializer\Type("array")
+     * @Serializer\SerializedName("childrenAges")
+     */
+    protected $childrenAges;
+    
+    /**
      * @var string|null
      * @Serializer\Type("string")
-     * @Serializer\SerializedName("affiliateVerticalType")
+     * @Serializer\SerializedName("customerValueStatus")
      */
-    protected $affiliateVerticalType;
-    
-    
-    /**
-     * @return array|null
-     */
-    public function getChildrenAges()
-    {
-        return $this->childrenAges;
-    }
+    protected $customerValueStatus;
     
     /**
-     * @param array|null $childrenAges
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\Dates|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\Dates")
+     * @Serializer\SerializedName("dates")
      */
-    public function setChildrenAges($childrenAges)
-    {
-        $this->childrenAges = $childrenAges;
-    }
+    protected $dates;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("destId")
+     */
+    protected $destId;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("destType")
+     */
+    protected $destType;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("maxLengthOfStayInDays")
+     */
+    protected $maxLengthOfStayInDays;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbAdults")
+     */
+    protected $nbAdults;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbChildren")
+     */
+    protected $nbChildren;
+    
+    /**
+     * @var int|null
+     * @Serializer\Type("int")
+     * @Serializer\SerializedName("nbRooms")
+     */
+    protected $nbRooms;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("userHasSelectedFilters")
+     */
+    protected $userHasSelectedFilters;
     
     
     /**
@@ -156,159 +139,6 @@ class SearchMeta
     public function setTypename($typename)
     {
         $this->typename = $typename;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getNbAdults()
-    {
-        return $this->nbAdults;
-    }
-    
-    /**
-     * @param int|null $nbAdults
-     */
-    public function setNbAdults($nbAdults)
-    {
-        $this->nbAdults = $nbAdults;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox[]|null
-     */
-    public function getBoundingBoxes()
-    {
-        return $this->boundingBoxes;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox[]|null $boundingBoxes
-     */
-    public function setBoundingBoxes($boundingBoxes)
-    {
-        $this->boundingBoxes = $boundingBoxes;
-    }
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\Dates|null
-     */
-    public function getDates()
-    {
-        return $this->dates;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\Dates|null $dates
-     */
-    public function setDates($dates)
-    {
-        $this->dates = $dates;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getMaxLengthOfStayInDays()
-    {
-        return $this->maxLengthOfStayInDays;
-    }
-    
-    /**
-     * @param int|null $maxLengthOfStayInDays
-     */
-    public function setMaxLengthOfStayInDays($maxLengthOfStayInDays)
-    {
-        $this->maxLengthOfStayInDays = $maxLengthOfStayInDays;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getNbRooms()
-    {
-        return $this->nbRooms;
-    }
-    
-    /**
-     * @param int|null $nbRooms
-     */
-    public function setNbRooms($nbRooms)
-    {
-        $this->nbRooms = $nbRooms;
-    }
-    
-    
-    /**
-     * @return bool|null
-     */
-    public function getUserHasSelectedFilters()
-    {
-        return $this->userHasSelectedFilters;
-    }
-    
-    /**
-     * @param bool|null $userHasSelectedFilters
-     */
-    public function setUserHasSelectedFilters($userHasSelectedFilters)
-    {
-        $this->userHasSelectedFilters = $userHasSelectedFilters;
-    }
-    
-    
-    /**
-     * @return string|null
-     */
-    public function getCustomerValueStatus()
-    {
-        return $this->customerValueStatus;
-    }
-    
-    /**
-     * @param string|null $customerValueStatus
-     */
-    public function setCustomerValueStatus($customerValueStatus)
-    {
-        $this->customerValueStatus = $customerValueStatus;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getDestId()
-    {
-        return $this->destId;
-    }
-    
-    /**
-     * @param int|null $destId
-     */
-    public function setDestId($destId)
-    {
-        $this->destId = $destId;
-    }
-    
-    
-    /**
-     * @return int|null
-     */
-    public function getNbChildren()
-    {
-        return $this->nbChildren;
-    }
-    
-    /**
-     * @param int|null $nbChildren
-     */
-    public function setNbChildren($nbChildren)
-    {
-        $this->nbChildren = $nbChildren;
     }
     
     
@@ -349,17 +179,17 @@ class SearchMeta
     /**
      * @return string|null
      */
-    public function getDestType()
+    public function getAffiliateVerticalType()
     {
-        return $this->destType;
+        return $this->affiliateVerticalType;
     }
     
     /**
-     * @param string|null $destType
+     * @param string|null $affiliateVerticalType
      */
-    public function setDestType($destType)
+    public function setAffiliateVerticalType($affiliateVerticalType)
     {
-        $this->destType = $destType;
+        $this->affiliateVerticalType = $affiliateVerticalType;
     }
     
     
@@ -381,19 +211,189 @@ class SearchMeta
     
     
     /**
-     * @return string|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox[]|null
      */
-    public function getAffiliateVerticalType()
+    public function getBoundingBoxes()
     {
-        return $this->affiliateVerticalType;
+        return $this->boundingBoxes;
     }
     
     /**
-     * @param string|null $affiliateVerticalType
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\BoundingBoxes\BoundingBox[]|null $boundingBoxes
      */
-    public function setAffiliateVerticalType($affiliateVerticalType)
+    public function setBoundingBoxes($boundingBoxes)
     {
-        $this->affiliateVerticalType = $affiliateVerticalType;
+        $this->boundingBoxes = $boundingBoxes;
+    }
+    
+    
+    /**
+     * @return array|null
+     */
+    public function getChildrenAges()
+    {
+        return $this->childrenAges;
+    }
+    
+    /**
+     * @param array|null $childrenAges
+     */
+    public function setChildrenAges($childrenAges)
+    {
+        $this->childrenAges = $childrenAges;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getCustomerValueStatus()
+    {
+        return $this->customerValueStatus;
+    }
+    
+    /**
+     * @param string|null $customerValueStatus
+     */
+    public function setCustomerValueStatus($customerValueStatus)
+    {
+        $this->customerValueStatus = $customerValueStatus;
+    }
+    
+    
+    /**
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\Dates|null
+     */
+    public function getDates()
+    {
+        return $this->dates;
+    }
+    
+    /**
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\SearchMeta\Dates|null $dates
+     */
+    public function setDates($dates)
+    {
+        $this->dates = $dates;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getDestId()
+    {
+        return $this->destId;
+    }
+    
+    /**
+     * @param int|null $destId
+     */
+    public function setDestId($destId)
+    {
+        $this->destId = $destId;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getDestType()
+    {
+        return $this->destType;
+    }
+    
+    /**
+     * @param string|null $destType
+     */
+    public function setDestType($destType)
+    {
+        $this->destType = $destType;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getMaxLengthOfStayInDays()
+    {
+        return $this->maxLengthOfStayInDays;
+    }
+    
+    /**
+     * @param int|null $maxLengthOfStayInDays
+     */
+    public function setMaxLengthOfStayInDays($maxLengthOfStayInDays)
+    {
+        $this->maxLengthOfStayInDays = $maxLengthOfStayInDays;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getNbAdults()
+    {
+        return $this->nbAdults;
+    }
+    
+    /**
+     * @param int|null $nbAdults
+     */
+    public function setNbAdults($nbAdults)
+    {
+        $this->nbAdults = $nbAdults;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getNbChildren()
+    {
+        return $this->nbChildren;
+    }
+    
+    /**
+     * @param int|null $nbChildren
+     */
+    public function setNbChildren($nbChildren)
+    {
+        $this->nbChildren = $nbChildren;
+    }
+    
+    
+    /**
+     * @return int|null
+     */
+    public function getNbRooms()
+    {
+        return $this->nbRooms;
+    }
+    
+    /**
+     * @param int|null $nbRooms
+     */
+    public function setNbRooms($nbRooms)
+    {
+        $this->nbRooms = $nbRooms;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
+    public function getUserHasSelectedFilters()
+    {
+        return $this->userHasSelectedFilters;
+    }
+    
+    /**
+     * @param bool|null $userHasSelectedFilters
+     */
+    public function setUserHasSelectedFilters($userHasSelectedFilters)
+    {
+        $this->userHasSelectedFilters = $userHasSelectedFilters;
     }
     
     

@@ -13,18 +13,18 @@ class DestinationLocation
 {
     
     /**
-     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\Name|null
-     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\Name")
-     * @Serializer\SerializedName("name")
-     */
-    protected $name;
-    
-    /**
      * @var string|null
      * @Serializer\Type("string")
      * @Serializer\SerializedName("__typename")
      */
     protected $typename;
+    
+    /**
+     * @var string|null
+     * @Serializer\Type("string")
+     * @Serializer\SerializedName("countryCode")
+     */
+    protected $countryCode;
     
     /**
      * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\InName|null
@@ -34,28 +34,11 @@ class DestinationLocation
     protected $inName;
     
     /**
-     * @var string|null
-     * @Serializer\Type("string")
-     * @Serializer\SerializedName("countryCode")
+     * @var \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\Name|null
+     * @Serializer\Type("Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\Name")
+     * @Serializer\SerializedName("name")
      */
-    protected $countryCode;
-    
-    
-    /**
-     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\Name|null
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    /**
-     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\Name|null $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
+    protected $name;
     
     
     /**
@@ -72,6 +55,23 @@ class DestinationLocation
     public function setTypename($typename)
     {
         $this->typename = $typename;
+    }
+    
+    
+    /**
+     * @return string|null
+     */
+    public function getCountryCode()
+    {
+        return $this->countryCode;
+    }
+    
+    /**
+     * @param string|null $countryCode
+     */
+    public function setCountryCode($countryCode)
+    {
+        $this->countryCode = $countryCode;
     }
     
     
@@ -93,19 +93,19 @@ class DestinationLocation
     
     
     /**
-     * @return string|null
+     * @return \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\Name|null
      */
-    public function getCountryCode()
+    public function getName()
     {
-        return $this->countryCode;
+        return $this->name;
     }
     
     /**
-     * @param string|null $countryCode
+     * @param \Capimichi\BookingSchemas\Model\Booking\Search\Response\Data\SearchQueries\Search\DestinationLocation\Name|null $name
      */
-    public function setCountryCode($countryCode)
+    public function setName($name)
     {
-        $this->countryCode = $countryCode;
+        $this->name = $name;
     }
     
     

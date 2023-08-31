@@ -20,18 +20,18 @@ class FilterLayout
     protected $typename;
     
     /**
-     * @var bool|null
-     * @Serializer\Type("bool")
-     * @Serializer\SerializedName("isCollapsable")
-     */
-    protected $isCollapsable;
-    
-    /**
      * @var int|null
      * @Serializer\Type("int")
      * @Serializer\SerializedName("collapsedCount")
      */
     protected $collapsedCount;
+    
+    /**
+     * @var bool|null
+     * @Serializer\Type("bool")
+     * @Serializer\SerializedName("isCollapsable")
+     */
+    protected $isCollapsable;
     
     
     /**
@@ -52,23 +52,6 @@ class FilterLayout
     
     
     /**
-     * @return bool|null
-     */
-    public function getIsCollapsable()
-    {
-        return $this->isCollapsable;
-    }
-    
-    /**
-     * @param bool|null $isCollapsable
-     */
-    public function setIsCollapsable($isCollapsable)
-    {
-        $this->isCollapsable = $isCollapsable;
-    }
-    
-    
-    /**
      * @return int|null
      */
     public function getCollapsedCount()
@@ -82,6 +65,23 @@ class FilterLayout
     public function setCollapsedCount($collapsedCount)
     {
         $this->collapsedCount = $collapsedCount;
+    }
+    
+    
+    /**
+     * @return bool|null
+     */
+    public function getIsCollapsable()
+    {
+        return $this->isCollapsable;
+    }
+    
+    /**
+     * @param bool|null $isCollapsable
+     */
+    public function setIsCollapsable($isCollapsable)
+    {
+        $this->isCollapsable = $isCollapsable;
     }
     
     
